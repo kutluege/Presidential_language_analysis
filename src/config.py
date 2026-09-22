@@ -35,6 +35,37 @@ def leader_slugs(cfg: dict[str, Any]) -> list[str]:
     return list(cfg["leaders"].keys())
 
 
+def primary_model_key(cfg: dict[str, Any]) -> str:
+    """Key under embedding.models whose hf_id equals primary_embedding_model."""
+    for key, m in cfg["embedding"]["models"].items():
+        if m["hf_id"] == cfg["primary_embedding_model"]:
+            return key
+    return next(iter(cfg["embedding"]["models"]))
+
+
+def result_tag(cfg: dict[str, Any], model_key: str, suffix: str = "") -> str:
+    """Suffix appended to output table names.
+
+    The primary model on the full original chunk set gets the plain spec filenames (tag "");
+    every other combination gets `__{model_key}{suffix}` so results are never mixed.
+    """
+    if model_key == primary_model_key(cfg) and not suffix:
+        return ""
+    return f"__{model_key}{suffix}"
+
+
+def theme_keys(cfg: dict[str, Any]) -> list[str]:
+    return [t["key"] for t in cfg["theme_definitions"]]
+
+
+def theme_labels(cfg: dict[str, Any], lang: str = "en") -> dict[str, str]:
+    return {t["key"]: (t.get(f"label_{lang}") or t["label"]) for t in cfg["theme_definitions"]}
+
+
+def framing_keys(cfg: dict[str, Any]) -> list[str]:
+    return list(cfg["framing_definitions"].keys())
+
+
 def seed_everything(seed: int) -> None:
     random.seed(seed)
     os.environ["PYTHONHASHSEED"] = str(seed)

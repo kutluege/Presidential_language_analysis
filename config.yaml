@@ -132,8 +132,8 @@ pca_parameters:
   n_components_clustering: 50
 
 hdbscan_parameters:
-  min_cluster_size: 5
-  min_samples: 3
+  min_cluster_size: 6
+  min_samples: 2      # min_samples>=3 collapses the corpus into 'Turkish vs rest' (2 clusters) — see grid table
   metric: euclidean
   cluster_selection_method: eom
 
@@ -405,3 +405,16 @@ theme_keywords_diagnostic:
 methodology_notes:
   projection_note: "2D projections are shown only for visualization; reported similarity values are calculated in the original embedding space."
   interpretation_scope: "All similarity, distance and theme values describe the collected speech corpora, not ideology, personality, political quality or the people themselves."
+
+# ---------------------------------------------------------------- visualization (Phase 6)
+# Fixed colour per leader (reference categorical palette, slots 1-5 in validated adjacent order;
+# never re-assigned). Scatter plots add marker shapes and per-leader facets because a 5-colour set
+# cannot pass the all-pairs colour-vision floor on its own.
+visualization:
+  leader_colors:
+    erdogan: "#2a78d6"   # blue
+    macron: "#eb6834"    # orange
+    merkel: "#1baf7a"    # aqua
+    putin: "#eda100"     # yellow
+    trump: "#e87ba4"     # magenta
+  radar_range: [0.2, 0.8]   # identical radial scale for every leader; 0.5 = corpus average

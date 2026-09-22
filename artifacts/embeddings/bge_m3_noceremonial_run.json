@@ -1,0 +1,17 @@
+{
+  "model_key": "bge_m3",
+  "hf_id": "BAAI/bge-m3",
+  "device": "cuda",
+  "dtype": "float16",
+  "attn_implementation": null,
+  "variant": "original",
+  "chunks_file": "chunks_noceremonial.csv",
+  "n_chunks": 290,
+  "dim": 1024,
+  "load_seconds": 9.8,
+  "encode_seconds": 0.4,
+  "normalized": true,
+  "random_seed": 42,
+  "n_queries": 40,
+  "query_prompt": null
+}

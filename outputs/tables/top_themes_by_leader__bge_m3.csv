@@ -1,0 +1,61 @@
+leader,method,rank,theme,label,value,n_speeches
+erdogan,embedding_pct,1,crisis_resilience,"Crisis, Threat & Resilience",0.5984,5
+erdogan,embedding_pct,2,national_identity,National Identity & Unity,0.5545,5
+erdogan,embedding_pct,3,democracy_institutions,"Democracy, Law & Institutions",0.4933,5
+macron,embedding_pct,1,future_reform_technology,"Future, Reform & Technology",0.6888,4
+macron,embedding_pct,2,crisis_resilience,"Crisis, Threat & Resilience",0.6591,4
+macron,embedding_pct,3,economy_welfare,Economy & Welfare,0.6106,4
+merkel,embedding_pct,1,social_solidarity,Social Solidarity & Values,0.7496,4
+merkel,embedding_pct,2,foreign_policy,Foreign Policy & Geopolitics,0.6605,4
+merkel,embedding_pct,3,economy_welfare,Economy & Welfare,0.6575,4
+putin,embedding_pct,1,security_military,Security & Military,0.6053,4
+putin,embedding_pct,2,national_identity,National Identity & Unity,0.5681,4
+putin,embedding_pct,3,social_solidarity,Social Solidarity & Values,0.461,4
+trump,embedding_pct,1,national_identity,National Identity & Unity,0.419,3
+trump,embedding_pct,2,economy_welfare,Economy & Welfare,0.396,3
+trump,embedding_pct,3,democracy_institutions,"Democracy, Law & Institutions",0.3887,3
+erdogan,embedding_cos,1,crisis_resilience,"Crisis, Threat & Resilience",0.5337,5
+erdogan,embedding_cos,2,future_reform_technology,"Future, Reform & Technology",0.5224,5
+erdogan,embedding_cos,3,national_identity,National Identity & Unity,0.5096,5
+macron,embedding_cos,1,future_reform_technology,"Future, Reform & Technology",0.5709,4
+macron,embedding_cos,2,crisis_resilience,"Crisis, Threat & Resilience",0.5453,4
+macron,embedding_cos,3,social_solidarity,Social Solidarity & Values,0.5106,4
+merkel,embedding_cos,1,social_solidarity,Social Solidarity & Values,0.5553,4
+merkel,embedding_cos,2,future_reform_technology,"Future, Reform & Technology",0.5509,4
+merkel,embedding_cos,3,national_identity,National Identity & Unity,0.523,4
+putin,embedding_cos,1,national_identity,National Identity & Unity,0.5117,4
+putin,embedding_cos,2,security_military,Security & Military,0.4962,4
+putin,embedding_cos,3,future_reform_technology,"Future, Reform & Technology",0.4927,4
+trump,embedding_cos,1,national_identity,National Identity & Unity,0.4791,3
+trump,embedding_cos,2,future_reform_technology,"Future, Reform & Technology",0.4711,3
+trump,embedding_cos,3,security_military,Security & Military,0.4622,3
+erdogan,embedding_cos_en,1,crisis_resilience,"Crisis, Threat & Resilience",0.4721,5
+erdogan,embedding_cos_en,2,future_reform_technology,"Future, Reform & Technology",0.4714,5
+erdogan,embedding_cos_en,3,security_military,Security & Military,0.4597,5
+macron,embedding_cos_en,1,future_reform_technology,"Future, Reform & Technology",0.5034,4
+macron,embedding_cos_en,2,crisis_resilience,"Crisis, Threat & Resilience",0.4792,4
+macron,embedding_cos_en,3,national_identity,National Identity & Unity,0.4787,4
+merkel,embedding_cos_en,1,future_reform_technology,"Future, Reform & Technology",0.5028,4
+merkel,embedding_cos_en,2,social_solidarity,Social Solidarity & Values,0.4895,4
+merkel,embedding_cos_en,3,national_identity,National Identity & Unity,0.4864,4
+putin,embedding_cos_en,1,national_identity,National Identity & Unity,0.5117,4
+putin,embedding_cos_en,2,security_military,Security & Military,0.4962,4
+putin,embedding_cos_en,3,future_reform_technology,"Future, Reform & Technology",0.4927,4
+trump,embedding_cos_en,1,national_identity,National Identity & Unity,0.4791,3
+trump,embedding_cos_en,2,future_reform_technology,"Future, Reform & Technology",0.4711,3
+trump,embedding_cos_en,3,security_military,Security & Military,0.4622,3
+erdogan,nli,1,social_solidarity,Social Solidarity & Values,0.7576,5
+erdogan,nli,2,national_identity,National Identity & Unity,0.715,5
+erdogan,nli,3,foreign_policy,Foreign Policy & Geopolitics,0.6951,5
+macron,nli,1,social_solidarity,Social Solidarity & Values,0.853,4
+macron,nli,2,national_identity,National Identity & Unity,0.768,4
+macron,nli,3,foreign_policy,Foreign Policy & Geopolitics,0.6236,4
+merkel,nli,1,social_solidarity,Social Solidarity & Values,0.8864,4
+merkel,nli,2,foreign_policy,Foreign Policy & Geopolitics,0.6462,4
+merkel,nli,3,national_identity,National Identity & Unity,0.6264,4
+putin,nli,1,social_solidarity,Social Solidarity & Values,0.8107,4
+putin,nli,2,national_identity,National Identity & Unity,0.7785,4
+putin,nli,3,foreign_policy,Foreign Policy & Geopolitics,0.5259,4
+trump,nli,1,social_solidarity,Social Solidarity & Values,0.8674,3
+trump,nli,2,national_identity,National Identity & Unity,0.8637,3
+trump,nli,3,foreign_policy,Foreign Policy & Geopolitics,0.6801,3
