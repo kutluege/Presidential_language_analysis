@@ -1,0 +1,210 @@
+# political-speech-geometry — single source of truth for every phase.
+# All analysis scripts read this file; nothing is hard-coded in src/.
+
+project_name: political-speech-geometry
+random_seed: 42
+
+paths:
+  data_original: data/original
+  data_translated_en: data/translated_en
+  data_processed: data/processed
+  metadata: data/metadata.csv
+  artifacts_embeddings: artifacts/embeddings
+  artifacts_clusters: artifacts/clusters
+  artifacts_bootstrap: artifacts/bootstrap
+  outputs: outputs
+  outputs_plots: outputs/plots
+  outputs_tables: outputs/tables
+
+# Leader slug = folder name under data/original/ and filename prefix.
+leaders:
+  erdogan:
+    display_name: "Recep Tayyip Erdoğan"
+    short_name: "Erdoğan"
+    language: tr
+  macron:
+    display_name: "Emmanuel Macron"
+    short_name: "Macron"
+    language: fr
+  merkel:
+    display_name: "Angela Merkel"
+    short_name: "Merkel"
+    language: de
+  putin:
+    display_name: "Vladimir Putin"
+    short_name: "Putin"
+    language: en
+    language_note: "English transcript of the Russian original"
+  trump:
+    display_name: "Donald Trump"
+    short_name: "Trump"
+    language: en
+
+corpus:
+  min_speeches_per_leader: 3
+  target_speeches_per_leader: [3, 5]
+  # Which corpus variant to analyse: "original" (mixed-language) or "translated_en".
+  variant: original
+
+# ---------------------------------------------------------------- embeddings
+primary_embedding_model: Qwen/Qwen3-Embedding-8B
+robustness_embedding_model: BAAI/bge-m3
+
+embedding:
+  device: cuda
+  normalize: true                 # unit-length before any cosine computation
+  models:
+    qwen3_embedding_8b:
+      hf_id: Qwen/Qwen3-Embedding-8B
+      dtype: bfloat16
+      attn_implementation: sdpa   # flash_attention_2 has no Windows wheels
+      padding_side: left          # required for last-token pooling
+      batch_size: 16
+      max_seq_length: 512
+      # Documents (chunks) are embedded raw; only queries (theme descriptions) get the instruction.
+      query_instruction_template: "Instruct: {task}\nQuery: {text}"
+    bge_m3:
+      hf_id: BAAI/bge-m3
+      dtype: float16
+      batch_size: 32
+      max_seq_length: 512
+  # artifacts/embeddings/{model_key}_chunks.npy and {model_key}_index.parquet
+  artifact_pattern: "{model_key}_{unit}"
+
+# ---------------------------------------------------------------- chunking
+chunking:
+  chunk_min_tokens: 80
+  chunk_max_tokens: 180
+  chunk_target_tokens: 130
+  overlap_tokens: 0               # no overlapping windows
+  tokenizer: Qwen/Qwen3-Embedding-8B
+  fallback_tokens_per_word: 1.5   # used only if the tokenizer cannot be loaded
+  short_chunk_merge_tolerance: 1.15  # allow up to 1.15 * max when absorbing a short orphan chunk
+
+# ---------------------------------------------------------------- inventory / validation (Phase 0)
+inventory:
+  min_words_warn: 400
+  near_duplicate_jaccard: 0.5
+  fragment_containment: 0.5
+  shingle_size: 8
+  repeated_line_min_count: 3
+  repeated_line_min_chars: 15
+  double_space_warn: 20
+  language_min_ratio: 0.03
+
+# ---------------------------------------------------------------- geometry / clustering / viz
+knn_parameters:
+  k: 10
+  exclude_same_speech: true
+
+umap_parameters:
+  n_neighbors: 15
+  min_dist: 0.1
+  n_components: 2
+  metric: cosine
+
+pca_parameters:
+  n_components_visualization: 2
+  n_components_clustering: 50
+
+hdbscan_parameters:
+  min_cluster_size: 5
+  min_samples: 3
+  metric: euclidean
+  cluster_selection_method: eom
+
+bootstrap_iterations: 2000
+bootstrap_confidence_level: 0.95
+bootstrap_unit: speech            # resample speeches within each leader, never chunks
+
+robustness:
+  ceremonial_removal:
+    strip_leading_paragraphs: 1
+    strip_trailing_paragraphs: 2
+
+# ---------------------------------------------------------------- theme scoring (Phase 3)
+theme_scoring:
+  method_primary: embedding_similarity       # Option A
+  method_secondary: zero_shot_nli            # Option B
+  nli_model: MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7
+  query_task_instruction: "Given a passage from a political speech, retrieve the thematic description that best matches its content"
+  aggregation:
+    chunk_to_speech: mean
+    speech_to_leader: mean        # every speech weighs equally within its leader
+
+theme_definitions:
+  - key: national_identity
+    label: "National Identity & Unity"
+    description: >-
+      The nation as a shared community: references to the homeland, the people, national history
+      and heritage, collective memory, national pride, citizens belonging together, and calls for
+      national unity and togetherness.
+    examples: [nation, homeland, national identity, collective history, national unity, citizens, national belonging]
+  - key: security_military
+    label: "Security & Military"
+    description: >-
+      Armed forces, defense, soldiers and veterans, military operations, war and armed conflict,
+      terrorism and counter-terrorism, border security, national security threats and the
+      protection of the country by force.
+    examples: [military, defense, terrorism, war, armed forces, national security, security threats]
+  - key: economy_welfare
+    label: "Economy & Welfare"
+    description: >-
+      Economic conditions and policy: jobs, employment, wages, growth, inflation and prices,
+      industry and production, trade, taxes, public finances, pensions, living standards,
+      prosperity and public welfare.
+    examples: [economy, jobs, growth, inflation, production, prosperity, living standards, public welfare]
+  - key: foreign_policy
+    label: "Foreign Policy & Geopolitics"
+    description: >-
+      Relations with other countries and international organizations: alliances, diplomacy,
+      summits, treaties, the global order, other governments and regions, geopolitical
+      positioning, and the country's role and influence in the world.
+    examples: [international relations, alliances, diplomacy, global order, foreign countries, geopolitical positioning]
+  - key: democracy_institutions
+    label: "Democracy, Law & Institutions"
+    description: >-
+      Democratic processes and the rule of law: elections and voting, the constitution,
+      parliament, courts and the judiciary, civil rights and freedoms, institutions, governance,
+      accountability and the legitimacy of power.
+    examples: [democracy, elections, constitution, rule of law, institutions, rights, governance]
+  - key: social_solidarity
+    label: "Social Solidarity & Values"
+    description: >-
+      Social bonds and shared values: family, community, mutual support, compassion, care for
+      the vulnerable, volunteers, faith and traditions, social cohesion, respect and gratitude
+      toward fellow citizens.
+    examples: [family, solidarity, community, social cohesion, shared values, mutual support]
+  - key: crisis_resilience
+    label: "Crisis, Threat & Resilience"
+    description: >-
+      Hardship and how it is faced: crises, disasters, pandemics, emergencies, external threats
+      and pressures, sacrifice, endurance, resilience, recovery and rebuilding after difficult
+      times.
+    examples: [crisis, disaster, external threat, hardship, sacrifice, national resilience, recovery]
+  - key: future_reform_technology
+    label: "Future, Reform & Technology"
+    description: >-
+      Looking ahead and changing course: reforms and modernization, innovation, science and
+      technology, digitalization, education and schools, young people, the climate transition
+      and long-term plans for the coming years.
+    examples: [future, reform, modernization, innovation, technology, education, youth, transformation]
+
+framing_definitions:
+  conflict_threat_framing:
+    label: "Conflict / Threat Framing"
+    description: >-
+      Language that frames a situation in terms of threat, enemies, conflict, war, attack,
+      danger, defense, struggle, confrontation, terror and hostility.
+    concepts: [threat, enemy, conflict, war, attack, danger, defense, struggle, confrontation, terror, hostility]
+  cooperation_solidarity_framing:
+    label: "Cooperation / Solidarity Framing"
+    description: >-
+      Language that frames a situation in terms of cooperation, unity, peace, dialogue,
+      solidarity, partnership, reconciliation, mutual support and working together.
+    concepts: [cooperation, unity, peace, dialogue, solidarity, partnership, reconciliation, mutual support, working together]
+
+# Fixed wording that every report must carry.
+methodology_notes:
+  projection_note: "2D projections are shown only for visualization; reported similarity values are calculated in the original embedding space."
+  interpretation_scope: "All similarity, distance and theme values describe the collected speech corpora, not ideology, personality, political quality or the people themselves."

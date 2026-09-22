@@ -1,0 +1,22 @@
+# Generated from the working `speechgeo` env (Python 3.12, Windows, RTX 5090).
+# torch/torchvision come from the PyTorch CUDA 13.0 index; the PyPI wheel is CPU-only on Windows.
+--extra-index-url https://download.pytorch.org/whl/cu130
+
+torch==2.14.0+cu130
+torchvision==0.29.0+cu130
+transformers==5.17.0
+accelerate==1.15.0
+sentence-transformers==6.1.0
+numpy==2.5.2
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+umap-learn==0.5.12
+hdbscan==0.8.44
+matplotlib==3.11.2
+plotly==7.1.0
+pyarrow==25.0.1
+tqdm==4.70.1
+PyYAML==6.0.3
+jupyter==1.1.1
+ipykernel==7.3.0

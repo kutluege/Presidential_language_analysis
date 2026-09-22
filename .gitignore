@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Large / regenerable artifacts (keep the folder markers)
+artifacts/*/*
+!artifacts/*/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.npy
+*.parquet
+
+# Model caches
+.cache/
+hf_cache/
+models/
+
+# Environment
+.env
+.venv/
