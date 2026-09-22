@@ -4,11 +4,10 @@ __pycache__/
 .ipynb_checkpoints/
 .pytest_cache/
 
-# Large / regenerable artifacts (keep the folder markers)
+# Large / regenerable artifacts (keep the folder markers). data/processed CSV/MD results ARE tracked.
 artifacts/*/*
 !artifacts/*/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
+!artifacts/**/*.json
 *.npy
 *.parquet
 

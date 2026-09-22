@@ -81,6 +81,30 @@ chunking:
   fallback_tokens_per_word: 1.5   # used only if the tokenizer cannot be loaded
   short_chunk_merge_tolerance: 1.15  # allow up to 1.15 * max when absorbing a short orphan chunk
 
+# ---------------------------------------------------------------- preprocessing (Phase 1)
+# Conservative: only obvious non-speech artifacts are removed, every removal is logged in
+# data/processed/preprocessing_report.md, original files are never touched.
+preprocess:
+  collapse_whitespace: true
+  remove_symbol_only_lines: true          # e.g. a lone "*" section separator
+  strip_leading_speaker_label: true       # "President of Russia Vladimir Putin:" at file start
+  speaker_label_patterns:                 # case-insensitive, anchored at the start of the file
+    - "^\\W*p?resident of russia vladimir putin\\s*:\\s*"
+  remove_stage_directions: true
+  remove_html: true
+  remove_urls: true
+  remove_timestamps: true
+  remove_repeated_lines_min_count: 3
+  file_rules:
+    trump3.txt:
+      drop_paragraphs_before_match: "^Chief Justice Roberts, President Carter"
+      reason: "oath ceremony and emcee introduction spoken by other people (paragraphs 0-12)"
+  # Robustness variant C: strip ceremonial opening/closing paragraphs before chunking.
+  ceremonial:
+    strip_leading_paragraphs: 1
+    strip_trailing_paragraphs: 2
+    min_paragraphs_to_apply: 6
+
 # ---------------------------------------------------------------- inventory / validation (Phase 0)
 inventory:
   min_words_warn: 400
@@ -127,7 +151,15 @@ theme_scoring:
   method_primary: embedding_similarity       # Option A
   method_secondary: zero_shot_nli            # Option B
   nli_model: MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7
+  nli_hypothesis_template: "This text is about {}."
+  nli_batch_size: 16
   query_task_instruction: "Given a passage from a political speech, retrieve the thematic description that best matches its content"
+  # Primary: each chunk is compared with the theme description written in the chunk's own language
+  # (tr/fr/de/en), which removes most of the cross-lingual bias of comparing e.g. Turkish text with an
+  # English description. Robustness: English descriptions for every chunk (query_language: en).
+  query_language: matched          # matched | en
+  percentile_reference: all_chunks # percentiles are computed over the whole corpus, identical for all leaders
+  framing_rate_percentile: 0.75    # a chunk "uses" a framing if it sits in the top quartile of the corpus
   aggregation:
     chunk_to_speech: mean
     speech_to_leader: mean        # every speech weighs equally within its leader
@@ -135,74 +167,239 @@ theme_scoring:
 theme_definitions:
   - key: national_identity
     label: "National Identity & Unity"
+    label_tr: "Ulusal Kimlik ve Birlik"
     description: >-
       The nation as a shared community: references to the homeland, the people, national history
       and heritage, collective memory, national pride, citizens belonging together, and calls for
       national unity and togetherness.
+    description_tr: >-
+      Ortak bir topluluk olarak millet: vatan, halk, milli tarih ve miras, ortak hafıza, milli gurur,
+      vatandaşların birbirine ait olması ve milli birlik ile beraberlik çağrıları.
+    description_fr: >-
+      La nation comme communauté partagée : références à la patrie, au peuple, à l'histoire et au
+      patrimoine national, à la mémoire collective, à la fierté nationale, à l'appartenance des
+      citoyens et aux appels à l'unité et au rassemblement national.
+    description_de: >-
+      Die Nation als gemeinsame Gemeinschaft: Bezüge auf Heimat, Volk, nationale Geschichte und
+      Erbe, kollektive Erinnerung, Nationalstolz, Zusammengehörigkeit der Bürgerinnen und Bürger
+      sowie Aufrufe zu nationaler Einheit und Zusammenhalt.
     examples: [nation, homeland, national identity, collective history, national unity, citizens, national belonging]
   - key: security_military
     label: "Security & Military"
+    label_tr: "Güvenlik ve Ordu"
     description: >-
       Armed forces, defense, soldiers and veterans, military operations, war and armed conflict,
       terrorism and counter-terrorism, border security, national security threats and the
       protection of the country by force.
+    description_tr: >-
+      Silahlı kuvvetler, savunma, askerler ve gaziler, askeri operasyonlar, savaş ve silahlı çatışma,
+      terör ve terörle mücadele, sınır güvenliği, milli güvenlik tehditleri ve ülkenin güç yoluyla
+      korunması.
+    description_fr: >-
+      Forces armées, défense, soldats et anciens combattants, opérations militaires, guerre et
+      conflit armé, terrorisme et lutte antiterroriste, sécurité des frontières, menaces pour la
+      sécurité nationale et protection du pays par la force.
+    description_de: >-
+      Streitkräfte, Verteidigung, Soldaten und Veteranen, Militäreinsätze, Krieg und bewaffneter
+      Konflikt, Terrorismus und Terrorbekämpfung, Grenzsicherung, Bedrohungen der nationalen
+      Sicherheit und der Schutz des Landes mit Gewalt.
     examples: [military, defense, terrorism, war, armed forces, national security, security threats]
   - key: economy_welfare
     label: "Economy & Welfare"
+    label_tr: "Ekonomi ve Refah"
     description: >-
       Economic conditions and policy: jobs, employment, wages, growth, inflation and prices,
       industry and production, trade, taxes, public finances, pensions, living standards,
       prosperity and public welfare.
+    description_tr: >-
+      Ekonomik durum ve politika: iş, istihdam, ücretler, büyüme, enflasyon ve fiyatlar, sanayi ve
+      üretim, ticaret, vergiler, kamu maliyesi, emeklilik, hayat standardı, refah ve kamu yararı.
+    description_fr: >-
+      Situation et politique économiques : emplois, travail, salaires, croissance, inflation et
+      prix, industrie et production, commerce, impôts, finances publiques, retraites, niveau de
+      vie, prospérité et bien-être collectif.
+    description_de: >-
+      Wirtschaftliche Lage und Politik: Arbeitsplätze, Beschäftigung, Löhne, Wachstum, Inflation
+      und Preise, Industrie und Produktion, Handel, Steuern, öffentliche Finanzen, Renten,
+      Lebensstandard, Wohlstand und Gemeinwohl.
     examples: [economy, jobs, growth, inflation, production, prosperity, living standards, public welfare]
   - key: foreign_policy
     label: "Foreign Policy & Geopolitics"
+    label_tr: "Dış Politika ve Jeopolitik"
     description: >-
       Relations with other countries and international organizations: alliances, diplomacy,
       summits, treaties, the global order, other governments and regions, geopolitical
       positioning, and the country's role and influence in the world.
+    description_tr: >-
+      Diğer ülkeler ve uluslararası kuruluşlarla ilişkiler: ittifaklar, diplomasi, zirveler,
+      anlaşmalar, küresel düzen, diğer hükümetler ve bölgeler, jeopolitik konumlanma ve ülkenin
+      dünyadaki rolü ile etkisi.
+    description_fr: >-
+      Relations avec les autres pays et les organisations internationales : alliances, diplomatie,
+      sommets, traités, ordre mondial, autres gouvernements et régions, positionnement
+      géopolitique, rôle et influence du pays dans le monde.
+    description_de: >-
+      Beziehungen zu anderen Ländern und internationalen Organisationen: Bündnisse, Diplomatie,
+      Gipfeltreffen, Verträge, die Weltordnung, andere Regierungen und Regionen, geopolitische
+      Positionierung sowie Rolle und Einfluss des Landes in der Welt.
     examples: [international relations, alliances, diplomacy, global order, foreign countries, geopolitical positioning]
   - key: democracy_institutions
     label: "Democracy, Law & Institutions"
+    label_tr: "Demokrasi, Hukuk ve Kurumlar"
     description: >-
       Democratic processes and the rule of law: elections and voting, the constitution,
       parliament, courts and the judiciary, civil rights and freedoms, institutions, governance,
       accountability and the legitimacy of power.
+    description_tr: >-
+      Demokratik süreçler ve hukukun üstünlüğü: seçimler ve oy kullanma, anayasa, meclis, mahkemeler
+      ve yargı, haklar ve özgürlükler, kurumlar, yönetişim, hesap verebilirlik ve iktidarın
+      meşruiyeti.
+    description_fr: >-
+      Processus démocratiques et État de droit : élections et vote, constitution, parlement,
+      tribunaux et justice, droits et libertés civiques, institutions, gouvernance, responsabilité
+      et légitimité du pouvoir.
+    description_de: >-
+      Demokratische Prozesse und Rechtsstaatlichkeit: Wahlen und Abstimmungen, die Verfassung,
+      Parlament, Gerichte und Justiz, Bürgerrechte und Freiheiten, Institutionen, Regierungsführung,
+      Rechenschaft und die Legitimität der Macht.
     examples: [democracy, elections, constitution, rule of law, institutions, rights, governance]
   - key: social_solidarity
     label: "Social Solidarity & Values"
+    label_tr: "Toplumsal Dayanışma ve Değerler"
     description: >-
       Social bonds and shared values: family, community, mutual support, compassion, care for
       the vulnerable, volunteers, faith and traditions, social cohesion, respect and gratitude
       toward fellow citizens.
+    description_tr: >-
+      Toplumsal bağlar ve ortak değerler: aile, topluluk, karşılıklı destek, merhamet, kırılgan
+      kesimlere sahip çıkma, gönüllüler, inanç ve gelenekler, sosyal uyum, vatandaşlara saygı ve
+      şükran.
+    description_fr: >-
+      Liens sociaux et valeurs partagées : famille, communauté, entraide, compassion, attention
+      aux plus fragiles, bénévoles, foi et traditions, cohésion sociale, respect et gratitude
+      envers les concitoyens.
+    description_de: >-
+      Soziale Bindungen und gemeinsame Werte: Familie, Gemeinschaft, gegenseitige Unterstützung,
+      Mitgefühl, Fürsorge für Schwache, Ehrenamtliche, Glaube und Traditionen, gesellschaftlicher
+      Zusammenhalt, Respekt und Dankbarkeit gegenüber den Mitbürgerinnen und Mitbürgern.
     examples: [family, solidarity, community, social cohesion, shared values, mutual support]
   - key: crisis_resilience
     label: "Crisis, Threat & Resilience"
+    label_tr: "Kriz, Tehdit ve Dayanıklılık"
     description: >-
       Hardship and how it is faced: crises, disasters, pandemics, emergencies, external threats
       and pressures, sacrifice, endurance, resilience, recovery and rebuilding after difficult
       times.
+    description_tr: >-
+      Zorluklar ve bunlarla nasıl başa çıkıldığı: krizler, afetler, salgınlar, acil durumlar, dış
+      tehditler ve baskılar, fedakârlık, sabır, dayanıklılık, zor günlerin ardından toparlanma ve
+      yeniden inşa.
+    description_fr: >-
+      Les épreuves et la manière d'y faire face : crises, catastrophes, pandémies, urgences,
+      menaces et pressions extérieures, sacrifice, endurance, résilience, redressement et
+      reconstruction après des temps difficiles.
+    description_de: >-
+      Not und ihre Bewältigung: Krisen, Katastrophen, Pandemien, Notlagen, äußere Bedrohungen und
+      Druck, Opfer, Durchhalten, Widerstandskraft, Erholung und Wiederaufbau nach schweren Zeiten.
     examples: [crisis, disaster, external threat, hardship, sacrifice, national resilience, recovery]
   - key: future_reform_technology
     label: "Future, Reform & Technology"
+    label_tr: "Gelecek, Reform ve Teknoloji"
     description: >-
       Looking ahead and changing course: reforms and modernization, innovation, science and
       technology, digitalization, education and schools, young people, the climate transition
       and long-term plans for the coming years.
+    description_tr: >-
+      Geleceğe bakmak ve rota değiştirmek: reformlar ve modernleşme, yenilik, bilim ve teknoloji,
+      dijitalleşme, eğitim ve okullar, gençler, iklim dönüşümü ve önümüzdeki yıllara dair uzun
+      vadeli planlar.
+    description_fr: >-
+      Regarder vers l'avenir et changer de cap : réformes et modernisation, innovation, science
+      et technologie, numérique, éducation et école, jeunesse, transition climatique et projets
+      de long terme pour les années à venir.
+    description_de: >-
+      Nach vorn blicken und den Kurs ändern: Reformen und Modernisierung, Innovation, Wissenschaft
+      und Technologie, Digitalisierung, Bildung und Schulen, junge Menschen, der Klimawandel als
+      Umbau und langfristige Pläne für die kommenden Jahre.
     examples: [future, reform, modernization, innovation, technology, education, youth, transformation]
 
 framing_definitions:
   conflict_threat_framing:
     label: "Conflict / Threat Framing"
+    label_tr: "Çatışma / Tehdit Çerçevesi"
     description: >-
       Language that frames a situation in terms of threat, enemies, conflict, war, attack,
       danger, defense, struggle, confrontation, terror and hostility.
+    description_tr: >-
+      Bir durumu tehdit, düşman, çatışma, savaş, saldırı, tehlike, savunma, mücadele, hesaplaşma,
+      terör ve düşmanlık kavramlarıyla çerçeveleyen dil.
+    description_fr: >-
+      Un langage qui présente une situation en termes de menace, d'ennemis, de conflit, de guerre,
+      d'attaque, de danger, de défense, de lutte, de confrontation, de terreur et d'hostilité.
+    description_de: >-
+      Sprache, die eine Lage in Begriffen von Bedrohung, Feinden, Konflikt, Krieg, Angriff,
+      Gefahr, Verteidigung, Kampf, Konfrontation, Terror und Feindseligkeit rahmt.
     concepts: [threat, enemy, conflict, war, attack, danger, defense, struggle, confrontation, terror, hostility]
   cooperation_solidarity_framing:
     label: "Cooperation / Solidarity Framing"
+    label_tr: "İş Birliği / Dayanışma Çerçevesi"
     description: >-
       Language that frames a situation in terms of cooperation, unity, peace, dialogue,
       solidarity, partnership, reconciliation, mutual support and working together.
+    description_tr: >-
+      Bir durumu iş birliği, birlik, barış, diyalog, dayanışma, ortaklık, uzlaşma, karşılıklı destek
+      ve birlikte çalışma kavramlarıyla çerçeveleyen dil.
+    description_fr: >-
+      Un langage qui présente une situation en termes de coopération, d'unité, de paix, de
+      dialogue, de solidarité, de partenariat, de réconciliation, d'entraide et de travail en commun.
+    description_de: >-
+      Sprache, die eine Lage in Begriffen von Zusammenarbeit, Einheit, Frieden, Dialog,
+      Solidarität, Partnerschaft, Versöhnung, gegenseitiger Unterstützung und gemeinsamem Handeln
+      rahmt.
     concepts: [cooperation, unity, peace, dialogue, solidarity, partnership, reconciliation, mutual support, working together]
+
+# Diagnostic only (never used as the theme score): multilingual keyword hits per theme.
+theme_keywords_diagnostic:
+  national_identity:
+    en: [nation, national, homeland, our people, history, heritage, unity, united, citizens, motherland, fatherland]
+    tr: [millet, milli, vatan, tarih, birlik, beraberlik, vatandaş, bayrak, cumhuriyet, ecdad]
+    fr: [nation, national, patrie, peuple, histoire, unité, unis, citoyens, république, france]
+    de: [nation, national, heimat, volk, geschichte, einheit, zusammenhalt, bürger, deutschland, vaterland]
+  security_military:
+    en: [military, army, soldiers, defense, defence, war, terror, terrorism, security, armed, troops, veterans]
+    tr: [ordu, asker, savunma, savaş, terör, güvenlik, şehit, gazi, silah, operasyon]
+    fr: [armée, militaire, soldats, défense, guerre, terrorisme, sécurité, forces armées, attentat]
+    de: [bundeswehr, soldaten, verteidigung, krieg, terror, sicherheit, streitkräfte, anschlag]
+  economy_welfare:
+    en: [economy, economic, jobs, employment, wages, growth, inflation, prices, industry, trade, taxes, prosperity, pension]
+    tr: [ekonomi, istihdam, iş, ücret, büyüme, enflasyon, fiyat, üretim, sanayi, ticaret, vergi, refah, emekli]
+    fr: [économie, économique, emploi, emplois, salaires, croissance, inflation, prix, industrie, entreprises, impôts, retraites, pouvoir d'achat]
+    de: [wirtschaft, arbeitsplätze, arbeit, löhne, wachstum, inflation, preise, industrie, unternehmen, steuern, rente, wohlstand]
+  foreign_policy:
+    en: [international, allies, alliance, diplomacy, nato, united nations, europe, world, countries, partners, foreign]
+    tr: [uluslararası, müttefik, diplomasi, nato, dünya, ülkeler, ortak, dış politika, bölge, küresel]
+    fr: [international, alliés, diplomatie, europe, européen, monde, pays, partenaires, otan, ukraine]
+    de: [international, verbündete, diplomatie, europa, europäisch, welt, länder, partner, nato, ukraine]
+  democracy_institutions:
+    en: [democracy, democratic, election, elections, constitution, law, rights, freedom, parliament, court, institutions, vote]
+    tr: [demokrasi, seçim, anayasa, hukuk, hak, özgürlük, meclis, mahkeme, kurum, oy, sistem]
+    fr: [démocratie, démocratique, élection, élections, constitution, loi, droits, liberté, parlement, institutions, vote, assemblée]
+    de: [demokratie, demokratisch, wahl, wahlen, grundgesetz, verfassung, recht, rechte, freiheit, parlament, bundestag, institutionen]
+  social_solidarity:
+    en: [family, families, community, solidarity, together, support, compassion, care, volunteers, faith, values, love]
+    tr: [aile, dayanışma, birlikte, destek, merhamet, kardeş, gönüllü, inanç, değer, sevgi, komşu]
+    fr: [famille, familles, solidarité, ensemble, soutien, fraternité, bénévoles, valeurs, entraide, proches]
+    de: [familie, familien, solidarität, gemeinsam, unterstützung, zusammenhalt, ehrenamt, werte, nächsten, glaube]
+  crisis_resilience:
+    en: [crisis, disaster, pandemic, emergency, threat, hardship, sacrifice, resilience, recover, recovery, rebuild, challenge]
+    tr: [kriz, afet, deprem, salgın, tehdit, zorluk, fedakârlık, dayanıklı, toparlanma, yeniden, mücadele, sınav]
+    fr: [crise, catastrophe, pandémie, épidémie, urgence, menace, épreuve, sacrifice, résilience, reconstruire, défis]
+    de: [krise, katastrophe, pandemie, notlage, bedrohung, prüfung, opfer, widerstandskraft, wiederaufbau, herausforderung]
+  future_reform_technology:
+    en: [future, reform, modernize, innovation, technology, digital, science, education, schools, young, youth, climate, transformation]
+    tr: [gelecek, reform, modern, yenilik, teknoloji, dijital, bilim, eğitim, okul, genç, gençlik, iklim, dönüşüm]
+    fr: [avenir, réforme, réformes, modernisation, innovation, technologie, numérique, science, éducation, école, jeunes, jeunesse, climat, transition]
+    de: [zukunft, reform, reformen, modernisierung, innovation, technologie, digital, wissenschaft, bildung, schulen, junge, jugend, klima, wandel]
 
 # Fixed wording that every report must carry.
 methodology_notes:

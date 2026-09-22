@@ -134,3 +134,100 @@ def chunk_counts_summary(chunks: Sequence[Chunk]) -> dict:
         "min_tokens": min(toks),
         "max_tokens": max(toks),
     }
+
+
+# ----------------------------------------------------------------------------------------------
+# Phase 1b CLI: speeches_clean.csv -> chunks.csv
+# ----------------------------------------------------------------------------------------------
+CHUNK_COLUMNS = [
+    "chunk_id", "speech_id", "leader", "language", "speech_date", "speech_type", "source",
+    "chunk_index", "n_chunks_in_speech", "relative_position", "chunk_text", "token_count",
+    "word_count", "paragraph_indices", "is_short",
+]
+
+
+def build_chunks(speeches: "pd.DataFrame", cfg: dict, count_many: TokenCounter, strip_ceremonial: bool = False):
+    import pandas as pd  # local import keeps the pure algorithm dependency-free
+    from .textutils import count_words, split_paragraphs
+
+    ch = cfg["chunking"]
+    cer = (cfg.get("preprocess", {}) or {}).get("ceremonial", {}) or {}
+    rows, log = [], []
+    for sp in speeches.itertuples():
+        paragraphs = split_paragraphs(str(sp.clean_text))
+        offset = 0
+        if strip_ceremonial:
+            lead, trail = int(cer.get("strip_leading_paragraphs", 1)), int(cer.get("strip_trailing_paragraphs", 2))
+            if len(paragraphs) >= int(cer.get("min_paragraphs_to_apply", 6)):
+                dropped = paragraphs[:lead] + (paragraphs[-trail:] if trail else [])
+                paragraphs = paragraphs[lead: len(paragraphs) - trail if trail else None]
+                offset = lead
+                log.append({"speech_id": sp.speech_id, "dropped_paragraphs": lead + trail,
+                            "dropped_words": sum(count_words(p) for p in dropped)})
+        chunks = chunk_paragraphs(
+            paragraphs, count_many,
+            min_tokens=ch["chunk_min_tokens"], max_tokens=ch["chunk_max_tokens"],
+            short_chunk_merge_tolerance=ch.get("short_chunk_merge_tolerance", 1.15),
+        )
+        n = len(chunks)
+        for i, c in enumerate(chunks):
+            rows.append({
+                "chunk_id": f"{sp.speech_id}_c{i:03d}", "speech_id": sp.speech_id, "leader": sp.leader,
+                "language": sp.language, "speech_date": sp.speech_date, "speech_type": sp.speech_type,
+                "source": sp.source, "chunk_index": i, "n_chunks_in_speech": n,
+                "relative_position": round(i / max(n - 1, 1), 3), "chunk_text": c.text,
+                "token_count": c.token_count, "word_count": count_words(c.text),
+                "paragraph_indices": ";".join(str(p + offset) for p in c.paragraph_indices),
+                "is_short": c.is_short,
+            })
+    return pd.DataFrame(rows, columns=CHUNK_COLUMNS), log
+
+
+def main(argv=None) -> int:
+    import argparse
+    import sys
+
+    import pandas as pd
+
+    from .config import load_config, path_for
+    from .tokenizer_utils import get_token_counter
+
+    ap = argparse.ArgumentParser(description="Phase 1b: paragraph-based chunking of cleaned speeches.")
+    ap.add_argument("--config", default=None)
+    ap.add_argument("--variant", default="original", choices=["original", "translated_en"])
+    ap.add_argument("--strip-ceremonial", action="store_true", help="robustness variant: drop opening/closing paragraphs")
+    ap.add_argument("--no-tokenizer", action="store_true")
+    args = ap.parse_args(argv)
+    for s in (sys.stdout, sys.stderr):
+        if hasattr(s, "reconfigure"):
+            s.reconfigure(encoding="utf-8", errors="replace")
+
+    cfg = load_config(args.config)
+    proc = path_for(cfg, "data_processed") / ("" if args.variant == "original" else args.variant)
+    src = proc / "speeches_clean.csv"
+    if not src.exists():
+        print(f"[chunking] {src} not found — run `python -m src.preprocess --variant {args.variant}` first")
+        return 1
+    speeches = pd.read_csv(src, dtype=str, keep_default_na=False)
+    count_many, method = get_token_counter(cfg, allow_tokenizer=not args.no_tokenizer)
+    df, log = build_chunks(speeches, cfg, count_many, strip_ceremonial=args.strip_ceremonial)
+    out = proc / ("chunks_noceremonial.csv" if args.strip_ceremonial else "chunks.csv")
+    df.to_csv(out, index=False, encoding="utf-8")
+
+    per_leader = df.groupby("leader").agg(chunks=("chunk_id", "count"), speeches=("speech_id", "nunique"),
+                                          mean_tokens=("token_count", "mean"), short=("is_short", "sum"))
+    print(f"[chunking] tokenizer: {method}")
+    print(per_leader.round(1).to_string())
+    print(f"[chunking] {len(df)} chunks · tokens min/median/max = {df.token_count.min()}/{int(df.token_count.median())}/{df.token_count.max()}"
+          f" · short chunks = {int(df.is_short.sum())}")
+    if log:
+        print(f"[chunking] ceremonial paragraphs stripped in {len(log)} speeches "
+              f"({sum(l['dropped_words'] for l in log)} words)")
+    print(f"[chunking] wrote {out}")
+    return 0
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main())
