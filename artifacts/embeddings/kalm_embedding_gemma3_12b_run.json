@@ -1,0 +1,18 @@
+{
+  "model_key": "kalm_embedding_gemma3_12b",
+  "hf_id": "tencent/KaLM-Embedding-Gemma3-12B-2511",
+  "device": "cuda",
+  "dtype": "bfloat16",
+  "attn_implementation": "sdpa",
+  "variant": "original",
+  "chunks_file": "chunks.csv",
+  "n_chunks": 250,
+  "dim": 3840,
+  "load_seconds": 65.9,
+  "encode_seconds": 6.8,
+  "normalized": true,
+  "random_seed": 42,
+  "n_queries": 15,
+  "query_prompt": "Instruct: Given a passage from a political speech, retrieve the thematic description that best matches its content\nQuery: ",
+  "peak_vram_gb": 22.83
+}

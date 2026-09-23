@@ -1,0 +1,9 @@
+language,theme,n_chunks,mean_cos_matched,mean_cos_en,mean_pct
+en,national_identity,242,0.2855333,0.2855333,0.49999997
+en,security_military,242,0.2728151,0.2728151,0.5
+en,economy_welfare,242,0.25734112,0.25734112,0.5
+en,foreign_policy,242,0.2624511,0.2624511,0.5
+en,democracy_institutions,242,0.24561211,0.24561211,0.50000006
+en,social_solidarity,242,0.30187654,0.30187654,0.5
+en,crisis_resilience,242,0.3214578,0.3214578,0.50000006
+en,future_reform_technology,242,0.29202864,0.29202864,0.5

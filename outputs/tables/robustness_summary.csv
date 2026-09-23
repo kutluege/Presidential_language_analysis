@@ -1,0 +1,125 @@
+check,comparison,metric,value,material_change,note
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,leader_pair_similarity_spearman,0.8303,False,10 leader pairs
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,leader_pair_similarity_pearson,0.9172,False,10 leader pairs
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,most_similar_pair,macron–merkel | macron–merkel,False,A | B
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,least_similar_pair,putin–trump | putin–trump,False,A | B
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,mean_offdiagonal_similarity,0.758 | 0.799,False,A | B
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,theme_profile_spearman_erdogan,0.8571,False,8 themes
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,theme_top3_overlap_erdogan,2.0,False,of 3
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,theme_profile_spearman_macron,0.619,False,8 themes
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,theme_top3_overlap_macron,2.0,False,of 3
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,theme_profile_spearman_merkel,0.8571,False,8 themes
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,theme_top3_overlap_merkel,3.0,False,of 3
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,theme_profile_spearman_putin,0.9048,False,8 themes
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,theme_top3_overlap_putin,3.0,False,of 3
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,theme_profile_spearman_trump,0.9524,False,8 themes
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,theme_top3_overlap_trump,3.0,False,of 3
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,framing_leader_order_spearman_conflict_threat_framing,0.9,False,5 leaders
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,framing_leader_order_spearman_cooperation_solidarity_framing,0.6,False,5 leaders
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,framing_leader_order_spearman_past_orientation,0.9,False,5 leaders
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,framing_leader_order_spearman_future_orientation,0.6,False,5 leaders
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,framing_leader_order_spearman_us_vs_them,0.9,False,5 leaders
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,framing_leader_order_spearman_gratitude_recognition,0.9,False,5 leaders
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,framing_leader_order_spearman_promises_commitments,0.9,False,5 leaders
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,dispersion_speech_to_leader_spearman,1.0,False,5 leaders
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,knn_same_leader_share_erdogan,0.832 | 0.598,False,A | B
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,knn_same_leader_share_macron,0.891 | 0.713,False,A | B
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,knn_same_leader_share_merkel,0.782 | 0.479,False,A | B
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,knn_same_leader_share_putin,0.919 | 0.762,False,A | B
+A,kalm_embedding_gemma3_12b vs qwen3_embedding_8b,knn_same_leader_share_trump,0.954 | 0.658,False,A | B
+B,original vs translated_en,status,skipped,False,no translations available
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,leader_pair_similarity_spearman,0.9636,False,10 leader pairs
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,leader_pair_similarity_pearson,0.9787,False,10 leader pairs
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,most_similar_pair,macron–merkel | macron–merkel,False,A | B
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,least_similar_pair,putin–trump | putin–trump,False,A | B
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,mean_offdiagonal_similarity,0.758 | 0.767,False,A | B
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,theme_profile_spearman_erdogan,0.9762,False,8 themes
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,theme_top3_overlap_erdogan,3.0,False,of 3
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,theme_profile_spearman_macron,0.9762,False,8 themes
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,theme_top3_overlap_macron,3.0,False,of 3
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,theme_profile_spearman_merkel,1.0,False,8 themes
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,theme_top3_overlap_merkel,3.0,False,of 3
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,theme_profile_spearman_putin,0.9762,False,8 themes
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,theme_top3_overlap_putin,3.0,False,of 3
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,theme_profile_spearman_trump,0.8571,False,8 themes
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,theme_top3_overlap_trump,3.0,False,of 3
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,framing_leader_order_spearman_conflict_threat_framing,1.0,False,5 leaders
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,framing_leader_order_spearman_cooperation_solidarity_framing,0.6,False,5 leaders
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,framing_leader_order_spearman_past_orientation,0.9,False,5 leaders
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,framing_leader_order_spearman_future_orientation,0.9,False,5 leaders
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,framing_leader_order_spearman_us_vs_them,0.9,False,5 leaders
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,framing_leader_order_spearman_gratitude_recognition,0.7,False,5 leaders
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,framing_leader_order_spearman_promises_commitments,1.0,False,5 leaders
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,dispersion_speech_to_leader_spearman,1.0,False,5 leaders
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,knn_same_leader_share_erdogan,0.832 | 0.811,False,A | B
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,knn_same_leader_share_macron,0.891 | 0.887,False,A | B
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,knn_same_leader_share_merkel,0.782 | 0.765,False,A | B
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,knn_same_leader_share_putin,0.919 | 0.819,False,A | B
+C,kalm_embedding_gemma3_12b all content vs kalm_embedding_gemma3_12b ceremonial removed,knn_same_leader_share_trump,0.954 | 0.937,False,A | B
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,leader_pair_similarity_spearman,1.0,False,10 leader pairs
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,leader_pair_similarity_pearson,0.9797,False,10 leader pairs
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,most_similar_pair,macron–merkel | macron–merkel,False,A | B
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,least_similar_pair,putin–trump | putin–trump,False,A | B
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,mean_offdiagonal_similarity,0.799 | 0.805,False,A | B
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,theme_profile_spearman_erdogan,0.881,False,8 themes
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,theme_top3_overlap_erdogan,2.0,False,of 3
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,theme_profile_spearman_macron,1.0,False,8 themes
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,theme_top3_overlap_macron,3.0,False,of 3
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,theme_profile_spearman_merkel,0.9524,False,8 themes
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,theme_top3_overlap_merkel,3.0,False,of 3
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,theme_profile_spearman_putin,1.0,False,8 themes
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,theme_top3_overlap_putin,3.0,False,of 3
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,theme_profile_spearman_trump,0.881,False,8 themes
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,theme_top3_overlap_trump,2.0,False,of 3
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,framing_leader_order_spearman_conflict_threat_framing,1.0,False,5 leaders
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,framing_leader_order_spearman_cooperation_solidarity_framing,0.9,False,5 leaders
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,framing_leader_order_spearman_past_orientation,0.9,False,5 leaders
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,framing_leader_order_spearman_future_orientation,0.9,False,5 leaders
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,framing_leader_order_spearman_us_vs_them,1.0,False,5 leaders
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,framing_leader_order_spearman_gratitude_recognition,1.0,False,5 leaders
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,framing_leader_order_spearman_promises_commitments,0.6,False,5 leaders
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,dispersion_speech_to_leader_spearman,1.0,False,5 leaders
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,knn_same_leader_share_erdogan,0.598 | 0.587,False,A | B
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,knn_same_leader_share_macron,0.713 | 0.697,False,A | B
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,knn_same_leader_share_merkel,0.479 | 0.424,False,A | B
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,knn_same_leader_share_putin,0.762 | 0.673,False,A | B
+C,qwen3_embedding_8b all content vs qwen3_embedding_8b ceremonial removed,knn_same_leader_share_trump,0.658 | 0.622,False,A | B
+D,centroid vs cross-neighbour,spearman_centroid_vs_cross_neighbor_similarity,0.7455,False,10 pairs
+D,centroid vs cross-neighbour,spearman_centroid_vs_knn_share,0.6364,False,10 pairs
+D,centroid vs cross-neighbour,top_pair_centroid,macron–merkel,False,
+D,centroid vs cross-neighbour,top_pair_cross_neighbor,macron–merkel,False,
+E,without trump2,similarity_trump_erdogan,0.735 → 0.741,False,with → without
+E,without trump2,similarity_trump_macron,0.736 → 0.741,False,with → without
+E,without trump2,similarity_trump_merkel,0.729 → 0.735,False,with → without
+E,without trump2,similarity_trump_putin,0.701 → 0.706,False,with → without
+E,without trump2,top3_themes_trump,"['Economy & Welfare', 'Security & Military', 'National Identity & Unity'] → ['National Identity & Unity', 'Security & Military', 'Economy & Welfare']",False,
+F,embedding vs NLI,leader_theme_spearman_erdogan,0.0952,True,8 themes
+F,matched vs English descriptions,leader_theme_spearman_erdogan,1.0,False,8 themes
+F,embedding vs NLI,leader_theme_spearman_macron,-0.4524,True,8 themes
+F,matched vs English descriptions,leader_theme_spearman_macron,1.0,False,8 themes
+F,embedding vs NLI,leader_theme_spearman_merkel,-0.4048,True,8 themes
+F,matched vs English descriptions,leader_theme_spearman_merkel,1.0,False,8 themes
+F,embedding vs NLI,leader_theme_spearman_putin,0.6667,False,8 themes
+F,matched vs English descriptions,leader_theme_spearman_putin,1.0,False,8 themes
+F,embedding vs NLI,leader_theme_spearman_trump,0.0,True,8 themes
+F,matched vs English descriptions,leader_theme_spearman_trump,1.0,False,8 themes
+G,original languages vs English,leader_pair_similarity_spearman,-0.4303,True,"10 pairs, same model"
+G,original languages vs English,most_similar_pair,putin–trump | macron–merkel,True,old | new
+G,original languages vs English,erdogan_pairs_mean_rank,8.5 → 4.2,True,of 10 (1 = most similar)
+G,original languages vs English,knn_same_leader_share_erdogan,0.995 → 0.598,True,old → new
+G,original languages vs English,knn_same_leader_share_macron,0.958 → 0.713,True,old → new
+G,original languages vs English,knn_same_leader_share_merkel,0.689 → 0.479,True,old → new
+G,original languages vs English,knn_same_leader_share_putin,0.919 → 0.762,True,old → new
+G,original languages vs English,knn_same_leader_share_trump,0.867 → 0.658,True,old → new
+G,original languages vs English,theme_profile_spearman_erdogan,0.2857,True,8 themes (old: language-matched descriptions; new: English)
+G,original languages vs English,theme_profile_spearman_macron,0.8571,False,8 themes (old: language-matched descriptions; new: English)
+G,original languages vs English,theme_profile_spearman_merkel,0.7619,False,8 themes (old: language-matched descriptions; new: English)
+G,original languages vs English,theme_profile_spearman_putin,0.9524,False,8 themes (old: language-matched descriptions; new: English)
+G,original languages vs English,theme_profile_spearman_trump,0.6429,False,8 themes (old: language-matched descriptions; new: English)
+H,rhetoric vs emotion,conflict_threat_framing_pct__vs__fam_hostility,0.4872,False,20 speeches
+H,rhetoric vs emotion,conflict_threat_framing_pct__vs__fam_threat_negative,0.3173,False,20 speeches
+H,rhetoric vs emotion,cooperation_solidarity_framing_pct__vs__fam_affiliative_positive,-0.1128,False,20 speeches
+H,rhetoric vs emotion,gratitude_recognition_pct__vs__emo_gratitude,-0.1068,False,20 speeches
+H,rhetoric vs emotion,conflict_threat_framing_pct__vs__valence,-0.1654,False,20 speeches
+H,rhetoric vs emotion,us_vs_them_pct__vs__fam_hostility,0.4947,False,20 speeches
+H,rhetoric vs emotion,future_orientation_pct__vs__emo_optimism,0.5594,False,20 speeches

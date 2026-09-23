@@ -1,0 +1,11 @@
+leader_a,leader_b,share_most_similar_pair,share_least_similar_pair,observed
+macron,merkel,0.738,0.0,0.871435284614563
+erdogan,macron,0.2585,0.0,0.8614677786827087
+erdogan,merkel,0.0015,0.0005,0.8240841627120972
+macron,trump,0.002,0.0,0.8204466700553894
+erdogan,trump,0.0,0.001,0.8155317306518555
+macron,putin,0.0,0.004,0.7884635925292969
+erdogan,putin,0.0,0.1095,0.7829931974411011
+merkel,trump,0.0,0.027,0.7780965566635132
+merkel,putin,0.0,0.4435,0.7533241510391235
+putin,trump,0.0,0.4145,0.7523903846740723

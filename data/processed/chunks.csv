@@ -1,0 +1,1104 @@
+chunk_id,speech_id,leader,language,speech_date,speech_type,source,chunk_index,n_chunks_in_speech,relative_position,chunk_text,token_count,word_count,paragraph_indices,is_short
+erdogan1_c000,erdogan1,erdogan,en,,symposium_speech,,0,10,0.0,"My dear brothers and sisters, I congratulate the administrators of SETA for organizing this symposium at a time when Türkiye stands on the eve of a historic decision to transition to the Presidential System.
+
+Every country has a form of government unique to its own circumstances. When we look at our country, we see that over the past 200 years we have gone through many different experiences one after another.",80,70,0;1,False
+erdogan1_c001,erdogan1,erdogan,en,,symposium_speech,,1,10,0.111,"My brothers and sisters, throughout this process our country has been worn down and diminished by wars and has paid very heavy prices. The Victory of Çanakkale represents the point at which we could no longer endure any further. Drawing inspiration and strength from Çanakkale, we fought our War of Independence.
+
+While European countries chose to maintain monarchy alongside democracy, we sent the dynasty out of the country and proclaimed the Republic. First, we had a single-party system—please pay attention to this—and then a multi-party system of government, through which our country has reached the present day.",118,97,2;3,False
+erdogan1_c002,erdogan1,erdogan,en,,symposium_speech,,2,10,0.222,"Since our transition to multi-party political life in 1950, we have always tried to keep our democracy standing under the shadow of military coups and tutelary administrations.
+
+The most important consequence of these distortions has been the constant threat to an environment of stability and confidence. Political instability also brings economic and social problems with it.
+
+Our search over the past 200 years, our experiences during the Republican era, and especially what we have gone through in recent years show us one reality: if we want to achieve our goals as a country and as a nation, we first need a strong and effective system of government in which it is completely clear who holds authority and responsibility.",139,118,4;5;6,False
+erdogan1_c003,erdogan1,erdogan,en,,symposium_speech,,3,10,0.333,"In fact, the Presidential System that we are discussing today did not suddenly emerge in a day, a month, or a year. Behind it lies such a deep and thought-provoking historical background.
+
+The system we are discussing is the most appropriate solution to the question of survival that Türkiye and the Turkish nation have faced for centuries. That is the issue.
+
+When we bring together all these experiences, the events we have lived through, and our reading of history, our country's need for a new constitution and, along with it, a new system of government becomes as clear as day. My brothers and sisters, as you can see, the Presidential System we are discussing today has nothing to do with the regime, one-man rule, or personalization of power.",152,128,7;8;9,False
+erdogan1_c004,erdogan1,erdogan,en,,symposium_speech,,4,10,0.444,"The issue is our effort, as a country and a nation, to establish a system of government that is much stronger, much more resilient, and much better suited to achieving our goals in light of the experiences we have had in the past.
+
+The greatest safeguard of the Presidential System is that it is democratic in the true sense of the word. Under this system, no one who fails to win the support of more than half of our nation can have the opportunity to govern the country.",96,88,10;11,False
+erdogan1_c005,erdogan1,erdogan,en,,symposium_speech,,5,10,0.556,"What we are engaged in here is a struggle over a system. This is a struggle over the system. What will happen after Erdoğan? Whatever the nation says will happen. Whatever God wills will happen.
+
+More importantly, Türkiye has already taken its first steps toward this system and has successfully completed them. I am referring to the constitutional amendment of 2007.
+
+Therefore, with the constitutional amendment, rather than personalizing the issue, we are placing governance within a system.",96,78,12;13;14,False
+erdogan1_c006,erdogan1,erdogan,en,,symposium_speech,,6,10,0.667,"My brothers and sisters, without a soul, the body is merely a corpse. Likewise, if we do not explain to our nation the spirit, essence, and fundamental meaning of this issue, the provisions of the constitutional amendment alone will remain nothing more than dry legal expressions.
+
+With this understanding, until the date of the referendum, until April 16, those of us who say “Yes” to the Presidential System of Government must travel across every corner of our country, use every means of communication, and explain the new system.",106,88,15;16,False
+erdogan1_c007,erdogan1,erdogan,en,,symposium_speech,,7,10,0.778,"Why? Yes for one nation. Yes for one flag. Yes for one homeland. Yes for one state.
+
+The essence of the Presidential System is that the authority to govern is given directly to the nation.
+
+Because the President, who will perform the executive function, will be accountable to the nation from whom he derives his authority, he will have to act at every step knowing that the eyes of the public are upon him.",84,74,17;18;19,False
+erdogan1_c008,erdogan1,erdogan,en,,symposium_speech,,8,10,0.889,"What did we say? Ours will be a Turkish-style Presidential System. We do not have to be exactly the same as others.
+
+The President—that is, the head of the executive—will represent the executive branch. He will form his cabinet, appoint its members, and dismiss them when necessary. But to whom will he be accountable? He will be accountable to the nation. He will be accountable to the nation.",84,68,20;21,False
+erdogan1_c009,erdogan1,erdogan,en,,symposium_speech,,9,10,1.0,"The executive branch, which currently has two heads—the President and the Prime Minister—will now be united under a single office. In this way, from the very beginning, our nation will know to whom it has given authority, who has assumed responsibility, and therefore whom it can hold accountable when necessary.
+
+The legislative body and the members of parliament serving there will focus solely on their primary duties under the new system.
+
+With the new system, which clearly separates the executive from the legislature, all members of parliament will be able to concentrate on parliamentary work.",109,95,22;23;24,False
+erdogan2022_c000,erdogan2022,erdogan,en,2022-12-31,new_year_message,,0,13,0.0,"My Dear Nation,
+
+I greet each and every one of you with my warmest feelings and deepest affection.
+
+Today, we are not only bringing one year to a close and welcoming a new one; we are also entering a period in which we will leave behind the first century of our Republic and step into its new century.
+
+We began the centennial commemorations of the National Struggle in Samsun in 2019.",87,71,0;1;2;3,False
+erdogan2022_c001,erdogan2022,erdogan,en,2022-12-31,new_year_message,,1,13,0.083,"In fact, we had hoped that, together, we would celebrate with great enthusiasm every centennial anniversary of the events that took place during the four-year period leading up to the proclamation of the Republic.
+
+We had also made very serious preparations for this.
+
+However, the measures implemented within the framework of the COVID-19 pandemic forced us to mark this period with more modest commemorative ceremonies.
+
+So much so that, even on the 100th anniversary of the opening of the Grand National Assembly, we had to make do with messages of congratulations.",111,91,4;5;6;7,False
+erdogan2022_c002,erdogan2022,erdogan,en,2022-12-31,new_year_message,,2,13,0.167,"Praise be to God, we have left those difficult days behind us.
+
+God willing, we will be able to celebrate the joy of the 100th anniversary of the founding of our Republic on October 29, 2023, with the enthusiasm we had envisioned.
+
+Moreover, 2023 also marks the milestone of a promise we made to our nation 12 years ago.",84,59,8;9;10,False
+erdogan2022_c003,erdogan2022,erdogan,en,2022-12-31,new_year_message,,3,13,0.25,"Since the 2011 elections, when we presented our 2023 goals—one of the most ambitious visions for democracy and development in our country—to the judgment of our nation and received its approval, we have worked day and night to fulfill this promise.
+
+The events that began immediately after Türkiye announced its 2023 goals and have continued without interruption until today are, in one respect, an indication of how many centers of power we unsettled with this step.",97,76,11;12,False
+erdogan2022_c004,erdogan2022,erdogan,en,2022-12-31,new_year_message,,4,13,0.333,"From the Gezi events of 2013 to the December 17–25 police-judiciary coup attempt that same year…
+
+From the PKK’s trench operations to DAESH’s harassment of our borders…
+
+From the attempted coup of July 15, 2016, to the international sabotage targeting our economy in 2018…
+
+Throughout this critical period, in which we were subjected to countless attacks from all sides, we never took a step back from our 2023 goals while simultaneously carrying out a multifaceted struggle.",116,76,13;14;15;16,False
+erdogan2022_c005,erdogan2022,erdogan,en,2022-12-31,new_year_message,,5,13,0.417,"On the contrary;
+
+By strengthening our national unity and solidarity…
+
+By expanding our counterterrorism strategy in the direction of eliminating threats at their source…
+
+By burying terrorists in the trenches they had dug…
+
+By crushing the coup plotters…
+
+By frustrating economic hitmen through our own programs…
+
+By mobilizing our country’s resources at full capacity in order to turn global crises into opportunities…
+
+In short, by struggling together with all our strength, we have always continued on our path under the guidance of our 2023 goals.",106,85,17;18;19;20;21;22;23;24,False
+erdogan2022_c006,erdogan2022,erdogan,en,2022-12-31,new_year_message,,6,13,0.5,"Without a doubt, the economic difficulties that began in the final months of 2021 and continued throughout 2022 have troubled all of us.
+
+The negative developments around the world, which struggled to withstand the economic shock caused first by the global pandemic and then by the Russia-Ukraine war, inevitably affected us as well.
+
+However, during this period, the most important feature distinguishing Türkiye from the rest of the world, particularly from developed countries, has been its economic model, which refuses to compromise on employment and production.",107,86,25;26;27,False
+erdogan2022_c007,erdogan2022,erdogan,en,2022-12-31,new_year_message,,7,13,0.583,"Yes, this country has experienced a rise in the cost of living.
+
+But everyone with a conscience will acknowledge that, during the same period, this country also reached the highest employment level, the highest production capacity, and the highest export figures in its history.
+
+In other words, we did not leave our nation alone in the face of the rising cost of living, nor did we abandon our people to their fate.",82,72,28;29;30,False
+erdogan2022_c008,erdogan2022,erdogan,en,2022-12-31,new_year_message,,8,13,0.667,"Instead;
+
+We increased employment so that everyone could earn an income…
+
+We tried to compensate for the loss of welfare experienced by workers through substantial increases…
+
+We continuously supported industry and commerce so that the wheels of the economy would keep turning.
+
+If Türkiye today is still standing tall despite all the attacks it has endured and all the crises that have swept across the world, we owe this to the determined struggle we have waged and to the distinctive political and economic policies we have pursued.",93,87,31;32;33;34;35,False
+erdogan2022_c009,erdogan2022,erdogan,en,2022-12-31,new_year_message,,9,13,0.75,"No one can deny the reality of a Türkiye that, through its sensible, composed, peace-oriented and moderate stance in international crises, has earned the respect of everyone, including its longstanding adversaries.
+
+While the world has been grappling with an energy crisis, through our own discoveries and through our position as a center of international supply and trade routes, we have placed ourselves in a different position.
+
+We have progressed from the days when terrorist organizations’ attacks targeting our cities were turned into an instrument of blackmail against our country to a level at which we are able to conduct operations dozens, and sometimes hundreds, of kilometers beyond our borders.",123,109,36;37;38,False
+erdogan2022_c010,erdogan2022,erdogan,en,2022-12-31,new_year_message,,10,13,0.833,"Wherever we travel in our country, we see hundreds of factories under construction, being opened, and shipping goods intensively both domestically and abroad.
+
+In tourism, we have not only compensated for our losses, but are also concluding a season in which we reached the highest level of revenue in our history.
+
+Whichever field you look at, you will see similar pictures.
+
+I would like to underline and repeat once again that we are closing 2022, just like the past 20 years, with gains greater than the difficulties we have faced.",111,90,39;40;41;42,False
+erdogan2022_c011,erdogan2022,erdogan,en,2022-12-31,new_year_message,,11,13,0.917,"God willing, in 2023, with our Türkiye Century vision, we will launch a much greater breakthrough in our country, one worthy of the new century of our Republic.
+
+Our goal is no longer merely to enter the highest tier of the global political and economic league.
+
+Our goal is to attain the political and economic power necessary to take our place among the very top ranks of that highest tier.",81,70,43;44;45,False
+erdogan2022_c012,erdogan2022,erdogan,en,2022-12-31,new_year_message,,12,13,1.0,"We regard the infrastructure of democracy and development that we have brought to our country over the past 20 years as the foundation, the beginning, the “Bismillah” of this great leap forward.
+
+In other words, we are only just beginning.
+
+Our aim is to make this beginning in the best and most effective way possible and to leave our young people a country in which they can carry the Türkiye Century to success in a manner consistent with our goals, our dreams, and our civilizational and historical heritage.
+
+With these feelings, I bid farewell to 2022 and wish every member of our nation, and all of humanity, a 2023 filled with peace, tranquility, prosperity, and well-being.
+
+May God protect you.
+
+Stay well and in good health…",161,126,46;47;48;49;50;51,False
+erdogan2023_c000,erdogan2023,erdogan,en,2023-12-31,new_year_message,,0,14,0.0,"My Dear Nation,
+
+I greet each and every one of you with my most heartfelt feelings and affection.
+
+Tonight, we are bringing the year 2023 to a close and stepping into 2024.
+
+I wish for the new calendar year to bring goodness to our country, our nation, and all of humanity.
+
+In fact, we believe that every new year should be welcomed with joy, hope, and excitement.",86,67,0;1;2;3;4,False
+erdogan2023_c001,erdogan2023,erdogan,en,2023-12-31,new_year_message,,1,14,0.077,"However, we are entering this new year with a sense of sorrow, both because of the adverse developments in our region and around the world, and because of the martyrs we lost in recent days.
+
+Of course, we continue to preserve our hope for a better, more peaceful, and more prosperous future for all of humanity.
+
+For this to happen, first of all, we need to see the so-called democratic and freedom-loving countries cease their support for terrorist organizations with blood on their hands.",98,84,5;6;7,False
+erdogan2023_c002,erdogan2023,erdogan,en,2023-12-31,new_year_message,,2,14,0.154,"For this to happen, first of all, we need to see all countries and institutions take a common stance against the killing of innocent children and women in Gaza.
+
+For this to happen, first of all, we need to see fair and sincere efforts being made to bring an end to conflicts, particularly the Russia-Ukraine war, which inflict suffering on individuals and squander the resources of countries.
+
+For this to happen, first of all, we need to see the wealth of societies that have been exploited for centuries and whose dignity has been trampled upon being used for their own future, prosperity, and security.",121,104,8;9;10,False
+erdogan2023_c003,erdogan2023,erdogan,en,2023-12-31,new_year_message,,3,14,0.231,"In short, in order to turn hopes into reality, we need to ensure that all countries, institutions, and individuals around the world unite around common values and principles.
+
+As Türkiye, we represent a different place, a different mission, and a different understanding in this global picture.
+
+As a state and as a nation, we are not merely striving to bring our own efforts for security and prosperity to fruition.",80,69,11;12;13,False
+erdogan2023_c004,erdogan2023,erdogan,en,2023-12-31,new_year_message,,4,14,0.308,"With the understanding that we ourselves cannot find peace unless an atmosphere of peace prevails in our region and throughout the world, we seek the same standards for everyone.
+
+With this understanding,
+
+We are working to bring peace efforts in our region to fruition.
+
+We are developing our relations with our friends in every field.
+
+We share the troubles and concerns of our brothers and sisters.
+
+We support every effort aimed at preparing the world for a better, fairer, and more prosperous future.",94,83,14;15;16;17;18;19,False
+erdogan2023_c005,erdogan2023,erdogan,en,2023-12-31,new_year_message,,5,14,0.385,"At a time when we have completed the first century of our Republic and entered its new century, which we call the Century of Türkiye, we continue to reinforce our determination and efforts as we set our sights on even greater goals.
+
+We believe that the oppression of the oppressor will not continue forever.
+
+We believe that the unjust and unbalanced global system of governance is going through its final struggles.
+
+We believe that the voice of the oppressed is spreading deeply throughout the world, and that these cries will grow and turn into the common conscience of humanity.",108,99,20;21;22;23,False
+erdogan2023_c006,erdogan2023,erdogan,en,2023-12-31,new_year_message,,6,14,0.462,"Indeed, we see that Türkiye’s statements and positions, which address not only its own citizens, friends, and brothers and sisters but all of humanity, are increasingly finding resonance in people’s hearts.
+
+My Dear Nation,
+
+Of course, along this arduous path, we constantly encounter new trials, new difficulties, and new obstacles.
+
+At the root of many of the problems we face, from the fight against terrorism to economic traps, lies the objective of preventing the construction of a great and powerful Türkiye.",100,81,24;25;26;27,False
+erdogan2023_c007,erdogan2023,erdogan,en,2023-12-31,new_year_message,,7,14,0.538,"As long as we, as a country, continue to use our potential and capabilities effectively, this struggle will become even tougher.
+
+Because Türkiye’s growth means disrupting the calculations of those who, for centuries, have been able to act freely all around us thanks to our setbacks.
+
+Our becoming stronger means bringing an end to the systems of those who use, exploit, and oppress everyone else for the sake of their own prosperity and security.",85,74,28;29;30,False
+erdogan2023_c008,erdogan2023,erdogan,en,2023-12-31,new_year_message,,8,14,0.615,"For our voice to be heard more means strengthening the pursuit of rights, justice, freedom, and conscience throughout the world.
+
+At no point in its history has our nation shied away from paying a price, making sacrifices, or taking responsibility in order to achieve its goals.
+
+The strong stance our nation has displayed in the face of the many critical events we have experienced over the past 21 years shows that this determination continues today.",86,75,31;32;33,False
+erdogan2023_c009,erdogan2023,erdogan,en,2023-12-31,new_year_message,,9,14,0.692,"Yes, I would like to repeat this once again from here.
+
+As long as our nation protects its unity, solidarity, and brotherhood, with God’s permission, no one will be able to divide us.
+
+As our state implements the Century of Türkiye vision, which is the next stage of our 2023 goals, with God’s permission, our crescent-and-star flag will continue to rise.",82,61,34;35;36,False
+erdogan2023_c010,erdogan2023,erdogan,en,2023-12-31,new_year_message,,10,14,0.769,"As we continue, through our political, economic, military, and diplomatic achievements, to inspire confidence in our friends and fear in our enemies, the fog before us will gradually clear.
+
+In short, as long as we do not compromise our independence or our future, no one will be able to stand in the way of our blessed march.
+
+In the past, we lost a great deal of time, energy, and human life because of tutelary forces, coup plotters, terrorist organizations, and political and social engineering projects imposed upon us as instruments of imperialists.",114,92,37;38;39,False
+erdogan2023_c011,erdogan2023,erdogan,en,2023-12-31,new_year_message,,11,14,0.846,"We have long since had enough of these schemes, and we have no intention of paying such heavy prices again.
+
+We parted ways long ago with those who kept our country occupied with internal struggles and deprived it of its historical legacy and the opportunities it should possess.
+
+This is precisely the meaning of the principle we repeat at every opportunity: “ONE NATION, ONE FLAG, ONE STATE, ONE HOMELAND.”",82,69,40;41;42,False
+erdogan2023_c012,erdogan2023,erdogan,en,2023-12-31,new_year_message,,12,14,0.923,"God willing, 2024 will be a year in which we leave behind the difficult period that began with the coup attempt, grew with the COVID-19 pandemic, and deepened with the conflicts in our region, and instead focus on our goals.
+
+At a time when global crises continue to intensify, we will once again demonstrate our difference and raise the star of a Türkiye that produces, creates employment, grows, and develops.",89,70,43;44,False
+erdogan2023_c013,erdogan2023,erdogan,en,2023-12-31,new_year_message,,13,14,1.0,"Yes, the 2023 goals were only the beginning; our real rise begins with the Century of Türkiye and with 2024.
+
+We sincerely believe that, with your support, we will bring this struggle to victory as well.
+
+With these feelings, I once again wish for the new calendar year to bring goodness to every member of our nation and to all of humanity.
+
+I greet you all with love and respect.
+
+Stay well and healthy.",92,74,45;46;47;48;49,False
+erdogan2024_c000,erdogan2024,erdogan,en,2024-12-31,new_year_message,,0,12,0.0,"My Beloved Nation,
+
+I greet you all with my heartfelt feelings and affection.
+
+Today, we bid farewell to 2024 and welcome the year 2025 with new hopes, expectations, and dreams.
+
+First and foremost, I pray to Almighty God that the new calendar year will bring goodness to our country, our nation, the broader geography with which we share bonds of heart and culture, and all of humanity.",87,67,0;1;2;3,False
+erdogan2024_c001,erdogan2024,erdogan,en,2024-12-31,new_year_message,,1,12,0.091,"I remember with mercy all our martyrs who laid down their lives for our independence and our future over the past year, and I express my gratitude to our veterans.
+
+As a nation, God willing, we will further strengthen our unity, solidarity, and togetherness in 2025 and stand even more firmly together.
+
+The year 2024, which we are leaving behind, witnessed many critical developments both within our country and across our region.",94,72,4;5;6,False
+erdogan2024_c002,erdogan2024,erdogan,en,2024-12-31,new_year_message,,2,12,0.182,"We successfully held our Local Administration Elections in an atmosphere of a true celebration of democracy, once again demonstrating to the entire world the maturity of Turkish democracy.
+
+While the will of our nation was freely expressed at the ballot box, once again, alongside our democracy, all 85 million of our citizens emerged as the winners.
+
+Regardless of their preferences, I would once again like to thank all my fellow citizens who turned the ballot boxes into places of celebration.",90,80,7;8;9,False
+erdogan2024_c003,erdogan2024,erdogan,en,2024-12-31,new_year_message,,3,12,0.273,"Despite the elections and the new crises that erupted in our region, we have begun to reap the benefits of the economic program that we have been implementing with determination.
+
+We achieved very important successes in employment, exports, production, tourism, the defense industry, and many other fields.
+
+We made significant progress in our efforts to rebuild and revive our earthquake-stricken regions, and these efforts will accelerate further in the new year.",83,71,10;11;12,False
+erdogan2024_c004,erdogan2024,erdogan,en,2024-12-31,new_year_message,,4,12,0.364,"The continuing decline in inflation, particularly at an increasing pace during the final months of the year, confirms that we will achieve our targets for 2025.
+
+By giving greater priority to policies that will compensate our citizens for their loss of welfare and increase their purchasing power, God willing, we will reach much better conditions.
+
+In 2025, we will continue with determination our fight against opportunists who seek to profit at the expense of our people through exorbitant prices, particularly in housing, rents, and food.",107,85,13;14;15,False
+erdogan2024_c005,erdogan2024,erdogan,en,2024-12-31,new_year_message,,5,12,0.455,"I especially ask my fellow citizens not to give credence to populist rhetoric that has imposed very heavy costs on Türkiye in the past.
+
+Just as we have resolved the problems of this country and this nation over the past 22 years, we will once again overcome the current cyclical difficulties in the economy.
+
+We are on the right path; with God's permission, we will achieve our goals.
+
+All we ask of you is a little more patience, resilience, and understanding.",95,81,16;17;18;19,False
+erdogan2024_c006,erdogan2024,erdogan,en,2024-12-31,new_year_message,,6,12,0.545,"My Beloved Nation,
+
+The final weeks of 2024 marked the beginning of a new era in Syria, a country with which we share deep-rooted historical, human, and neighborly ties.
+
+We will provide every form of support necessary for this new era to open the way for lasting peace, tranquility, stability, and economic prosperity in Syria.
+
+As stability takes root in Syria, I believe that the voluntary return of Syrian refugees who have longed for their homeland for the past 13 years will also become easier.",108,85,20;21;22;23,False
+erdogan2024_c007,erdogan2024,erdogan,en,2024-12-31,new_year_message,,7,12,0.636,"I say, “May God be pleased with you,” to all my fellow citizens who, throughout this period, displayed the finest examples of being an “Ansar Nation,” a nation that offers refuge and support.
+
+We are the country that has given one of the strongest responses to the massacres in Gaza from the very first day and has demonstrated its conscientious and just stance on every platform.
+
+We are making intensive efforts to bring an end to the massacres that have continued for 15 months in Gaza and the other Palestinian territories and to establish peace there as well.",114,98,24;25;26,False
+erdogan2024_c008,erdogan2024,erdogan,en,2024-12-31,new_year_message,,8,12,0.727,"In 2025, we will continue to work with all our strength for the establishment of a free, sovereign, and territorially integral Palestinian State based on the 1967 borders, with East Jerusalem as its capital.
+
+Bringing the war between Russia and Ukraine, both of which are our neighbors across the Black Sea, to an end through a just peace will remain one of our priorities.",82,64,27;28,False
+erdogan2024_c009,erdogan2024,erdogan,en,2024-12-31,new_year_message,,9,12,0.818,"Our hope is that a new era will begin to our north as well in 2025.
+
+While carrying out all these diplomatic initiatives beyond our borders, our most important agenda at home will be the strengthening of our “home front.”
+
+We are determined to make the Century of Türkiye a century of brotherhood.
+
+In the period ahead, we will take determined steps to turn our vision of a “TERROR-FREE TÜRKİYE” and a “TERROR-FREE REGION” into reality.",101,76,29;30;31;32,False
+erdogan2024_c010,erdogan2024,erdogan,en,2024-12-31,new_year_message,,10,12,0.909,"We are making every effort to ensure that this process, which will open a new path before our country, proceeds smoothly and with mutual goodwill and understanding.
+
+However, when necessary, we will not hesitate to bring into play the iron fist of our state inside the velvet glove.
+
+Within this framework, we hope and desire, God willing, to bring our nation new good news in 2025.",80,66,33;34;35,False
+erdogan2024_c011,erdogan2024,erdogan,en,2024-12-31,new_year_message,,11,12,1.0,"May Almighty God be our guide and helper.
+
+May Almighty God never let us fall short before our beloved nation, whom we are honored to serve, or before the hundreds of millions of oppressed people who have placed their hopes in Türkiye.
+
+With these wishes, I hope that the new calendar year brings goodness to our country, our nation, and all of humanity, and I greet each and every one of you with respect.
+
+May your new year be blessed.
+
+Stay well and in good health.",97,86,36;37;38;39;40,False
+erdogan2025_c000,erdogan2025,erdogan,en,2025-12-31,new_year_message,,0,14,0.0,"My Dear Nation,
+
+I greet you all with my most heartfelt feelings, with affection and respect.
+
+Today, we bid farewell to 2025 and prepare to say “hello” to 2026 with renewed excitement, new hopes, and new goals.
+
+I wish for the new calendar year to bring blessings to our country, our nation, the communities and lands to which we are bound by ties of the heart, and all humanity.",90,69,0;1;2;3,False
+erdogan2025_c001,erdogan2025,erdogan,en,2025-12-31,new_year_message,,1,14,0.077,"I commemorate with mercy all our heroes who were martyred, whether in our fight against terrorist organizations, drug traffickers, and urban criminals, or in the defense of the security and survival of our state.
+
+On behalf of myself and my nation, I extend my gratitude to each and every one of our veterans, who have paid great sacrifices for the peace and well-being of our 86 million citizens.",81,68,4;5,False
+erdogan2025_c002,erdogan2025,erdogan,en,2025-12-31,new_year_message,,2,14,0.154,"The year we have left behind witnessed important developments both in our country and around the world.
+
+Despite the growing atmosphere of war, crises, and tensions in our region, Türkiye, under the leadership of capable and competent cadres, continues its blessed journey with confidence.
+
+We are witnessing the positive results of the economic program we have implemented with determination across a broad range of areas.
+
+While the disinflation process continues, the reserves of our Central Bank are growing stronger, and we are shifting into a higher gear in production, investment, employment, and exports.",109,93,6;7;8;9,False
+erdogan2025_c003,erdogan2025,erdogan,en,2025-12-31,new_year_message,,3,14,0.231,"From tourism to the defense industry, we continue to break record after record in many fields.
+
+We believe that our “500,000 Social Housing Project,” for which the first draws were held two days ago, will not only enable our low-income citizens to become homeowners under highly favorable conditions, but will also contribute to reducing the excessive increases in housing and rental prices.
+
+This year, we intend to crown the gains we have achieved in the economy with reforms.",94,78,10;11;12,False
+erdogan2025_c004,erdogan2025,erdogan,en,2025-12-31,new_year_message,,4,14,0.308,"With the support of our Parliament, God willing, we will implement step by step the Türkiye Century Reform Program that we announced at our Grand Congress.
+
+My Esteemed Citizens,
+
+Throughout 2025, the first priority of our government was to heal the wounds caused by the February 6 Disaster of the Century.
+
+Although we cannot bring back the lives we lost, we have succeeded in rebuilding our cities with their infrastructure, public squares, green spaces, social facilities, and historical and cultural character.",99,81,13;14;15;16,False
+erdogan2025_c005,erdogan2025,erdogan,en,2025-12-31,new_year_message,,5,14,0.385,"As we promised, on December 27 in Hatay, with the participation of more than 100,000 of our brothers and sisters, we proudly handed over the key to our 455,000th earthquake home to its rightful beneficiaries.
+
+I wish our new homes and workplaces to be auspicious and beneficial for our earthquake survivors.
+
+I would like to thank all our brothers and sisters who, since February 6, have worked at construction sites around the clock, seven days a week, regardless of the cold of winter or the heat of summer, as well as all our institutions and benefactors who contributed to the construction of these homes.",136,104,17;18;19,False
+erdogan2025_c006,erdogan2025,erdogan,en,2025-12-31,new_year_message,,6,14,0.462,"As for those who, instead of supporting the reconstruction efforts, criticize everything that is done, I invite them to Hatay and our other disaster-stricken cities so that they can see firsthand what our state has accomplished.
+
+As the government and the Alliance, we will continue to keep the promises we have made and, God willing, we will never let our nation down.
+
+We will not leave alone not only our own people, but any of our brothers and sisters who look to our country for support.",99,86,20;21;22,False
+erdogan2025_c007,erdogan2025,erdogan,en,2025-12-31,new_year_message,,7,14,0.538,"The reflections of our political approach, which places rights, justice, and conscience at its core, can be seen throughout our region, particularly in Syria and Gaza.
+
+In neighboring Syria, which attained its freedom through the December 8 Revolution, recovery has accelerated and significant progress toward political stability has been made within a short period of time.
+
+As the atmosphere of peace in Syria has become more firmly established, voluntary returns have also increased, and over the past year 600,000 of our Syrian guests have returned to their homeland.",108,88,23;24;25,False
+erdogan2025_c008,erdogan2025,erdogan,en,2025-12-31,new_year_message,,8,14,0.615,"We believe that a strong Syria that has secured its political unity and territorial integrity will make exceptional contributions both to its region and to the world.
+
+As Türkiye, without distinguishing between Arab, Kurd, Turkmen, Sunni, Shia, or Nusayri, we will provide the new administration with the necessary support for the peace and security of the Syrian people.
+
+In Gaza, the ceasefire achieved with our contribution remains in place thanks to the restraint of our Gazan brothers and sisters, despite all of Israel’s violations.",102,84,26;27;28,False
+erdogan2025_c009,erdogan2025,erdogan,en,2025-12-31,new_year_message,,9,14,0.692,"We are making intensive efforts to ensure that Israel’s attacks come to an end, that the flow of humanitarian aid into Gaza accelerates, and that reconstruction efforts can begin.
+
+Until those responsible for the deaths of 71,000 of our brothers and sisters, most of them children and women, are held accountable before justice, we will neither retreat nor remain silent, and we will never allow the genocide to be forgotten.",86,70,29;30,False
+erdogan2025_c010,erdogan2025,erdogan,en,2025-12-31,new_year_message,,10,14,0.769,"We also continue our initiatives to bring the Russia-Ukraine War, which is about to enter its fifth year, to an end as soon as possible through a just and lasting peace.
+
+We are closely monitoring the growing provocations and threats directed against the interests of our country and the Turkish Cypriot people in the Eastern Mediterranean.
+
+I would like to underline once again today that we will never tolerate faits accomplis, opportunistic encroachments, or piracy in our Blue Homeland.",96,79,31;32;33,False
+erdogan2025_c011,erdogan2025,erdogan,en,2025-12-31,new_year_message,,11,14,0.846,"My Dear Nation,
+
+We have passed several important milestones in the Terror-Free Türkiye process, which will open an entirely new chapter not only for our country but also for our region.
+
+As the People’s Alliance, we have always acted constructively throughout this process, focused on solutions, and put not only our hands but our entire bodies under the stone, taking full responsibility.
+
+Our National Solidarity, Brotherhood and Democracy Commission, which has carefully listened to the relevant parties, will, God willing, soon finalize its concluding report, which we believe will give new momentum to the process.",114,95,34;35;36;37,False
+erdogan2025_c012,erdogan2025,erdogan,en,2025-12-31,new_year_message,,12,14,0.923,"It is our hope that the Commission will continue to act in a spirit of consensus during this final stage as well.
+
+This process, which aims to free our country from a 40-year affliction, must not be sacrificed to the calculations of short-term political interests.
+
+For our part, we will not hesitate to do whatever falls upon us to ensure that the process reaches its intended destination without suffering any setbacks.",82,71,38;39;40,False
+erdogan2025_c013,erdogan2025,erdogan,en,2025-12-31,new_year_message,,13,14,1.0,"Just as we have done for the past 23 years, with nothing but love for our nation and our homeland in our hearts, we will continue to serve all 86 million of our citizens and work selflessly for the prosperity, peace, and well-being of all of Türkiye.
+
+In 2026 as well, instead of merely talking, we will produce results; instead of engaging in polemics, we will take action; and we will continue to let our works and investments speak for us.
+
+May God be our guide and helper.
+
+I thank everyone who supports our Türkiye Century vision.
+
+With these thoughts, I congratulate you on the new calendar year and wish for 2026 to bring blessings to our country, our nation, our region, and all humanity.
+
+Once again, I greet you with affection and respect.
+
+Stay well and in good health…",177,140,41;42;43;44;45;46;47,False
+macron2022_c000,macron2022,macron,en,2022-12-31,new_year_address,,0,27,0.0,"My dear fellow citizens,
+
+For the sixth time, I have the privilege of sharing this moment of New Year’s wishes with you.
+
+With you, the officers and soldiers of our armed forces who protect us; with you, police officers, gendarmes, firefighters, security forces and sea rescuers who are keeping watch this evening. With you, doctors, healthcare workers and patients. With you, public servants who ensure the continuity of our public services. With you, citizens engaged in their professional lives or in our associations. With you, our fellow citizens overseas. With all of you who are with your families in France or abroad, and more particularly with those of you whose circumstances in life mean that you feel alone this evening. Those of you who are going through hardship, and to whom our thoughts go.",162,134,0;1;2,False
+macron2022_c001,macron2022,macron,en,2022-12-31,new_year_address,,1,27,0.038,"New Year’s addresses have something unique about them: they compel us to speak of a future which, in truth, we do not know, but which we know with certainty we will have to face, with our strengths and our weaknesses, but as a united country.
+
+In carrying out the responsibilities entrusted to me, I never lose sight of this imperative of the unity of the nation that we all form together.",81,71,3;4,False
+macron2022_c002,macron2022,macron,en,2022-12-31,new_year_address,,2,27,0.077,"If we were to give in to the spirit of division that presses upon us from every side, we would have virtually no chance of overcoming the challenges before us in such a harsh world and in such difficult times. And so, for 2023, I wish for us, as far as possible, to live as a united and supportive country, recognizing the place of each person and respecting everyone.",81,69,5,False
+macron2022_c003,macron2022,macron,en,2022-12-31,new_year_address,,3,27,0.115,"I think back to the wishes I expressed to you at the same time one year ago. Who could have imagined then that, just as we thought we were emerging, with great difficulty, from a global pandemic, within a matter of weeks we would have to confront unimaginable challenges: war returning to European soil following Russia’s aggression against Ukraine and its democracy; tens, perhaps hundreds, of thousands of deaths; millions of refugees; a terrible energy crisis; a looming food crisis; and the invocation of the gravest threats, including nuclear ones? Who could have predicted the wave of inflation that followed? Or the climate crisis, whose dramatic effects were once again visible in our country this summer?",137,116,6,False
+macron2022_c004,macron2022,macron,en,2022-12-31,new_year_address,,4,27,0.154,"And yet, throughout these seasons of danger, what has remained constant, once again this year, is our collective ability to rise together to these challenges.
+
+Yes, during this year, France, together with Europe, has upheld the voice of law and freedom in support of Ukraine; thousands of you demonstrated solidarity by welcoming into our towns and villages refugees fleeing the Russian invasion.
+
+National solidarity, financed by French taxpayers, has made it possible to mitigate the increase in energy prices for everyone, safeguard our businesses, and particularly protect the incomes of the most modest among us. And thanks to our collective action, we supported growth, kept inflation at levels lower than those experienced by our neighbours, and brought unemployment down to its lowest level in fifteen years. Indeed, this year we continued to create jobs, and quality jobs.",160,137,7;8;9,False
+macron2022_c005,macron2022,macron,en,2022-12-31,new_year_address,,5,27,0.192,"With every challenge, Europe has enabled us to act faster and more forcefully: to build a united front of resistance against Russia, to reinvest in our industries, and above all to find, on the scale of the continent, responses to the challenges of our century. Thus, during the first six months of this year, when France held the Presidency of the Council of the European Union, we took decisions to reduce our greenhouse gas emissions by more than half by 2030; we agreed on a carbon tax at our borders to protect our industries and our planet; together, we decided to establish a minimum tax on large multinational corporations in order to combat tax evasion; and together, we began to regulate major digital platforms more effectively.",147,126,10,False
+macron2022_c006,macron2022,macron,en,2022-12-31,new_year_address,,6,27,0.231,"And despite all these crises and all these challenges, 2022 was also, for all of us, a year of intense democratic activity, during which you renewed our National Assembly and, in the presidential election this spring, decided to entrust me with a new five-year mandate at the head of our nation, an honour that also places obligations upon me.
+
+2022 was also, once again, a year in which our country shone in the arts, culture and sport, with two Nobel Prizes and so many great moments of creativity and sporting achievement. Let us be proud of all this, and of everything we have accomplished together during the year that is now ending.",138,112,11;12,False
+macron2022_c007,macron2022,macron,en,2022-12-31,new_year_address,,7,27,0.269,"We must carry this pride and this confidence with us as we enter the year ahead. For I believe that 2023 will first of all be a year of questions that I know are causing concern, and of crises that we will once again have to confront.
+
+Will we face electricity cuts? If we continue to save energy, as we have been doing for the past few months and as I announced to you as early as 14 July, and if we continue to bring our nuclear reactors back into service as planned, we will get through it. It is in our hands.",118,103,13;14,False
+macron2022_c008,macron2022,macron,en,2022-12-31,new_year_address,,8,27,0.308,"Will energy prices rise? Here too, we have put concrete responses in place. I say this to each and every one of you because, although energy prices have reached historic levels, increases will remain capped in our country. I say this in particular to our tradespeople, our bakers, but also to our most industrial businesses. Starting tomorrow, you will have tailored support in addition to the tariff shield already in place, so that the long-term survival of your businesses, our jobs and our competitiveness can be ensured. And whenever necessary, the Government will adapt its responses, as it has done at every stage. Above all, we will accelerate solutions that will enable us to free ourselves from our dependencies and establish an electricity price that reflects its actual cost of production.",152,131,15,False
+macron2022_c009,macron2022,macron,en,2022-12-31,new_year_address,,9,27,0.346,"Will we once again experience a wave of Covid, and will the epidemic ever end? Here too, we will be able to cope. First, thanks to the reasonable and appropriate use of the protective measures against the virus that we have learned. Second, thanks to vaccination, which has demonstrated its effectiveness; and this evening I particularly encourage all our fellow citizens over the age of 70 to receive their booster dose, or to get vaccinated if they have not already done so. Finally, by testing, sequencing and introducing border controls.",106,90,16,False
+macron2022_c010,macron2022,macron,en,2022-12-31,new_year_address,,10,27,0.385,"That is what the Government has decided to do in our airports starting tomorrow for flights arriving from China, where the epidemic is in full swing and where many restrictions have been lifted.
+
+Will we have to work longer in 2023? Here too, as I pledged before you, this year will indeed be the year of a pension reform intended to ensure the balance of our system for the years and decades ahead. We need to work more. That is the very purpose of the unemployment insurance reform introduced by the Government and passed by Parliament. It is also the purpose of this reform, on which the social partners and the Government will work in the coming months in order to finalize the new rules that will apply from the end of the summer of 2023.",154,136,17;18,False
+macron2022_c011,macron2022,macron,en,2022-12-31,new_year_address,,11,27,0.423,"The objective is to strengthen our pay-as-you-go pension schemes, which without such measures would be threatened, because we continue to finance them through borrowing. To achieve this, the extension of our working lives will be gradual and will take place in stages over nearly ten years. It will also be fair, taking account of long careers, interrupted careers, and the difficulty of certain tasks and professions.
+
+But this is what will enable us to balance the financing of our pensions in our country and, in a country where people are living longer—which is a fortunate thing—to improve the minimum pension for all those who have worked the required number of quarters, and to pass on to our children a social model that is fair and strong because it will be credible and sustainably financed.",152,134,19;20,False
+macron2022_c012,macron2022,macron,en,2022-12-31,new_year_address,,12,27,0.462,"Throughout the long history of our nation, there have been generations called upon to resist, others called upon to rebuild, and still others called upon to expand the prosperity that had been achieved.
+
+As for us, it falls to us to confront this new chapter in a difficult era and, beyond the emergencies of this year, some of which I have just mentioned, to take responsibility for rebuilding many of the pillars of our nation, whether our schools, our healthcare system, our transport, the development of our regions, our industries, and many others.",108,93,21;22,False
+macron2022_c013,macron2022,macron,en,2022-12-31,new_year_address,,13,27,0.5,"To do this, we must remain united, but we must also preserve an undiminished collective ambition: an ambition to continue transforming our country in the face of vested interests, in the face of all the apparently good reasons for continuing as before, and in the face of the temptation to succumb to a spirit of defeat.
+
+That is how we will serve our young people and the generations to come. Over the past five years, we have already done much of this work of transformation, simplification and overcoming inertia. But it is sometimes still too little, and too often too slow.",117,101,23;24,False
+macron2022_c014,macron2022,macron,en,2022-12-31,new_year_address,,14,27,0.538,"And like you, I too grow impatient, but without ever giving in to easy solutions or fatalism. And so my wish for us in 2023 is that, through our work and our commitment, we strive to rebuild a France that is stronger and fairer, so that we may pass it on to our children.
+
+It is through our work and our commitment that we will be able to increase the resources of our domestic security forces, our justice system and our armed forces in the face of new geopolitical challenges and the multiplication of conflicts.",110,95,25;26,False
+macron2022_c015,macron2022,macron,en,2022-12-31,new_year_address,,15,27,0.577,"It is through our work and our commitment that we will fight more effectively against trafficking and against illegal immigration, both in mainland France and in our overseas territories. Let us always remain faithful to our values. Let us integrate people more effectively through language and work; let us protect the women and men who fight for freedom, such as those coming from Iran or elsewhere; but let us maintain control of our borders and preserve the unity of the nation.",88,81,27,False
+macron2022_c016,macron2022,macron,en,2022-12-31,new_year_address,,16,27,0.615,"It is through our work and our commitment that we will also build a productive and environmentally responsible nation. Because the ecological transition is a battle that we must win, we must pursue it with determination and method. Ecological planning will be the instrument of this historic transformation, enabling us to reduce our CO2 emissions and preserve our biodiversity. With our France 2030 plan, we will continue to invest, innovate and deploy environmental solutions on an industrial scale. And following the law intended to accelerate the development of renewable energy, the nuclear energy law will mark the beginning of the construction of new power plants on our territory.",124,108,28,False
+macron2022_c017,macron2022,macron,en,2022-12-31,new_year_address,,17,27,0.654,"It is through our work and our commitment that we will also restore a nation founded on trust. By making our secularism effective every day, because it is a principle of freedom. And it takes nothing away from the place of religion in each person’s private conscience, for all those who believe. At this moment, I pay tribute to the memory of His Holiness Benedict XVI, whose passing, I know, affects many Catholics in France and throughout the world.",92,79,29,False
+macron2022_c018,macron2022,macron,en,2022-12-31,new_year_address,,18,27,0.692,"This nation of trust will also be strengthened by an unwavering fight against all forms of discrimination, within a society founded on respect and recognition. It will also be reinforced by the daily struggle that we will continue to pursue in support of people with disabilities.
+
+It is through our work and our commitment that we must rebuild our great public services so that they fully uphold our ideal of equality. Through the National Council for Refoundation, we have begun to renew the contract between generations and to work towards providing better support for our elderly citizens who are losing their independence.",111,102,30;31,False
+macron2022_c019,macron2022,macron,en,2022-12-31,new_year_address,,19,27,0.731,"We have also begun to restore confidence in our national education system and our healthcare system, drawing on the energy and dedication of our teachers and healthcare workers. We will pursue this work vigorously throughout the year ahead, through clear and strong choices and through action carried out as close as possible to the realities on the ground.
+
+It is through our work and our commitment that we will build a fairer society. A fairer society is first and foremost one in which equality between women and men is a reality. This, which has been the great cause of both of my presidential terms, will continue to shape the Government’s work and inspire our actions every day.",129,117,32;33,False
+macron2022_c020,macron2022,macron,en,2022-12-31,new_year_address,,20,27,0.769,"But a fairer society is also one that is fairer socially. Not through higher taxes—no. Nor by leaving more debt to future generations. But by improving the support we provide to our children and adolescents, reforming vocational secondary education, and improving the guidance provided to our young people so that they can find the right training and the right careers.
+
+By reindustrializing our country faster and more strongly, we will create new jobs and careers for the future. For the greatest injustice in our country remains the influence of family background and the weakness of social mobility. And the answer lies in schools, in career guidance, in higher education, in our innovation policy and in our industrialization.",139,117,34;35,False
+macron2022_c021,macron2022,macron,en,2022-12-31,new_year_address,,21,27,0.808,"And because confidence in the vitality of our democratic life has also weakened, we know that we will have much to do in the months ahead. In the coming weeks and months, I will lay the first foundations of a Universal National Service. We will have to initiate the necessary changes to our institutions and to our public and civic life. And together with the National Assembly and the Senate, as well as the Economic, Social and Environmental Council, we will have to build a better functioning of our institutions and involve our citizens more frequently.",105,96,36,False
+macron2022_c022,macron2022,macron,en,2022-12-31,new_year_address,,22,27,0.846,"France and Europe have an eminent role to play at this moment in the history of humanity, as so many authoritarian regimes challenge our democracies and their foundations. Protecting our children, protecting our free and independent information, protecting the free and just order that enables citizens to live happy lives: these are some of the struggles of our time.
+
+We have a duty to take them on.
+
+Yes, it is through our work and our commitment that we will give ourselves the means to fulfil our aspirations for today and our ambitions for tomorrow.",105,94,37;38;39,False
+macron2022_c023,macron2022,macron,en,2022-12-31,new_year_address,,23,27,0.885,"In short, in 2023, step by step, we will have to consolidate our energy, economic, social, industrial, financial and strategic independence, and strengthen what I might call our strength of spirit. This is what we owe to our children.
+
+This is not, and never will be, a pursuit of illusions doomed from the outset. For French independence must find in Europe its extension and its complement. At a time when so many countries dream of becoming empires, and so many companies imagine themselves as kingdoms, we have a continent capable of forming an area of peace and freedom, prosperity, solidarity, law and power. Since 2017, we have pursued this struggle to bring Europe’s strengths together. So that, as 27 nations, we may be stronger.",161,124,40;41,False
+macron2022_c024,macron2022,macron,en,2022-12-31,new_year_address,,24,27,0.923,"That is why I have fought this battle in recent years, why you have heard me warn other Europeans as well about the need to defend our industries and our jobs following decisions taken on other continents a few weeks ago, and why I will redouble my efforts at the beginning of this year.
+
+My dear fellow citizens,
+
+Here and this evening, on your behalf, I want to say to our Ukrainian friends: we respect you and we admire you. Your struggle in defence of your nation is heroic, and it inspires us. And throughout the year ahead, we will stand unwaveringly by your side. We will help you until victory, and together we will work to build a just and lasting peace. You can count on France, and you can count on Europe.",154,134,42;43;44,False
+macron2022_c025,macron2022,macron,en,2022-12-31,new_year_address,,25,27,0.962,"As for us, let us be this generation of builders.
+
+In the coming months of 2023, the reconstruction work on Notre-Dame de Paris, this extraordinary project, will move closer to completion. In the coming months, our entire country will come together in a spirit of fraternity as we approach the Olympic and Paralympic Games and as France hosts the Rugby World Cup. In the coming months, thanks to the France 2030 plan, the first electric cars built entirely on our territory will roll out of our factories.",111,87,45;46,False
+macron2022_c026,macron2022,macron,en,2022-12-31,new_year_address,,26,27,1.0,"And so many other projects will take shape throughout our country, enabling France both to reduce carbon emissions and to reduce unemployment. In the coming months, in our classrooms, in our hospitals and in our doctors’ practices, you will see the first tangible changes resulting from the renewal of our schools and our healthcare system.
+
+For all of this, I wish for all of us unity, boldness, collective ambition and kindness. We have overcome so many crises together, my dear fellow citizens. I know that we are capable of overcoming those that lie ahead and of being the generation entrusted with the responsibility of rebuilding France and Europe so that we may pass them on to our children stronger, more beautiful and more just.
+
+Together, we will succeed.
+
+And it is with this confidence that I extend to all of you my very best wishes for the New Year.
+
+Long live the Republic.
+
+Long live France.",177,156,47;48;49;50;51;52,False
+macron2023_c000,macron2023,macron,en,2023-12-31,new_year_address,,0,19,0.0,"French women and men, in metropolitan France, in our overseas territories and abroad,
+
+As I extend my best wishes to you, I want to begin by expressing our gratitude to all those among our fellow citizens who, once again this evening, are protecting, caring for others, helping, and ensuring the continuity of the life of the Nation. Thanks to them, we are able to spend these moments of transition from one year to the next with our families and loved ones. And at this moment, I also want to express my particular affection for those who are ill or who will remain alone.",117,103,0;1,False
+macron2023_c001,macron2023,macron,en,2023-12-31,new_year_address,,1,19,0.056,"The year 2023 was marked by the continuation of the war in Ukraine, the war now taking place in the Middle East and the bombardments of Gaza; by the terrorist attacks of October 7 in Israel, in which 41 French citizens were killed, and this evening my thoughts are with their families, just as they are with the families of our compatriots who are still being held hostage.",84,68,2,False
+macron2023_c002,macron2023,macron,en,2023-12-31,new_year_address,,2,19,0.111,"It was also marked by growing geopolitical tensions, by the consequences of climate disruption on our territory, and by acts of terrorism on our soil. By divisions, acts of hatred and, at times, violence on several occasions, which weaken the cohesion of the Nation. Finally, inflation has taken its toll, making everything more difficult: finding housing, getting around, doing the shopping.
+
+There were, of course, happy moments, moments of pride, but I know how present the fear of the return of war, of decline, and of losing control remains.",110,89,3;4,False
+macron2023_c003,macron2023,macron,en,2023-12-31,new_year_address,,3,19,0.167,"And yet I am convinced—and this is not false optimism—that in this context of crises, the best can emerge.
+
+That is why I have never ceased to follow the same course: to act with determination and consistency, for today and for tomorrow. For seven years, from the position in which you placed me, I have sought to make France stronger and fairer, to liberate, protect and unite. That is our course, and we are holding to it. And the same was true in 2023.",105,84,5;6,False
+macron2023_c004,macron2023,macron,en,2023-12-31,new_year_address,,4,19,0.222,"In 2023, France was undoubtedly one of the Western countries that, despite the circumstances, made the greatest number of decisions and carried out the greatest number of transformations. Some of them, such as the pension reform, were, I know, unpopular. I stand by them because I had committed to them and because they were necessary for the country.
+
+All these past months have therefore been a far cry from the powerlessness that some had predicted for us, and that is a good thing. And I want here to thank especially the Prime Minister and her government.",114,96,7;8,False
+macron2023_c005,macron2023,macron,en,2023-12-31,new_year_address,,5,19,0.278,"In 2023, we acted—acted in pursuit of our goal of reindustrialisation and full employment, the first results of which are already visible. Pensions, unemployment insurance, the revival of our green industries, the acceleration of France 2030, the overhaul of vocational high schools, the reform of Pôle emploi and the active solidarity income, and the reform of the European electricity market: all these major transformations were decided upon, voted on, and began to take effect this year.",104,76,9,False
+macron2023_c006,macron2023,macron,en,2023-12-31,new_year_address,,6,19,0.333,"And this year we continued to create jobs while reducing our greenhouse gas emissions even more rapidly, in accordance with our commitments. This proves that you have risen to the challenge of this collective mobilisation.
+
+Thanks to this economic strengthening, we remain able to finance our social model, to protect ourselves against crises or inflation, but also to invest in strengthening our public services. And that is what we have done.",80,71,10;11,False
+macron2023_c007,macron2023,macron,en,2023-12-31,new_year_address,,7,19,0.389,"We invested in our schools and our healthcare system in order to provide better support and better address inequalities of opportunity. We laid the foundations for an unprecedented ecological planning strategy and committed substantial resources to support each and every one of you through this transition.
+
+In 2023, we also passed historic laws for the years ahead in order to protect ourselves. A historic law for our armed forces: over the course of a decade, the budget of our military will have doubled. A historic law for our police officers, gendarmes, magistrates and court clerks, in order to ensure public order and republican unity, including the creation of thousands of positions to better protect you. We will continue to restore authority wherever it is lacking in the face of antisocial behaviour and crime.",156,133,12;13,False
+macron2023_c008,macron2023,macron,en,2023-12-31,new_year_address,,8,19,0.444,"On immigration, the law passed in December, together with the agreement reached at the European level, gives us the tools necessary to better uphold the principles of the Republic: that is, both to fight smugglers and illegal immigration, and to better integrate those who are meant to remain on our soil—refugees, students, researchers and workers.
+
+I am, of course, well aware of the impatience—and I would even venture to say that I share it—even though the first changes are already visible. I know that you would like us to do more and to do it faster. And it is to achieve this objective that 2024 must above all be a year of determination. To act, to act again, in the interest of the Nation.",154,124,14;15,False
+macron2023_c009,macron2023,macron,en,2023-12-31,new_year_address,,9,19,0.5,"We will be determined to act for schools, childhood and education, in order to restore the level of our pupils, the authority of our teachers, and the strength of our secular and republican education system. After strengthening our economy, strengthening the State and our public services, we must now undertake a civic strengthening of the Nation. France is a culture, a history, a language, universal values that must be learned from the earliest age. By every generation.",90,77,16,False
+macron2023_c010,macron2023,macron,en,2023-12-31,new_year_address,,10,19,0.556,"We will also be determined to make our Republic stronger by fighting crime, tackling discrimination more firmly, and enabling concrete progress toward equality between women and men, for early childhood, and for our fellow citizens with disabilities. We will be equally determined to intensify the strengthening of our industrial, technological and scientific capabilities. We must do everything we can to achieve our ambition of full employment, continue to innovate, but also attract talent and businesses and produce more in France. Accordingly, next year we will embark on major cutting-edge projects, from nuclear energy to artificial intelligence and transport. So that by 2027, we will be ten years ahead in areas where, in 2017, we were ten years behind.",145,118,17,False
+macron2023_c011,macron2023,macron,en,2023-12-31,new_year_address,,11,19,0.611,"In 2024, we will have to accelerate our efforts even further and radically simplify the lives of our entrepreneurs, farmers, shopkeepers, craftspeople, elected representatives—particularly our mayors—and many sectors, including housing.
+
+Finally, we will be determined to act so that in 2024 our ecological approach—this distinctively French approach to ecology—and our planning continue to develop as a model and a unique path, allowing us to move away from fossil fuels and gain greater independence and progress. France, which already produces some of the least carbon-intensive electricity in Europe, will completely phase out coal by 2027. And we will pursue this same fight internationally, including through our Pact for People and the Planet.",149,111,18;19,False
+macron2023_c012,macron2023,macron,en,2023-12-31,new_year_address,,12,19,0.667,"2024: a year of determination, effectiveness and results. And in the weeks ahead, I will have the opportunity to explain to you how our Nation will meet these challenges.
+
+My dear compatriots, action is not an option. Action is our duty toward future generations. That is why I will tirelessly stand with those who act in the service of the country, and never with those who refuse to tell you the truth in order to justify doing nothing and who, in the end, weaken us. Never with those who put electoral calculations, petty arrangements or their personal interests first.
+
+We must therefore continue strengthening the Nation in the face of the disorder of the world. For strength of character is the virtue required in difficult times.
+
+2024 will also be a year of decisive choices.",160,135,20;21;22;23,False
+macron2023_c013,macron2023,macron,en,2023-12-31,new_year_address,,13,19,0.722,"We will have to choose a stronger, more sovereign Europe, in light of the legacy of Jacques Delors. A Europe that works for peace in the Middle East and on our own continent, by continuing to support the Ukrainian people and, with them, our security, our freedom and our values. Next June, you will be called upon to decide whether to continue strengthening our European sovereignty in the face of these dangers: whether to stop Russia and support the Ukrainians, or give way to authoritarian powers in Ukraine; whether to continue building Europe or bring it to a halt; whether to continue the ecological and productive transition or turn back; whether to affirm the strength of liberal democracies or give way to the lies that sow chaos.",145,127,24,False
+macron2023_c014,macron2023,macron,en,2023-12-31,new_year_address,,14,19,0.778,"Finally, 2024 will be a year of French pride. Pride in the thousands of craftsmen, builders and entrepreneurs who have taken part in the magnificent project to rebuild Notre-Dame de Paris, whose spire once again rises toward the sky above a cathedral that will reopen on December 8.
+
+We are a Nation of builders and craftspeople, capable, when united, of resisting and rising again. Yes, in five years, as promised, we will have rebuilt the cathedral and accomplished the impossible. We are that Nation which, when proud of itself, always carries a universal hope.",120,94,25;26,False
+macron2023_c015,macron2023,macron,en,2023-12-31,new_year_address,,15,19,0.833,"In 2024, we will also celebrate our History. Eighty years after 1944, we will take pride in our past and in our heroes whose destinies became intertwined. Soldiers of the Allied armies, but also French citizens by birth or by choice, French and foreign members of the Resistance. All fighting so that a France faithful to the spirit of the Enlightenment and to the spirit of our Revolution could be liberated.",89,71,27,False
+macron2023_c016,macron2023,macron,en,2023-12-31,new_year_address,,16,19,0.889,"2024 will be a year of pride in the French language. After restoring the Château de Villers-Cotterêts and creating there the Cité internationale de la langue française, in a few months we will welcome the French-speaking world there.
+
+2024 will also be a year of French sporting pride, as the Olympic and Paralympic Games will take place here, in France, and therefore, in a sense, at home for all of us, both in metropolitan France and in our overseas territories.",110,80,28;29,False
+macron2023_c017,macron2023,macron,en,2023-12-31,new_year_address,,17,19,0.944,"We will be proud of our athletes, our artists, our landscapes, and of this great popular celebration, made possible by thousands of volunteers, who will also build a sporting legacy for our Nation. Through the commitment of us all, beginning tomorrow.
+
+Yes, 2024 will, as you have understood, be a truly French vintage year. Because it is only once every decade that we commemorate our Liberation on such a scale. It is only once a century that we host the Olympic and Paralympic Games. And it is only once in a millennium that we rebuild a cathedral. It is only once in a generation that the destiny of the next is decided, as it undoubtedly is being decided now.",143,119,30;31,False
+macron2023_c018,macron2023,macron,en,2023-12-31,new_year_address,,18,19,1.0,"2024: a year of determination, choices, renewal and pride. At its heart, a year of hope. Yes, much of our future will be decided this year. So it is up to us to act together. It is up to us to choose rather than endure, to chart the course rather than follow it.
+
+And our entire History teaches us that the determination of a few can overcome every seeming inevitability. So it is up to us to act—yes, to act together, to continue to move beyond divisions and narrow group interests, because within our people lie the deep reserves of strength needed to meet these challenges.
+
+My dear compatriots, I wish you a very beautiful and very happy year 2024.
+
+So that France may unite, act and shine. May it be worthy of the “indefinable splendour of those who are destined for great undertakings,” because that is who we are.
+
+Long live the Republic. Long live France.",202,157,32;33;34;35;36,False
+macron2024_c000,macron2024,macron,en,2024-12-31,new_year_address,,0,16,0.0,"My dear compatriots,
+
+Together, this year, we proved that “impossible” is not a French word.
+
+We became the first nation to amend our Constitution in order to guarantee women’s right to voluntarily terminate a pregnancy. We advanced equality between women and men, among other things thanks to the courage of those who dared to speak out.
+
+We continued to build an ecology based on progress, to fight climate change by reducing our emissions, by opening factories, and by continuing to fight for both our present and our future.",105,88,0;1;2;3,False
+macron2024_c001,macron2024,macron,en,2024-12-31,new_year_address,,1,16,0.067,"We commemorated the bravery of our Resistance fighters and of those who liberated us, 80 years later, from Normandy to Provence.
+
+We remembered those who fell so that France could rise again. Our heroes, our elders, our allies, those who came from every continent to liberate our homeland.
+
+We also experienced, as I promised a year ago, moments of great pride. First of all, this summer we organized Olympic and Paralympic Games that immediately entered history, entered our memories and our hearts, that made a united country come alive, from Saint-Denis to Tahiti, and showed a France full of boldness, flair and extraordinary freedom.",135,104,4;5;6,False
+macron2024_c002,macron2024,macron,en,2024-12-31,new_year_address,,2,16,0.133,"A France that shines through its sporting achievements, its emotions, its generosity, and through a city of Paris shown at its very best.
+
+Our Olympic and Paralympic Games, yes, are and will remain an unforgettable moment in the life of the Nation.
+
+In this month of December 2024, as we had promised, we returned Notre-Dame de Paris to worship and reopened it to the public. Five years after the fire of 2019, the rebuilt Notre-Dame remains a symbol of our French determination.",109,82,7;8;9,False
+macron2024_c003,macron2024,macron,en,2024-12-31,new_year_address,,3,16,0.2,"Thousands of workers, craftsmen, women and men rebuilt the cathedral day after day throughout those five years. It was returned to everyone, and the entire world was able to admire this work.
+
+Tomorrow, let us know how to preserve the best of what we were during this year, 2024. United, determined and in solidarity, and in the face of every major ordeal, in the face of what so many people said was impossible, we succeeded because we stood together.",97,79,10;11,False
+macron2024_c004,macron2024,macron,en,2024-12-31,new_year_address,,4,16,0.267,"United, determined and in solidarity, we also stood together in the face of the trials and tragedies of 2024: climate-related disasters, the crisis our farmers are still experiencing today, whom we will continue to protect and support, tensions in several of our territories, and the global economic slowdown.
+
+Together, today we stand alongside the people of Mayotte, whom we are thinking of with emotion and solidarity. And of course, we are and will remain alongside all of our overseas territories, from the Antilles to New Caledonia, which has suffered so greatly in recent months.",118,94,12;13,False
+macron2024_c005,macron2024,macron,en,2024-12-31,new_year_address,,5,16,0.333,"We are also confronted with political instability. It is not unique to France; we also see it among our German friends, who have just dissolved their Parliament. But it legitimately concerns us.
+
+I must acknowledge this evening that, for the moment, the dissolution has brought more divisions to the National Assembly than solutions for the French people.
+
+If I decided to dissolve the Assembly, it was to give you back your voice, to restore clarity and to avoid the paralysis that threatened us. But lucidity and humility require us to recognize that, at this point, this decision has produced more instability than calm, and I fully accept my share of responsibility for it.",129,113,14;15;16,False
+macron2024_c006,macron2024,macron,en,2024-12-31,new_year_address,,6,16,0.4,"The current Assembly nevertheless represents the country in all its diversity, and therefore also in its divisions. It is fully legitimate, and in this unprecedented but democratic configuration, it must be capable of forming majorities, as parliaments in the great democracies do, and our government must be able to follow a path of compromise in order to act.
+
+I would like to thank Michel Barnier here, who, after Elisabeth Borne and Gabriel Attal, committed himself with sincerity, and I extend my very best wishes to François Bayrou and his government.",111,90,17;18,False
+macron2024_c007,macron2024,macron,en,2024-12-31,new_year_address,,7,16,0.467,"I hope that the year ahead will be one of collective recovery, that it will bring stability and the right compromises needed to make the right decisions in the service of the French people.
+
+Because we cannot afford to wait. The year 2025 must be a year of action, a useful year for you and one that enables you to live better. Purchasing power, employment, security, justice, and support for our elected representatives and our associations: for all of these things, it is necessary to adopt a budget.",105,88,19;20,False
+macron2024_c008,macron2024,macron,en,2024-12-31,new_year_address,,8,16,0.533,"We can make life better by agreeing on a few simple matters: making life easier for all those who work hard, improving everyday security, delivering justice more quickly, and enabling every family to have access to the best education for their children, to healthcare, and to basic public services. It is therefore up to us to do this.
+
+The year 2025 must also be a year of unity and responsibility, in order to build a stronger and more independent France in the face of the world’s upheavals.
+
+The wars in Ukraine and the Middle East are not distant conflicts. They concern us directly and threaten our security, our unity and our economy.
+
+Recent events in Syria, the manipulation of elections in Moldova, Georgia and Romania, and terrorist attacks in Europe and in our neighboring regions show just how much our security and the proper functioning of our democracies can never be taken for granted.",180,154,21;22;23;24,False
+macron2024_c009,macron2024,macron,en,2024-12-31,new_year_address,,9,16,0.6,"That is why Europe can no longer delegate its security and defense to other powers. In 2025, France must continue investing in its military rearmament in order to guarantee our sovereignty, the protection of our interests, and the security of our fellow citizens. Europe, for its part, must accelerate its efforts to take control of its own defense, security and borders. This is what I have been fighting for for so many years, what we have begun to build with our European partners, and what we will continue to pursue.",108,90,25,False
+macron2024_c010,macron2024,macron,en,2024-12-31,new_year_address,,10,16,0.667,"We must clearly recognize that the world is moving faster and challenging many of our certainties. What we once took for granted can no longer be taken for granted.
+
+There can be no prosperity without security, and France, through its diplomatic and military power, still has a role to play in this respect.
+
+If our children are to live better than we do, the technologies and companies that will shape the world of tomorrow, our future and our growth, must also be developed in France and in Europe: artificial intelligence, the revolutions in quantum technologies, energy and biology, to name only a few of these fields.",121,106,26;27;28,False
+macron2024_c011,macron2024,macron,en,2024-12-31,new_year_address,,11,16,0.733,"Europeans must put an end to their naivety. We must say no to trade rules dictated by others that we are the only ones still respecting, and say no to everything that makes us dependent on others without anything in return and without preparing for our future.
+
+On the contrary, what we need is a European awakening: a scientific, intellectual, technological and industrial awakening, as well as an agricultural, energy and ecological awakening. To achieve this, we must move faster, make our decisions more rapidly and more decisively as Europeans, simplify our rules for our fellow citizens as well as for our businesses, and invest more.",125,106,29;30,False
+macron2024_c012,macron2024,macron,en,2024-12-31,new_year_address,,12,16,0.8,"This requires a France that continues to be attractive, that works and innovates more, that continues to create jobs and that ensures its growth while keeping its public finances under control. I will see to it.
+
+For seven years, we have managed to withstand the worst crises while reducing unemployment, reindustrializing the country and attracting innovations from all over the world.
+
+Once again this year, we demonstrated our ability to maintain our standing in sectors of the future, with, for example, the launch of Ariane 6 and the connection of the new Flamanville nuclear reactor to the grid. This is where our independence is being built, and we must remain strong and credible at the heart of a Europe that must accelerate.",144,122,31;32;33,False
+macron2024_c013,macron2024,macron,en,2024-12-31,new_year_address,,13,16,0.867,"It is therefore up to all of us, collectively, to act, because 2025 will demand boldness and decisiveness.
+
+My dear compatriots, great nations are those that, in moments of crisis and doubt, know how to look far ahead, rise above the controversies of everyday life, build the future and stay one step ahead.
+
+This is where we are today. That is why, in 2025, we will stay the course.",95,69,34;35;36,False
+macron2024_c014,macron2024,macron,en,2024-12-31,new_year_address,,14,16,0.933,"We are now a quarter of a century into this century. Some of the promises of the year 2000 have been fulfilled, but so many disruptions and imbalances have also emerged. So, for the quarter-century ahead, I want us to be able to decide and act, with 2050 in our sights.
+
+We will have choices to make for our economy, our democracy, our security and our children. Yes, the hope, prosperity and peace of the quarter-century ahead depend on the choices we make today.",108,84,37;38,False
+macron2024_c015,macron2024,macron,en,2024-12-31,new_year_address,,15,16,1.0,"That is why, in 2025, we will continue to make decisions, and I will also ask you to decide on some of these decisive issues. Because each and every one of you will have a role to play. Each and every one of you will be necessary if we are to succeed in the project I have just briefly outlined before you. Yes, just as with the great undertakings that have shaped our history, and again during the year that has just passed, each and every one of you is necessary to build an even greater Nation and Republic.
+
+That is why, for 2025, I wish for all of us to remain united, determined and fraternal.
+
+I wish you and your loved ones a wonderful and very happy year 2025.
+
+Long live the Republic.
+
+Long live France.",169,137,39;40;41;42;43,False
+macron2025_c000,macron2025,macron,en,2025-12-31,new_year_address,,0,13,0.0,"French women and men, my dear compatriots,
+
+On this evening of December 31, my thoughts go first and foremost to those who ensure the continuity of the Nation: the security forces, firefighters, volunteers, healthcare workers, workers, and all those who, tonight as always, are on the front line in the face of hardship. Protecting, caring, feeding, helping, providing assistance and solidarity—this is how great nations endure each day, through the dedication of their citizens. On behalf of all of you, my thoughts are with those who are alone, ill, facing hardship or deprivation. I know how difficult the situation is for many of you, confronted with personal suffering and the hardships of life, and I want to express our support and affection.",154,122,0;1,False
+macron2025_c001,macron2025,macron,en,2025-12-31,new_year_address,,1,13,0.083,"Thanks to everyone’s commitment, thanks to you, we are holding firm. Yes, our country is holding firm. Strong in its institutions and its public services; strong in its armed forces, which are the most effective in Europe, thanks to the commitment of its soldiers. Strong in our economy, where never before have so many French people been employed, where growth remains steady, and where our inflation is among the lowest in the euro area. Strong in our research, our academic excellence, and also in our diplomatic initiatives, whether those undertaken for peace, the climate, or our oceans.",117,97,2,False
+macron2025_c002,macron2025,macron,en,2025-12-31,new_year_address,,2,13,0.167,"But beyond all this, no one is blind to the disorder in the world or to our own weaknesses. Our world is becoming harsher every day. War and instability persist in the Near and Middle East, with consequences for our economies, our interests, and sometimes our cohesion. And war continues to rage on European soil, with particular intensity since Russia decided to launch a new aggression against Ukraine nearly four years ago. We are witnessing the return of empires, the questioning of the international order, a world of trade wars, technological competition, and often instability.
+
+I also see our own divisions, our doubts, the growing loneliness within society, the decline in our birth rate, insecurity, and difficulties with purchasing power.",142,120,3;4,False
+macron2025_c003,macron2025,macron,en,2025-12-31,new_year_address,,3,13,0.25,"I know all the impatience, and sometimes the anger, that continues to exist in the country, and I share several of those concerns. These urgent matters require answers. From the very first weeks of the year ahead, the Government and Parliament will have to build agreements in order to provide the nation with a budget. This is essential. From the beginning of 2026, we will need to act: to support our farmers in the face of crises and protect them from decisions that could threaten our ability to produce, as well as our food security. To further strengthen our economy by simplifying the rules for our entrepreneurs as well as for our farmers. To persevere in our efforts against insecurity and all forms of antisocial behaviour, and to relentlessly combat drug trafficking in all its forms.",160,136,5,False
+macron2025_c004,macron2025,macron,en,2025-12-31,new_year_address,,4,13,0.333,"To continue regaining control of our French and European borders in the face of illegal immigration; to continue training our teachers and give primary and lower secondary schools the means to better transmit fundamental knowledge; to recognise the expertise of our doctors, both in community care and in hospitals, by simplifying the way they work and allowing them greater freedom to make decisions and organise their activities. To implement concrete and radical decentralisation, developed together with our local elected representatives, in order to simplify the functioning of the country, make savings, and at the same time respond to the legitimate aspirations of Corsica and several overseas territories. For all of this—and I could have listed here every project that lies ahead of us—I know that the Government is hard at work and that the Prime Minister is determined to be of service to the country, and tonight I want to thank them sincerely for that.",173,155,5,False
+macron2025_c005,macron2025,macron,en,2025-12-31,new_year_address,,5,13,0.417,"This will also require everyone’s mobilisation and the efforts of all.
+
+This year, municipal elections will also be held in our towns and communities. And tonight I want once again to express to all our mayors and elected representatives my recognition and gratitude. Over the past few years, they have stood with me through every struggle and every crisis, serving you.
+
+This year must therefore be, and will be, a useful year.",85,72,5;6;7,False
+macron2025_c006,macron2025,macron,en,2025-12-31,new_year_address,,6,13,0.5,"I will pay particular attention to ensuring that several major projects are brought to completion. We will see the first steps of the national service programme for the engagement of our young people, which will strengthen the bond between our armed forces and the nation. We will protect our children and adolescents from social media and screens. And we will finally bring the legislative process concerning the question of a dignified end of life to completion, an issue on which I made a commitment to you in 2022.",99,88,8,False
+macron2025_c007,macron2025,macron,en,2025-12-31,new_year_address,,7,13,0.583,"At the end of the year, when the time comes, the next campaign for the 2027 presidential election will gradually begin—the first presidential election in ten years in which I will not take part. Nevertheless, until the very last second, I will remain at work, striving every day to live up to the mandate you entrusted to me, and I will do everything possible to ensure that the presidential election takes place as calmly as possible, and in particular free from any foreign interference.",98,84,9,False
+macron2025_c008,macron2025,macron,en,2025-12-31,new_year_address,,8,13,0.667,"Beyond the work that must be done, I have three wishes for our nation.
+
+First, a wish for unity. Whatever the challenges, our history teaches us that we can overcome anything and face anything if we know how to remain united. Let us therefore never forget that the reasons we have for living together are, every day, stronger than whatever may divide us, stronger than the flood of emergencies, individual incidents, or bad news. Our unity requires us to fight relentlessly against antisemitism, racism, and every form of discrimination. Our unity requires us to recognise that every French woman and every French man has a role to play in meeting the challenges ahead of us, that each and every one of us is necessary and deserves encouragement and recognition. Yes, in our everyday lives, ultimately, I wish for us to show greater kindness and greater humanity.",169,146,10;11,False
+macron2025_c009,macron2025,macron,en,2025-12-31,new_year_address,,9,13,0.75,"My second wish is a wish for strength and independence. At a time when the law of the strongest is attempting to impose itself on world affairs and our Europe is under pressure from every side, we must defend our independence and our freedoms.",47,44,12,True
+macron2025_c010,macron2025,macron,en,2025-12-31,new_year_address,,10,13,0.833,"Our independence requires us to continue investing in our armed forces, our security forces, our public services, and our economy despite financial difficulties. For ten years, I have argued strongly for this independence, and as Europeans we have done a great deal to strengthen it, but now we must accelerate. European defence was for a long time merely a subject of debate; it has now begun to take shape, and in 2026 this process will accelerate. As early as January 6, in Paris, many European states and allies will make concrete commitments to protect Ukraine and secure a just and lasting peace on our European continent. Let us also protect our industrial and agricultural Europe by establishing fair and equitable trade rules in relation to the rest of the world. Let us dare to become a true power, one that embraces a European preference for its jobs and its businesses.",172,150,13,False
+macron2025_c011,macron2025,macron,en,2025-12-31,new_year_address,,11,13,0.917,"Let us build an independent Europe in the space industry, quantum technologies, and artificial intelligence. Our prosperity, both in France and across Europe, depends on it.
+
+My final wish is a wish for hope—hope for ourselves and for our children.
+
+Let us not give up. Let us not give up on progress, which is still possible provided that we build it, work hard, invest for the long term, and recognise that genuine progress does not happen in a single day, but sometimes takes the span of a generation.",104,88,13;14;15,False
+macron2025_c012,macron2025,macron,en,2025-12-31,new_year_address,,12,13,1.0,"Let us not give up on reconciling the climate, biodiversity, growth, and independence. Let us not give up on major scientific discoveries, on our love of science and research, or on economic success.
+
+Let us not give up on the place of reading, beauty, and culture. Let us not give up, day after day, on becoming a nation that is more supportive and more fraternal. Yes, ultimately, I wish for us to resist the spirit of the times, quite simply because we are French. We must stand firm in defending what we cherish: humanity, peace, and freedom. We will succeed. So let us look ahead, and let us look far into the future, as citizens and as a nation.
+
+My dear compatriots in mainland France, in our overseas territories, and living abroad, I wish you a wonderful and very happy year 2026.
+
+Long live the Republic! Long live France!",188,149,16;17;18;19,False
+merkel1_c000,merkel1,merkel,en,2016-12-31,new_year_address,,0,10,0.0,"Dear fellow citizens,
+
+2016 was a year of severe trials. I would like to speak to you about that this evening — but also about why, despite everything, I remain confident about Germany and why I am so deeply convinced of the strengths of our country and its people.
+
+The most serious challenge is, without doubt, Islamist terrorism, which has also had us Germans in its sights for many years. In 2016, it struck us in the heart of our own country: in Würzburg, in Ansbach, and only a few days ago at the Christmas market here at the Kaiser Wilhelm Memorial Church in Berlin.",130,105,0;1;2,False
+merkel1_c001,merkel1,merkel,en,2016-12-31,new_year_address,,1,10,0.111,"And — yes — it is especially bitter and repugnant when terrorist attacks are committed by people who supposedly seek protection in our country. People who, precisely for that reason, have experienced the willingness of our country to help them and who now mock that generosity through their actions. Just as they also mock those who genuinely need and deserve our protection.
+
+So what, then, of the confidence I spoke of at the beginning?",84,74,3;4,False
+merkel1_c002,merkel1,merkel,en,2016-12-31,new_year_address,,2,10,0.222,"Confidence in the midst of deep grief for the dead and the injured?
+
+I believe we were able to feel it here in Berlin and in many other German cities, especially during these difficult days: in the comfort that we can give or receive.
+
+And in a firm determination to confront the terrorists’ world of hatred with our humanity and our solidarity.
+
+By continuing with our lives and our work, we tell the terrorists: You are murderers filled with hatred, but you do not determine how we live or how we want to live. We are free, humane, and open.",114,100,5;6;7;8,False
+merkel1_c003,merkel1,merkel,en,2016-12-31,new_year_address,,3,10,0.333,"And even with the images of bombed-out Aleppo in Syria before our eyes, we can once again say how important and right it was that, during the past year, our country helped those who genuinely need our protection to gain a foothold here among us and to integrate.
+
+All of this is reflected in our democracy, in our rule of law, and in our values.
+
+They are the opposite of the hate-filled world of terrorism, and they will prove stronger than terrorism. Together, we are stronger. Our state is stronger.",105,90,9;10;11,False
+merkel1_c004,merkel1,merkel,en,2016-12-31,new_year_address,,4,10,0.444,"Our state does everything it can to guarantee its citizens security in freedom.
+
+This work is never finished, and especially this year we have provided our security authorities with a great deal of additional support. In 2017, as the Federal Government, wherever political or legislative changes are necessary, we will initiate and implement the necessary measures as quickly as possible.
+
+Many people also associate this year, 2016, with the feeling that the world as a whole has come apart at the seams, or that what was long regarded as an achievement is now being called into question. The European Union, for example. Or even parliamentary democracy itself, which supposedly does not care about the interests of citizens but serves only the benefit of a few.",148,125,12;13;14,False
+merkel1_c005,merkel1,merkel,en,2016-12-31,new_year_address,,5,10,0.556,"What distorted images.
+
+Yes, Europe is slow. It is laborious. It has to endure profound setbacks such as the withdrawal of a member state. And — yes — Europe should concentrate on those things it can genuinely do better than the nation state.
+
+But no — we Germans should never allow ourselves to be deceived into thinking that a happy future could ever lie in going it alone as a nation.
+
+Where Europe — as in global competition, the protection of our external borders, or migration — is challenged as a whole, it must also find the answer as a whole, no matter how difficult and arduous that may be. And we Germans have every interest in playing a leading role in that process.",140,124,15;16;17;18,False
+merkel1_c006,merkel1,merkel,en,2016-12-31,new_year_address,,6,10,0.667,"The image that some people draw of our parliamentary democracy is also a distortion. Yet it is strong. It enables participation and a voice in decision-making. It accepts — no, it demands — disagreement and criticism. Criticism that is expressed peacefully and with respect for the individual, that seeks solutions and compromises, and does not exclude entire groups.
+
+2017 is also the year of the next federal election. I will work for a political debate in which we will argue passionately about many things, but always as democrats who never forget that it is an honour to serve our democracy and, through it, the people.",124,105,19;20,False
+merkel1_c007,merkel1,merkel,en,2016-12-31,new_year_address,,7,10,0.778,"Another source of encouragement for me when I think about Germany is our social market economy. It enables us to cope with crises and processes of change better than any other economic system in the world.
+
+Never before have so many people been in employment as they are today. Most of our companies are in good shape. Our economic success gives us the opportunity to strengthen our social welfare system and to help all those who need help. Starting tomorrow, for example, important improvements in long-term care will come into effect.",100,91,21;22,False
+merkel1_c008,merkel1,merkel,en,2016-12-31,new_year_address,,8,10,0.889,"I also draw encouragement from the enthusiasm and inventive spirit with which German companies and our universities conduct research and development for the future. Whether in new forms of energy or digitalisation, in every field we have the opportunity not merely to be driven by change, but to be among those who discover and shape new paths.
+
+To do that, we need an open view of the world and confidence — in ourselves and in our country.",84,77,23;24,False
+merkel1_c009,merkel1,merkel,en,2016-12-31,new_year_address,,9,10,1.0,"Solidarity, openness, our democracy, and a strong economy that serves the well-being of all: these are the things that, even at the end of a difficult year, give me confidence in our future here in Germany.
+
+None of these values is simply given to us. We will have to work for each of them in 2017 as well, all of us together, each according to our abilities — and that work will be worthwhile.
+
+I wish you and your families, from the bottom of my heart, a happy New Year, happiness, good health, and God’s blessing.",120,96,25;26;27,False
+merkel2_c000,merkel2,merkel,en,2017-12-31,new_year_address,,0,10,0.0,"Dear Fellow Citizens,
+
+I extend my warm greetings to you. I am pleased to have the opportunity, on this New Year’s Eve as well, to share with you a few thoughts that are on my mind as we stand on the threshold of a new year.
+
+From the many conversations and encounters I have had this year, I know that many of you are concerned about social cohesion in Germany. It has been a long time since opinions on this issue were so divided. Some even speak of a rift running through our society.",104,94,0;1;2,False
+merkel2_c001,merkel2,merkel,en,2017-12-31,new_year_address,,1,10,0.111,"Some say: Germany is a wonderful country in which the values of our Basic Law are lived out. A country that is strong and economically successful. A country in which more people are in employment today than ever before. A country with an open-minded and diverse society, with a strong sense of solidarity, where millions of people volunteer every day to help others—for example in sport, in support of the sick and vulnerable, or in helping refugees.",88,77,3,False
+merkel2_c002,merkel2,merkel,en,2017-12-31,new_year_address,,2,10,0.222,"Others say: There are too many people who do not share in this success. People who cannot keep pace with the speed of our times. People who see their children moving to the big cities and who are left behind in areas where everyday life, from shopping to visiting a doctor, is becoming increasingly difficult. People who are concerned that there is too much crime and violence. People who ask how we can organize and manage immigration into our country.",88,80,4,False
+merkel2_c003,merkel2,merkel,en,2017-12-31,new_year_address,,3,10,0.333,"Both are realities in our country: success and confidence, but also fears and doubts. For me, both are a source of motivation.
+
+For you, dear fellow citizens, have given us politicians the task of addressing the challenges of the future while keeping the needs of all citizens in mind. I feel committed to this responsibility—especially as we work to form a stable government for Germany swiftly in the new year.",81,70,5;6,False
+merkel2_c004,merkel2,merkel,en,2017-12-31,new_year_address,,4,10,0.444,"For the world will not wait for us. We must now create the conditions that will ensure Germany is doing well 10 or 15 years from now. And Germany is truly doing well when success benefits everyone and improves and enriches our lives.
+
+In this regard, the guiding principle of the Social Market Economy—that economic success and social cohesion are two sides of the same coin—can continue to serve as our compass in the age of digital progress.",91,78,7;8,False
+merkel2_c005,merkel2,merkel,en,2017-12-31,new_year_address,,5,10,0.556,"On the one hand, this means:
+
+safeguarding existing jobs while also creating entirely new jobs for the future,
+
+providing companies with even greater support for research and development in innovative technologies,
+
+making the state a pioneer in digitalization,
+
+and, above all, preparing ourselves and our children for digital progress through the best possible education and further training.
+
+On the other hand, it also means:",80,64,9;10;11;12;13;14,False
+merkel2_c006,merkel2,merkel,en,2017-12-31,new_year_address,,6,10,0.667,"placing families at the center of our policies and easing their financial burden so that they can balance family life and work even better,
+
+ensuring good and dignified care by strengthening the care professions and providing even greater support to people who care for relatives at home,
+
+and—not least—ensuring equivalent living conditions in every region of our country, whether in cities or in rural areas.
+
+And we will have to invest even more in a strong state that upholds the rules of our coexistence and ensures your security—indeed, the security of us all.",110,93,15;16;17;18,False
+merkel2_c007,merkel2,merkel,en,2017-12-31,new_year_address,,7,10,0.778,"For this reason, I would particularly like to thank the police officers who are there for us this evening as well, protecting, for example, the many New Year’s Eve celebrations taking place across the country, as well as the soldiers who serve our country here at home or on missions abroad.
+
+The future of Germany is, in all of this, inseparably linked to the future of Europe. The 27 states of Europe must, more than ever before, be encouraged to stand together as a community. This will be the decisive question of the years ahead.",113,95,19;20,False
+merkel2_c008,merkel2,merkel,en,2017-12-31,new_year_address,,8,10,0.889,"The question will be whether we Europeans, in a global and digital world, can uphold our values with solidarity and confidence, both at home and abroad; whether we can work in this way for a Europe that is economically successful and just; and whether we can consistently stand up for the protection of our external borders as well as for the security of our citizens.
+
+Germany and France want to work together to make this possible and thereby help prepare Europe for the future.",91,84,21;22,False
+merkel2_c009,merkel2,merkel,en,2017-12-31,new_year_address,,9,10,1.0,"Dear Fellow Citizens,
+
+The struggle to find the right answers is part of a vibrant democracy. We are, in the best sense of the word, a society of many voices. At the same time, we are united by the values of our Basic Law: respect for the inviolable dignity of every individual and for their fundamental freedoms.
+
+That we become more aware once again of what, at our core, holds us together; that we once again place greater emphasis on what we have in common; that we strive to show greater respect for one another—and respect in the broadest sense: paying attention, truly listening, and showing understanding—these are my wishes for the new year.
+
+And to you and your families, I wish health, strength, confidence, and God’s blessing for the New Year 2018.",165,133,23;24;25;26,False
+merkel2020_c000,merkel2020,merkel,en,2019-12-31,new_year_address,,0,9,0.0,"Dear fellow citizens,
+
+This evening, we stand not only at the beginning of a new year, but also at the beginning of a new decade. I am convinced that we have good reason to be confident that the 2020s, which will begin in just a few hours, can be good years—if we make use of our strengths, if we focus on what unites us, and if we remember what we have achieved together over the past decades.",93,77,0;1,False
+merkel2020_c001,merkel2020,merkel,en,2019-12-31,new_year_address,,1,9,0.125,"Next year, Germany will have been reunified in peace and freedom for 30 years. In those 30 years, we have accomplished remarkable things. For example, never before have so many people been in employment as today. Nevertheless, there will still be more to do in the next decade than we thought 30 years ago.
+
+At the same time, we experience every day just how profoundly digital progress is changing our lives in every area, including, of course, our working lives. We must find new answers to this. Because we want everyone to have access to the education they need for this transformation. We want them to continue to have good and secure jobs in the future—and a reliable pension in old age.",146,122,2;3,False
+merkel2020_c002,merkel2020,merkel,en,2019-12-31,new_year_address,,2,9,0.25,"To achieve this, more than ever we need the courage to think in new ways, the strength to leave familiar paths behind, the willingness to venture into new territory, and the determination to act more quickly, in the conviction that unfamiliar approaches can succeed—and must succeed, if today’s younger generation and their descendants are still to be able to live well on this Earth.
+
+The warming of our planet is real. It is threatening. It, and the crises arising from global warming, are caused by human beings. Therefore, we must do everything humanly possible to overcome this challenge facing humanity. It is still possible.",122,104,4;5,False
+merkel2020_c003,merkel2020,merkel,en,2019-12-31,new_year_address,,3,9,0.375,"This conviction also underpins the climate protection programme that the Federal Government and the Länder adopted a few days ago. I am very well aware that the measures decided upon make some people afraid that they may be overwhelmed by them, while for others they still do not go nearly far enough.
+
+And it is also true that, at the age of 65, I am at a point in my life when I personally will no longer experience all the consequences of climate change that would arise if policymakers failed to act. It is our children and grandchildren who will have to live with the consequences of what we do—or fail to do—today. That is why I am devoting all my strength to ensuring that Germany makes its contribution—ecologically, economically and socially—to bringing climate change under control. The law that has just been adopted provides the necessary framework for doing so—in the literal sense of the word.",179,157,6;7,False
+merkel2020_c004,merkel2020,merkel,en,2019-12-31,new_year_address,,4,9,0.5,"In doing this, we can build on what has always made us strong: our ideas, our inventive spirit, our diligence and perseverance, our craftspeople, engineers and skilled workers, our state and voluntary structures, our way of living together in families and associations, and our appreciation for those who, for example, work in care, for and with other people.
+
+And we are guided by the values of our Basic Law: freedom, solidarity and respect for the dignity of every individual, as well as by the principles of the social market economy. They will remain our compass in the next decade as well. This means that even in the digital age, technology must serve people—not the other way around. Human dignity sets the limits, because it is inviolable.",152,126,8;9,False
+merkel2020_c005,merkel2020,merkel,en,2019-12-31,new_year_address,,5,9,0.625,"This is the core of our liberal democracy, which must be brought to life anew every day. I thank the women and men who assume political responsibility in our country, especially those at the municipal level. Protecting them—as well as everyone in our country—from hatred, hostility and violence, from racism and antisemitism, is the responsibility of the state, a responsibility to which the Federal Government feels particularly committed.",82,68,10,False
+merkel2020_c006,merkel2020,merkel,en,2019-12-31,new_year_address,,6,9,0.75,"I thank the many people who work for the good of our community, both professionally and on a voluntary basis: the police officers, firefighters and all those who stand by their fellow citizens in difficult situations. Together, they form the backbone of our democracy.
+
+In recent years, I have often said that in the long term, Germany can only do well if Europe does well too. Because only within the community of the European Union can we uphold our values and interests and safeguard peace, freedom and prosperity.",99,88,11;12,False
+merkel2020_c007,merkel2020,merkel,en,2019-12-31,new_year_address,,7,9,0.875,"Europe must make its voice heard more strongly in the world. We will work toward this during Germany’s Presidency of the Council of the European Union in the coming year as well, for example through a summit of all Member States with China and a meeting with the countries of Africa. Cooperation with Africa is also in our own interest. Because only when people have the opportunity to live peaceful and secure lives will flight and migration decrease. Only when we end wars through political solutions will lasting security be achieved.",98,91,13,False
+merkel2020_c008,merkel2020,merkel,en,2019-12-31,new_year_address,,8,9,1.0,"Our security and prosperity depend to a significant extent on security and economic progress in our neighbourhood as well. That is why this evening I would like to thank our soldiers, our police officers, and our civilian aid workers who are serving far from home.
+
+A new decade lies ahead of us. The 2020s can be good years. Let us surprise ourselves once again with what we are capable of. Change for the better is possible if we embrace new things with openness and determination.
+
+With this in mind, I wish you and your families a healthy, happy and blessed New Year 2020.",123,103,14;15;16,False
+merkel3_c000,merkel3,merkel,en,2018-12-31,new_year_address,,0,9,0.0,"Dear fellow citizens,
+
+A year lies behind us, with its highs and lows, with joyful and sad moments. Each of us will have something very personal that comes to mind. This evening, I am thinking above all of the extremely difficult political year that is coming to an end today.
+
+I know that many of you have struggled greatly with the Federal Government. First, it took us a long time even to form a government, and once we had one, there were disputes and a great deal of preoccupation with ourselves.",104,91,0;1;2,False
+merkel3_c001,merkel3,merkel,en,2018-12-31,new_year_address,,1,9,0.125,"My understanding as Federal Chancellor is that our democracy lives from the broadly shared agreement that those who serve the state do everything in their power to preserve domestic peace and the cohesion of our country. That they repeatedly examine what they themselves can personally contribute to this.
+
+That is what I have done. And I have done so regardless of how unsatisfactory the past year was, because, quite fundamentally, 13 years in office as Federal Chancellor are in themselves more than enough reason to do so.",98,87,3;4,False
+merkel3_c002,merkel3,merkel,en,2018-12-31,new_year_address,,2,9,0.25,"At the end of October, I therefore initiated a new beginning and said that, after the end of this legislative term, I would no longer hold any political office.
+
+Democracy thrives on change, and all of us are subject to the passage of time. We build on what our predecessors have left us and shape the present for those who will come after us.
+
+In doing so, I am guided by the conviction that we will only master the challenges of our time if we stand together and cooperate with others across borders.",104,93,5;6;7,False
+merkel3_c003,merkel3,merkel,en,2018-12-31,new_year_address,,3,9,0.375,"For me, the images that our astronaut Alexander Gerst has sent us from the International Space Station, the ISS, over the past few months are almost symbolic of this. They are images that repeatedly give us a new perspective on our planet: on natural forces such as hurricanes, with which we humans must live; on our Central European landscapes, which during this unusually dry summer appeared completely brown rather than green even from space; and time and again, they are simply images of the overwhelming beauty of our Earth.",101,89,8,False
+merkel3_c004,merkel3,merkel,en,2018-12-31,new_year_address,,4,9,0.5,"On the one hand, this overwhelming beauty. On the other hand, we know how vulnerable the foundations of our lives are—in the broadest sense. There is the defining challenge of climate change, the challenge of managing and regulating migration, and the fight against international terrorism.
+
+It is in our own interest to resolve all of these issues, and we can do so most effectively when we also take the interests of others into account. That is the lesson of the two world wars of the last century. But this conviction is no longer shared by everyone today, and certainties about international cooperation are coming under pressure. In such a situation, we must once again stand up more strongly for our convictions, make our arguments, and fight for them. And, in our own interest, we must assume greater responsibility.",160,138,9;10,False
+merkel3_c005,merkel3,merkel,en,2018-12-31,new_year_address,,5,9,0.625,"Starting tomorrow, Germany will be a member of the United Nations Security Council for two years and will work there in support of global solutions. We are continuing to increase our funding for humanitarian aid and development assistance, as well as our defence spending.
+
+We are working to make the European Union more robust and more capable of taking decisions. And despite the United Kingdom's departure from the European Union, we want to maintain a close partnership with Britain.",87,79,11;12,False
+merkel3_c006,merkel3,merkel,en,2018-12-31,new_year_address,,6,9,0.75,"In May, by taking part in the European elections, you can help ensure that the European Union continues to be a project of peace, prosperity and security in the future.
+
+Dear fellow citizens, prosperity, security and peace—above all, we must work for these things here at home.
+
+Millions of people willingly devote themselves to serving society. On this New Year's Eve, I would particularly like to thank all police officers, soldiers, the many emergency and rescue workers, and all those who care for others in hospitals and in nursing and care services, as well as the millions of people who volunteer their time.",122,103,13;14;15,False
+merkel3_c007,merkel3,merkel,en,2018-12-31,new_year_address,,7,9,0.875,"In order to safeguard jobs, prosperity and the foundations of our lives, the Federal Government is consistently taking the next steps in the structural transition from traditional to new technologies and is implementing its strategy for digital progress.
+
+Through our efforts to create equivalent living conditions, we want to ensure that everyone has good access to education, housing and healthcare—both in rural areas and in cities.
+
+In doing so, we struggle to find the best practical solutions. But increasingly, we are also struggling over the way we treat one another and over our values: openness, tolerance and respect. These values have made our country strong. We must stand up for them together—even when doing so is uncomfortable and demanding.",136,119,16;17;18,False
+merkel3_c008,merkel3,merkel,en,2018-12-31,new_year_address,,8,9,1.0,"Where we believe in our values and put our ideas into practice with determination, new and positive things can emerge. From this can grow the strength we need to solve our problems step by step and thereby lay the foundations for a peaceful and secure future for ourselves and our children.
+
+I wish all of us the courage to do so, together with all my very best wishes to you and your families for a healthy, happy and blessed New Year 2019.",92,82,19;20,False
+putin2022_c000,putin2022,putin,en,2022-12-31,new_year_address,,0,11,0.0,"Citizens of Russia, friends,
+
+The year 2022 is drawing to a close. It was a year of difficult but necessary decisions, of important steps towards Russia's full sovereignty and a powerful consolidation of our society.
+
+It was a year that put many things in their place, and drew a clear line between courage and heroism, on the one hand, and betrayal and cowardice on the other, showed us that there is nothing stronger than love for our near and dear, loyalty to our friends and comrades-in-arms, and devotion to our Fatherland.",115,91,0;1;2,False
+putin2022_c001,putin2022,putin,en,2022-12-31,new_year_address,,1,11,0.1,"It was a year of truly pivotal, even fateful events. They became the frontier where we lay the foundation for our common future, our true independence.
+
+This is what we are fighting for today, protecting our people in our historical territories in the new regions of the Russian Federation. Together, we are building and creating.
+
+Russia’s future is what matters the most. Defending our Motherland is the sacred duty we owe to our ancestors and descendants. The moral and historical truth is on our side.",100,85,3;4;5,False
+putin2022_c002,putin2022,putin,en,2022-12-31,new_year_address,,2,11,0.2,"The outgoing year has brought great and dramatic changes to our country and to the world. It was filled with uncertainty, anxiety and worry.
+
+But our multiethnic nation showed great courage and dignity as it had in every challenging period in Russian history, supported the defenders of our Fatherland, our soldiers and officers, and all participants in the special military operation, in both word and deed.
+
+We have always known that Russia's sovereign, independent and secure future depends only on us, on our strength and determination, and today, we have become convinced of it once again.",112,96,6;7;8,False
+putin2022_c003,putin2022,putin,en,2022-12-31,new_year_address,,3,11,0.3,"For years, Western elites hypocritically assured us of their peaceful intentions, including to help resolve the serious conflict in Donbass. But in fact, they encouraged the neo-Nazis in every possible way, who continued to take military and overtly terrorist action against peaceful civilians in the people's republics of Donbass.
+
+The West lied to us about peace while preparing for aggression, and today, they no longer hesitate to openly admit it and to cynically use Ukraine and its people as a means to weaken and divide Russia. We have never allowed anyone to do this and we will not allow it now.",124,101,9;10,False
+putin2022_c004,putin2022,putin,en,2022-12-31,new_year_address,,4,11,0.4,"Russian servicemen, militiamen and volunteers are now fighting for their homeland, for truth and justice, for reliable guarantees of peace and Russia’s security. They are all our heroes and they are shouldering the heaviest burden right now.
+
+From the bottom of my heart, I wish a very happy New Year to every participant in the special military operation, to those who are here next to me now, and who are on the frontline, those getting ready for action at training centres, those who are in hospitals or already back home, having fulfilled their duty, to all those now on combat duty in strategic units, and all personnel of the Russian Armed Forces.",132,112,11;12,False
+putin2022_c005,putin2022,putin,en,2022-12-31,new_year_address,,5,11,0.5,"Comrades,
+
+thank you for your valiant service. Our entire vast country is proud of your fortitude, endurance and courage. Millions of people are with you in their hearts and souls, and will be raising a toast to you at their New Year's table.
+
+Many thanks to everyone who provides ancillary support for military operations: drivers and railway workers who deliver supplies to the front, doctors, paramedics, and nurses who are fighting for soldiers’ lives and nursing wounded civilians. I thank the workers and engineers at our military and other plants who are working today with great dedication, builders who are erecting civilian facilities and defensive fortifications, and helping to restore the destroyed cities and villages in Donbass and Novorossiya.",147,119,13;14;15,False
+putin2022_c006,putin2022,putin,en,2022-12-31,new_year_address,,6,11,0.6,"Friends,
+
+Russia has been living under sanctions since the events in Crimea in 2014, but this year, a full-blown sanctions war has been unleashed against us. Those who started it expected our industry, finances and transport to collapse and never recover.
+
+This did not happen, because together we created a reliable margin of safety. We have been taking steps and measures towards strengthening our sovereignty in a vitally important field, in the economy. Our struggle for our country, for our interests and for our future undoubtedly serves as an inspiring example for other states in their quest for a just multipolar world order.",123,103,16;17;18,False
+putin2022_c007,putin2022,putin,en,2022-12-31,new_year_address,,7,11,0.7,"I consider it very important that in the outgoing year, such qualities as mercy, solidarity and proactive empathy have become especially important in Russia. More and more Russians feel the need to help others. They rally together and take initiative without any formal instructions.
+
+I want to thank you for being so considerate, responsible and kind, for your active involvement in the common cause regardless of age or income. You arrange warehouses and transport to deliver parcels to our fighters in the combat zone, to the residents of affected cities and towns, and help organise holidays for children from the new constituent entities of the Federation.",118,106,19;20,False
+putin2022_c008,putin2022,putin,en,2022-12-31,new_year_address,,8,11,0.8,"My friends, you are providing great support to the families of the fighters who perished, who gave their lives defending the lives of others.
+
+I know how difficult it is for their wives, sons and daughters, and for their parents, who raised real heroes; I understand how they feel now, on New Year's Eve. We will make every effort to help the families of our fallen comrades raise their children, give them a good education, and get a profession.",93,79,21;22,False
+putin2022_c009,putin2022,putin,en,2022-12-31,new_year_address,,9,11,0.9,"With all my heart, I share your pain and ask you to accept my sincere words of support.
+
+Friends,
+
+Our country has always celebrated the start of the New Year, even during very difficult times. It has always been everyone’s favourite holiday, and has a magical power to reveal the best in people, to heighten the importance of traditional family values, the energy of kindness, generosity and trust.",80,68,23;24;25,False
+putin2022_c010,putin2022,putin,en,2022-12-31,new_year_address,,10,11,1.0,"As we see the New Year in, everyone strives to give joy to their loved ones, to show them attention and warmth, to give them presents they have been dreaming of, to see the delight in children’s eyes and parents’ touching gratitude for our attention. The older generation knows how to appreciate such moments of happiness.
+
+Friends, now is the best moment to leave all personal grievances and misunderstandings in the past, to tell our nearest and dearest how we feel, how much we love them, how important it is to take care of each other – always, at any time.
+
+Let these heartfelt words and noble feelings give each of us immense strength and confidence that together, we will overcome all the challenges and keep our country great and independent.
+
+We will only move forward, to fight for our families and for Russia, for the future of our only, beloved Motherland.
+
+Happy New Year, friends! Happy 2023!",188,158,26;27;28;29;30,False
+putin2023_c000,putin2023,putin,en,2023-12-31,new_year_address,,0,6,0.0,"Citizens of Russia, friends,
+
+We are bidding farewell to 2023. Very soon it will become part of history and we will have to move forward, create the future.
+
+We have worked very hard and accomplished a lot over the past year. We were proud of our common achievements and happy about our successes. And we were firm, protecting the national interests, our freedom and security, and our values which continue to be our unshakeable foundation.",93,75,0;1;2,False
+putin2023_c001,putin2023,putin,en,2023-12-31,new_year_address,,1,6,0.2,"And the main thing which has united us is the destiny of the Motherland. There is a deep understanding of the utmost importance of the historic period which Russia is going through, those ambitious goals which society is facing and the colossal responsibility for the Motherland which every one of us feels.
+
+We are acutely and clearly aware of how much depends on us during this period, on our positive attitude, and our aspiration to support each other in word and deed.",91,82,3;4,False
+putin2023_c002,putin2023,putin,en,2023-12-31,new_year_address,,2,6,0.4,"Work for the common good has united society. We are united in our thoughts, deeds and in battle, on weekdays or holidays, displaying the main traits of the Russian people – solidarity, mercy, fortitude.
+
+I would like to address our military personnel – everyone who is on duty, who is on the front lines fighting for truth and justice. You are our heroes. Our hearts are with you. We are proud of you and we admire your courage.",91,78,5;6,False
+putin2023_c003,putin2023,putin,en,2023-12-31,new_year_address,,3,6,0.6,"I know that right now you feel the love of your nearest and dearest, the powerful and sincere support of millions of Russian citizens, the support of the entire people.
+
+We have proved over and over again that we are able to tackle the most difficult tasks and we will never back down as there is no force that can divide us, make us forget the memory and the faith of our fathers, or stop our development.",84,77,7;8,False
+putin2023_c004,putin2023,putin,en,2023-12-31,new_year_address,,4,6,0.8,"Friends,
+
+At all times, the New Year celebrations have been associated with bright hopes and a sincere wish to bring joy to the people you love.
+
+The upcoming year of 2024 has been declared the Year of the Family in our country. And a true big family is of course a family with children, where you find care and attention, warm-heartedness and support for the parents, love and respect for each other.",86,72,9;10;11,False
+putin2023_c005,putin2023,putin,en,2023-12-31,new_year_address,,5,6,1.0,"This kind of generational kinship and love of one’s home fosters devotion to the Motherland.
+
+I would like to convey my very best wishes for the new year to all Russian families. After all, the history of our huge, wonderful, and beloved Motherland is made up of the history of each family. We, the multinational people of Russia, shape its future.
+
+We are one country, one big family. We will ensure the steady development of the Motherland, the well-being of our citizens, and we will become even stronger.
+
+We are together. And this is the most reliable guarantee of Russia’s future.
+
+Happy New Year, friends! Happy 2024!",139,107,12;13;14;15;16,False
+putin2024_c000,putin2024,putin,en,2024-12-31,new_year_address,,0,4,0.0,"Citizens of Russia, friends,
+
+In just a few minutes, the year 2025 will begin, marking the completion of the first quarter of the 21st century.
+
+For Russia, this period has been marked by numerous events, including developments of historical significance and great magnitude. We set ambitious goals for ourselves and achieved them, coped with many challenges because we stood united.
+
+This’s what consolidated our unity, strengthened our confidence in ourselves, in our abilities, in our potential. True, there is still a lot to be accomplished, but we can be rightfully proud of what we have already achieved. This is our joint achievement, a solid foundation for future progress.",137,108,0;1;2;3,False
+putin2024_c001,putin2024,putin,en,2024-12-31,new_year_address,,1,4,0.333,"Our nation – independent, free, and strong – has tackled successfully the most formidable challenges. As we stand on the brink of a new year, we think about the future. We are confident that everything is going to be all right. We will continue to advance. We know for sure that Russia’s destiny and well-being of its people has always been and will remain our absolute value.
+
+Sincere love for our Motherland gives our lives a deep sense of purpose, while determination to make our own contribution to protecting its sovereignty, security, interests, and freedom of development has become a matter of honour for us.",123,105,4;5,False
+putin2024_c002,putin2024,putin,en,2024-12-31,new_year_address,,2,4,0.667,"As we welcome the New Year, the thoughts and hopes of families and friends, of millions of people across Russia are with our soldiers and commanders. You are the true heroes who undertook a great task and immense responsibility of defending Russia and ensuring peace and security for our nation. We are proud of your bravery and valour and we believe in you.
+
+In your honour, in honour of the 80th anniversary of Great Victory and as a tribute to the memory of our ancestors who have always defended the Motherland, the upcoming year 2025 has been declared the Year of the Defender of the Fatherland in Russia. We are the children, grandchildren, and great-grandchildren of the generation that crushed Nazism. We remain loyal to the legacy and traditions of our veterans.",158,132,6;7,False
+putin2024_c003,putin2024,putin,en,2024-12-31,new_year_address,,3,4,1.0,"Friends,
+
+New Year’s Eve always holds a special place in our hearts, filling us with warmth and hope that our dreams, aspirations, and best intentions will come to fruition. As the countdown to the New Year begins, we find ourselves surrounded by our near and dear ones: our family, children, parents, grandchildren, our friends and comrades-in-arms.
+
+I wish happiness and prosperity to our every home and every family, and to our beloved country, Russia. Together, we can achieve anything.
+
+Happy New Year, friends! Happy 2025!",113,85,8;9;10;11,False
+putin2025_c000,putin2025,putin,en,2025-12-31,new_year_address,,0,5,0.0,"Citizens of Russia, friends,
+
+At this moment, as we stand on the threshold of the New Year, we all feel the passage of time. Before us lies the future, and what it holds largely depends on us.
+
+We draw strength from within ourselves and from those who stand beside us – those who are dear and close to our hearts – and we are always ready to lend our shoulder in return. This mutual support gives us confidence that all our aspirations, hopes, and plans will definitely be realised.",101,89,0;1;2,False
+putin2025_c001,putin2025,putin,en,2025-12-31,new_year_address,,1,5,0.25,"Naturally, each of us has personal, unique dreams, very special in their own way. Yet they are inseparable from the destiny of our Motherland and from the sincere desire to be of service to it.
+
+For we are united – the people of Russia. The labour, achievements, and successes of each of us add new chapters to its thousand-year history, while the strength of our unity determines the sovereignty and security of our Fatherland, its development, and its future.",96,79,3;4,False
+putin2025_c002,putin2025,putin,en,2025-12-31,new_year_address,,2,5,0.5,"The New Year is, above all, a time when we hope for the best, for goodness and good luck. It is a special and magical holiday, when we open our hearts to love, friendship, and compassion, to sympathy and generosity.
+
+We strive to bring joy and warmth through our care for those in need of support and, of course, to stand by our heroes – the participants in the special military operation – in both word and deed.",90,78,5;6,False
+putin2025_c003,putin2025,putin,en,2025-12-31,new_year_address,,3,5,0.75,"You have taken upon yourselves the duty of fighting for our native land, for truth and for justice. On this New Year’s Eve, millions of people across Russia, I assure you, are with you: they think of you, share your feelings, and place their hopes in you. We are united by a sincere, selfless, and devoted love for Russia.
+
+I wish all our soldiers and commanders a happy New Year! We believe in you and in our victory.",94,78,7;8,False
+putin2025_c004,putin2025,putin,en,2025-12-31,new_year_address,,4,5,1.0,"Friends,
+
+In just a few moments, we will hear the chimes of the Kremlin clock, and the New Year will begin. We welcome it together with the nearest and dearest: our children, parents, friends, and comrades-in-arms. Even those who are far away – you are still with us in spirit.
+
+I wish you all good health and happiness, understanding and prosperity. And, above all, love which inspires us. May our traditions, faith, and memory bind all generations together, supporting us always and in everything.
+
+We are one – a great, strong, and united family, and that is why we will continue to work and to create, to achieve our goals, moving only forward for the benefit of our children and grandchildren, for the benefit of our great Russia.
+
+Happy New Year, friends!
+
+Happy 2026!",172,134,9;10;11;12;13;14,False
+trump1_c000,trump1,trump,en,2021-01-19,farewell_address,,0,28,0.0,"My fellow Americans: Four years ago, we launched a great national effort to rebuild our country, to renew its spirit, and to restore the allegiance of this government to its citizens. In short, we embarked on a mission to make America great again — for all Americans.
+
+As I conclude my term as the 45th President of the United States, I stand before you truly proud of what we have achieved together. We did what we came here to do — and so much more.",98,85,0;1,False
+trump1_c001,trump1,trump,en,2021-01-19,farewell_address,,1,28,0.037,"This week, we inaugurate a new administration and pray for its success in keeping America safe and prosperous. We extend our best wishes, and we also want them to have luck — a very important word.
+
+I’d like to begin by thanking just a few of the amazing people who made our remarkable journey possible.
+
+First, let me express my overwhelming gratitude for the love and support of our spectacular First Lady, Melania. Let me also share my deepest appreciation to my daughter Ivanka, my son-in-law Jared, and to Barron, Don, Eric, Tiffany, and Lara. You fill my world with light and with joy.",125,104,2;3;4,False
+trump1_c002,trump1,trump,en,2021-01-19,farewell_address,,2,28,0.074,"I also want to thank Vice President Mike Pence, his wonderful wife Karen, and the entire Pence family.
+
+Thank you as well to my Chief of Staff, Mark Meadows; the dedicated members of the White House Staff and the Cabinet; and all the incredible people across our administration who poured out their heart and soul to fight for America.
+
+I also want to take a moment to thank a truly exceptional group of people: the United States Secret Service. My family and I will forever be in your debt. My profound gratitude as well to everyone in the White House Military Office, the teams of Marine One and Air Force One, every member of the Armed Forces, and state and local law enforcement all across our country.",141,127,5;6;7,False
+trump1_c003,trump1,trump,en,2021-01-19,farewell_address,,3,28,0.111,"Most of all, I want to thank the American people. To serve as your President has been an honor beyond description. Thank you for this extraordinary privilege. And that’s what it is — a great privilege and a great honor.
+
+We must never forget that while Americans will always have our disagreements, we are a nation of incredible, decent, faithful, and peace-loving citizens who all want our country to thrive and flourish and be very, very successful and good. We are a truly magnificent nation.",99,85,8;9,False
+trump1_c004,trump1,trump,en,2021-01-19,farewell_address,,4,28,0.148,"All Americans were horrified by the assault on our Capitol. Political violence is an attack on everything we cherish as Americans. It can never be tolerated.
+
+Now more than ever, we must unify around our shared values and rise above the partisan rancor, and forge our common destiny.
+
+Four years ago, I came to Washington as the only true outsider ever to win the presidency. I had not spent my career as a politician, but as a builder looking at open skylines and imagining infinite possibilities. I ran for President because I knew there were towering new summits for America just waiting to be scaled. I knew the potential for our nation was boundless as long as we put America first.",139,121,10;11;12,False
+trump1_c005,trump1,trump,en,2021-01-19,farewell_address,,5,28,0.185,"So I left behind my former life and stepped into a very difficult arena, but an arena nevertheless, with all sorts of potential if properly done. America had given me so much, and I wanted to give something back.
+
+Together with millions of hardworking patriots across this land, we built the greatest political movement in the history of our country. We also built the greatest economy in the history of the world. It was about “America First” because we all wanted to make America great again. We restored the principle that a nation exists to serve its citizens. Our agenda was not about right or left, it wasn’t about Republican or Democrat, but about the good of a nation, and that means the whole nation.",144,125,13;14,False
+trump1_c006,trump1,trump,en,2021-01-19,farewell_address,,6,28,0.222,"With the support and prayers of the American people, we achieved more than anyone thought possible. Nobody thought we could even come close.
+
+We passed the largest package of tax cuts and reforms in American history. We slashed more job-killing regulations than any administration had ever done before. We fixed our broken trade deals, withdrew from the horrible Trans-Pacific Partnership and the impossible Paris Climate Accord, renegotiated the one-sided South Korea deal, and we replaced NAFTA with the groundbreaking USMCA — that’s Mexico and Canada — a deal that’s worked out very, very well.",113,94,15;16,False
+trump1_c007,trump1,trump,en,2021-01-19,farewell_address,,7,28,0.259,"Also, and very importantly, we imposed historic and monumental tariffs on China; made a great new deal with China. But before the ink was even dry, we and the whole world got hit with the China virus. Our trade relationship was rapidly changing, billions and billions of dollars were pouring into the U.S., but the virus forced us to go in a different direction.
+
+The whole world suffered, but America outperformed other countries economically because of our incredible economy and the economy that we built. Without the foundations and footings, it wouldn’t have worked out this way. We wouldn’t have some of the best numbers we’ve ever had.",129,108,17;18,False
+trump1_c008,trump1,trump,en,2021-01-19,farewell_address,,8,28,0.296,"We also unlocked our energy resources and became the world’s number-one producer of oil and natural gas by far. Powered by these policies, we built the greatest economy in the history of the world. We reignited America’s job creation and achieved record-low unemployment for African Americans, Hispanic Americans, Asian Americans, women — almost everyone.
+
+Incomes soared, wages boomed, the American Dream was restored, and millions were lifted from poverty in just a few short years. It was a miracle. The stock market set one record after another, with 148 stock market highs during this short period of time, and boosted the retirements and pensions of hardworking citizens all across our nation. 401(k)s are at a level they’ve never been at before. We’ve never seen numbers like we’ve seen, and that’s before the pandemic and after the pandemic.",176,137,19;20,False
+trump1_c009,trump1,trump,en,2021-01-19,farewell_address,,9,28,0.333,"We rebuilt the American manufacturing base, opened up thousands of new factories, and brought back the beautiful phrase: “Made in the USA.”
+
+To make life better for working families, we doubled the child tax credit and signed the largest-ever expansion of funding for childcare and development. We joined with the private sector to secure commitments to train more than 16 million American workers for the jobs of tomorrow.
+
+When our nation was hit with the terrible pandemic, we produced not one, but two vaccines with record-breaking speed, and more will quickly follow. They said it couldn’t be done but we did it. They call it a “medical miracle,” and that’s what they’re calling it right now: a “medical miracle.”",144,119,21;22;23,False
+trump1_c010,trump1,trump,en,2021-01-19,farewell_address,,10,28,0.37,"Another administration would have taken 3, 4, 5, maybe even up to 10 years to develop a vaccine. We did in nine months.
+
+We grieve for every life lost, and we pledge in their memory to wipe out this horrible pandemic once and for all.
+
+When the virus took its brutal toll on the world’s economy, we launched the fastest economic recovery our country has ever seen. We passed nearly $4 trillion in economic relief, saved or supported over 50 million jobs, and slashed the unemployment rate in half. These are numbers that our country has never seen before.",122,99,24;25;26,False
+trump1_c011,trump1,trump,en,2021-01-19,farewell_address,,11,28,0.407,"We created choice and transparency in healthcare, stood up to big pharma in so many ways, but especially in our effort to get favored-nations clauses added, which will give us the lowest prescription drug prices anywhere in the world.
+
+We passed VA Choice, VA Accountability, Right to Try, and landmark criminal justice reform.
+
+We confirmed three new justices of the United States Supreme Court. We appointed nearly 300 federal judges to interpret our Constitution as written.",92,76,27;28;29,False
+trump1_c012,trump1,trump,en,2021-01-19,farewell_address,,12,28,0.444,"For years, the American people pleaded with Washington to finally secure the nation’s borders. I am pleased to say we answered that plea and achieved the most secure border in U.S. history. We have given our brave border agents and heroic ICE officers the tools they need to do their jobs better than they have ever done before, and to enforce our laws and keep America safe.
+
+We proudly leave the next administration with the strongest and most robust border security measures ever put into place. This includes historic agreements with Mexico, Guatemala, Honduras, and El Salvador, along with more than 450 miles of powerful new wall.",124,107,30;31,False
+trump1_c013,trump1,trump,en,2021-01-19,farewell_address,,13,28,0.481,"We restored American strength at home and American leadership abroad. The world respects us again. Please don’t lose that respect.
+
+We reclaimed our sovereignty by standing up for America at the United Nations and withdrawing from the one-sided global deals that never served our interests. And NATO countries are now paying hundreds of billions of dollars more than when I arrived just a few years ago. It was very unfair. We were paying the cost for the world. Now the world is helping us.",94,84,32;33,False
+trump1_c014,trump1,trump,en,2021-01-19,farewell_address,,14,28,0.519,"And perhaps most importantly of all, with nearly $3 trillion, we fully rebuilt the American military — all made in the USA. We launched the first new branch of the United States Armed Forces in 75 years: the Space Force. And last spring, I stood at Kennedy Space Center in Florida and watched as American astronauts returned to space on American rockets for the first time in many, many years.",81,70,34,False
+trump1_c015,trump1,trump,en,2021-01-19,farewell_address,,15,28,0.556,"We revitalized our alliances and rallied the nations of the world to stand up to China like never before.
+
+We obliterated the ISIS caliphate and ended the wretched life of its founder and leader, al Baghdadi. We stood up to the oppressive Iranian regime and killed the world’s top terrorist, Iranian butcher Qasem Soleimani.
+
+We recognized Jerusalem as the capital of Israel and recognized Israeli sovereignty over the Golan Heights.",88,70,35;36;37,False
+trump1_c016,trump1,trump,en,2021-01-19,farewell_address,,16,28,0.593,"As a result of our bold diplomacy and principled realism, we achieved a series of historic peace deals in the Middle East. Nobody believed it could happen. The Abraham Accords opened the doors to a future of peace and harmony, not violence and bloodshed. It is the dawn of a new Middle East, and we are bringing our soldiers home.
+
+I am especially proud to be the first President in decades who has started no new wars.",88,77,38;39,False
+trump1_c017,trump1,trump,en,2021-01-19,farewell_address,,17,28,0.63,"Above all, we have reasserted the sacred idea that, in America, the government answers to the people. Our guiding light, our North Star, our unwavering conviction has been that we are here to serve the noble everyday citizens of America. Our allegiance is not to the special interests, corporations, or global entities; it’s to our children, our citizens, and to our nation itself.",81,63,40,False
+trump1_c018,trump1,trump,en,2021-01-19,farewell_address,,18,28,0.667,"As President, my top priority, my constant concern, has always been the best interests of American workers and American families. I did not seek the easiest course; by far, it was actually the most difficult. I did not seek the path that would get the least criticism. I took on the tough battles, the hardest fights, the most difficult choices because that’s what you elected me to do. Your needs were my first and last unyielding focus.",92,77,41,False
+trump1_c019,trump1,trump,en,2021-01-19,farewell_address,,19,28,0.704,"This, I hope, will be our greatest legacy: Together, we put the American people back in charge of our country. We restored self-government. We restored the idea that in America no one is forgotten, because everyone matters and everyone has a voice. We fought for the principle that every citizen is entitled to equal dignity, equal treatment, and equal rights because we are all made equal by God. Everyone is entitled to be treated with respect, to have their voice heard, and to have their government listen. You are loyal to your country, and my administration was always loyal to you.",118,101,42,False
+trump1_c020,trump1,trump,en,2021-01-19,farewell_address,,20,28,0.741,"We worked to build a country in which every citizen could find a great job and support their wonderful families. We fought for the communities where every American could be safe and schools where every child could learn. We promoted a culture where our laws would be upheld, our heroes honored, our history preserved, and law-abiding citizens are never taken for granted. Americans should take tremendous satisfaction in all that we have achieved together. It’s incredible.",87,76,43,False
+trump1_c021,trump1,trump,en,2021-01-19,farewell_address,,21,28,0.778,"Now, as I leave the White House, I have been reflecting on the dangers that threaten the priceless inheritance we all share. As the world’s most powerful nation, America faces constant threats and challenges from abroad. But the greatest danger we face is a loss of confidence in ourselves, a loss of confidence in our national greatness. A nation is only as strong as its spirit. We are only as dynamic as our pride. We are only as vibrant as the faith that beats in the hearts of our people.",101,90,44,False
+trump1_c022,trump1,trump,en,2021-01-19,farewell_address,,22,28,0.815,"No nation can long thrive that loses faith in its own values, history, and heroes, for these are the very sources of our unity and our vitality.
+
+What has always allowed America to prevail and triumph over the great challenges of the past has been an unyielding and unashamed conviction in the nobility of our country and its unique purpose in history. We must never lose this conviction. We must never forsake our belief in America.",89,76,45;46,False
+trump1_c023,trump1,trump,en,2021-01-19,farewell_address,,23,28,0.852,"The key to national greatness lies in sustaining and instilling our shared national identity. That means focusing on what we have in common: the heritage that we all share.
+
+At the center of this heritage is also a robust belief in free expression, free speech, and open debate. Only if we forget who we are, and how we got here, could we ever allow political censorship and blacklisting to take place in America. It’s not even thinkable. Shutting down free and open debate violates our core values and most enduring traditions.
+In America, we don’t insist on absolute conformity or enforce rigid orthodoxies and punitive speech codes. We just don’t do that. America is not a timid nation of tame souls who need to be sheltered and protected from those with whom we disagree. That’s not who we are. It will never be who we are.",173,146,47;48,False
+trump1_c024,trump1,trump,en,2021-01-19,farewell_address,,24,28,0.889,"For nearly 250 years, in the face of every challenge, Americans have always summoned our unmatched courage, confidence, and fierce independence. These are the miraculous traits that once led millions of everyday citizens to set out across a wild continent and carve out a new life in the great West. It was the same profound love of our God-given freedom that willed our soldiers into battle and our astronauts into space.",84,71,49,False
+trump1_c025,trump1,trump,en,2021-01-19,farewell_address,,25,28,0.926,"As I think back on the past four years, one image rises in my mind above all others. Whenever I traveled all along the motorcade route, there were thousands and thousands of people. They came out with their families so that they could stand as we passed, and proudly wave our great American flag. It never failed to deeply move me. I knew that they did not just come out to show their support of me; they came out to show me their support and love for our country.",99,89,50,False
+trump1_c026,trump1,trump,en,2021-01-19,farewell_address,,26,28,0.963,"This is a republic of proud citizens who are united by our common conviction that America is the greatest nation in all of history. We are, and must always be, a land of hope, of light, and of glory to all the world. This is the precious inheritance that we must safeguard at every single turn.
+
+For the past four years, I have worked to do just that. From a great hall of Muslim leaders in Riyadh to a great square of Polish people in Warsaw; from the floor of the Korean Assembly to the podium at the United Nations General Assembly; and from the Forbidden City in Beijing to the shadow of Mount Rushmore, I fought for you, I fought for your family, I fought for our country. Above all, I fought for America and all it stands for — and that is safe, strong, proud, and free.",170,149,51;52,False
+trump1_c027,trump1,trump,en,2021-01-19,farewell_address,,27,28,1.0,"Now, as I prepare to hand power over to a new administration at noon on Wednesday, I want you to know that the movement we started is only just beginning. There’s never been anything like it. The belief that a nation must serve its citizens will not dwindle but instead only grow stronger by the day.
+
+As long as the American people hold in their hearts deep and devoted love of country, then there is nothing that this nation cannot achieve. Our communities will flourish. Our people will be prosperous. Our traditions will be cherished. Our faith will be strong. And our future will be brighter than ever before.
+
+I go from this majestic place with a loyal and joyful heart, an optimistic spirit, and a supreme confidence that for our country and for our children, the best is yet to come.
+
+Thank you, and farewell. God bless you. God bless the United States of America.",178,156,53;54;55;56,False
+trump2_c000,trump2,trump,en,,composite_excerpts,,0,3,0.0,"Each American generation passes the torch of truth, liberty, and justice in an unbroken chain all the way down to the present. That torch is now in our hands, and we will use it to light up the world. Today, I am keeping another promise by nominating Judge Neil Gorsuch. We love our police, we love our sheriffs, and we love our ICE officers.
+
+Together, we're going to restore safety to our streets and peace to our communities. And we're going to destroy the vile criminal cartel MS-13 and many other gangs. We're going to get you back and operating immediately. Thank you, everybody. Your governor has done a fantastic job.",138,111,0;1,False
+trump2_c001,trump2,trump,en,,composite_excerpts,,1,3,0.5,"And I declare today for the world to hear, Let them hear that the West will never, ever be broken. Our values will prevail. Our people will thrive. And our civilization will triumph.
+
+We will defeat radical Islamic terrorism, and we will not allow it to take root in our country.
+
+We have created more than 2 million jobs since the election. Unemployment is at a 17-year low. The stock market is at an all-time high and hit yet another all-time high, the 85th time since my election. We have cut 22 regulations for every 1 new regulation, the most in the history of our country. We are going to be celebrating Merry Christmas again.",143,115,2;3;4,False
+trump2_c002,trump2,trump,en,,composite_excerpts,,2,3,1.0,"$3.2 trillion in tax cuts for American families, including doubling the standard deduction and doubling the child tax credit. The typical family of 4 earning $75,000 will see an income tax cut of more than $2,000. The largest tax cut in the history of our country. We are a nation of pioneers and patriots, aviators and astronauts. We crave adventure and achievement, exploration and enlightenment.
+
+We gave birth to the modern world, and we will shape tomorrow's world with the strength and skill of American hands. Because for America, the sky is never the limit. Thank you.",128,97,5;6,False
+trump3_c000,trump3,trump,en,2017-01-20,inaugural_address,,0,17,0.0,"Chief Justice Roberts, President Carter, President Clinton, President Bush, President Obama, fellow Americans, and people of the world, thank you.
+
+We, the citizens of America, are now joined in a great national effort to rebuild our country and restore its promise for all of our people.
+
+Together, we will determine the course of America and the world for many, many years to come.
+
+We will face challenges. We will confront hardships. But we will get the job done.",95,78,0;1;2;3,False
+trump3_c001,trump3,trump,en,2017-01-20,inaugural_address,,1,17,0.062,"Every four years, we gather on these steps to carry out the orderly and peaceful transfer of power, and we are grateful to President Obama and First Lady Michelle Obama for their gracious aid throughout this transition. They have been magnificent. Thank you.
+
+Today's ceremony, however, has very special meaning because today we are not merely transferring power from one administration to another, or from one party to another, but we are transferring power from Washington, D.C., and giving it back to you, the people.",100,85,4;5,False
+trump3_c002,trump3,trump,en,2017-01-20,inaugural_address,,2,17,0.125,"For too long, a small group in our nation's capital has reaped the rewards of government while the people have borne the cost. Washington flourished, but the people did not share in its wealth. Politicians prospered, but the jobs left and the factories closed.
+
+The establishment protected itself, but not the citizens of our country. Their victories have not been your victories. Their triumphs have not been your triumphs. And while they celebrated in our nation's capital, there was little to celebrate for struggling families all across our land.",109,89,6;7,False
+trump3_c003,trump3,trump,en,2017-01-20,inaugural_address,,3,17,0.188,"That all changes starting right here and right now, because this moment is your moment. It belongs to you. It belongs to everyone gathered here today and everyone watching all across America.
+
+This is your day. This is your celebration. And this, the United States of America, is your country.
+
+What truly matters is not which party controls our government, but whether our government is controlled by the people.",80,69,8;9;10,False
+trump3_c004,trump3,trump,en,2017-01-20,inaugural_address,,4,17,0.25,"January 20th, 2017, will be remembered as the day the people became the rulers of this nation again.
+
+The forgotten men and women of our country will be forgotten no longer. Everyone is listening to you now.
+
+You came by the tens of millions to become part of a historic movement the likes of which the world has never seen before.
+
+At the center of this movement is a crucial conviction: that a nation exists to serve its citizens.",94,79,11;12;13;14,False
+trump3_c005,trump3,trump,en,2017-01-20,inaugural_address,,5,17,0.312,"Americans want great schools for their children, safe neighborhoods for their families, and good jobs for themselves. These are just and reasonable demands of righteous people and a righteous public.
+
+But for too many of our citizens, a different reality exists: mothers and children trapped in poverty in our inner cities; rusted-out factories scattered like tombstones across the landscape of our nation; an education system flush with cash but which leaves our young and beautiful students deprived of all knowledge; and the crime and the gangs and the drugs that have stolen too many lives and robbed our country of so much unrealized potential.",118,104,15;16,False
+trump3_c006,trump3,trump,en,2017-01-20,inaugural_address,,6,17,0.375,"This American carnage stops right here and stops right now.
+
+We are one nation, and their pain is our pain. Their dreams are our dreams, and their success will be our success.
+
+We share one heart, one home, and one glorious destiny.
+
+The oath of office I take today is an oath of allegiance to all Americans.
+
+For many decades, we've enriched foreign industry at the expense of American industry, subsidized the armies of other countries while allowing for the very sad depletion of our military. We've defended other nations' borders while refusing to defend our own, and spent trillions and trillions of dollars overseas while America's infrastructure has fallen into disrepair and decay.",136,114,17;18;19;20;21,False
+trump3_c007,trump3,trump,en,2017-01-20,inaugural_address,,7,17,0.438,"We've made other countries rich while the wealth, strength, and confidence of our country has dissipated over the horizon.
+
+One by one, the factories shuttered and left our shores, with not even a thought about the millions and millions of American workers that were left behind.
+
+The wealth of our middle class has been ripped from their homes and then redistributed all across the world.
+
+But that is the past, and now we are looking only to the future.",91,79,22;23;24;25,False
+trump3_c008,trump3,trump,en,2017-01-20,inaugural_address,,8,17,0.5,"We assembled here today are issuing a new decree to be heard in every city, in every foreign capital, and in every hall of power.
+
+From this day forward, a new vision will govern our land.
+
+From this day forward, it's going to be only America first. America first.
+
+Every decision on trade, on taxes, on immigration, on foreign affairs will be made to benefit American workers and American families.",83,70,26;27;28;29,False
+trump3_c009,trump3,trump,en,2017-01-20,inaugural_address,,9,17,0.562,"We must protect our borders from the ravages of other countries making our products, stealing our companies, and destroying our jobs.
+
+Protection will lead to great prosperity and strength.
+
+I will fight for you with every breath in my body, and I will never, ever let you down.
+
+America will start winning again, winning like never before.
+
+We will bring back our jobs. We will bring back our borders. We will bring back our wealth. And we will bring back our dreams.",96,82,30;31;32;33;34,False
+trump3_c010,trump3,trump,en,2017-01-20,inaugural_address,,10,17,0.625,"We will build new roads and highways and bridges and airports and tunnels and railways all across our wonderful nation.
+
+We will get our people off of welfare and back to work, rebuilding our country with American hands and American labor.
+
+We will follow two simple rules: buy American and hire American.
+
+We will seek friendship and goodwill with the nations of the world, but we do so with the understanding that it is the right of all nations to put their own interests first.",92,85,35;36;37;38,False
+trump3_c011,trump3,trump,en,2017-01-20,inaugural_address,,11,17,0.688,"We do not seek to impose our way of life on anyone, but rather to let it shine as an example. We will shine for everyone to follow.
+
+We will reinforce old alliances and form new ones and unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth.
+
+At the bedrock of our politics will be a total allegiance to the United States of America. And through our loyalty to our country, we will rediscover our loyalty to each other.",99,89,39;40;41,False
+trump3_c012,trump3,trump,en,2017-01-20,inaugural_address,,12,17,0.75,"When you open your heart to patriotism, there is no room for prejudice.
+
+The Bible tells us how good and pleasant it is when God's people live together in unity.
+
+We must speak our minds openly, debate our disagreements honestly, but always pursue solidarity.
+
+When America is united, America is totally unstoppable.
+
+There should be no fear. We are protected, and we will always be protected.
+
+We will be protected by the great men and women of our military and law enforcement, and most importantly, we will be protected by God.",106,91,42;43;44;45;46;47,False
+trump3_c013,trump3,trump,en,2017-01-20,inaugural_address,,13,17,0.812,"Finally, we must think big and dream even bigger.
+
+In America, we understand that a nation is only living as long as it is striving.
+
+We will no longer accept politicians who are all talk and no action, constantly complaining but never doing anything about it.
+
+The time for empty talk is over. Now arrives the hour of action.
+
+Do not allow anyone to tell you that it cannot be done.",80,71,48;49;50;51;52,False
+trump3_c014,trump3,trump,en,2017-01-20,inaugural_address,,14,17,0.875,"No challenge can match the heart and fight and spirit of America.
+
+We will not fail. Our country will thrive and prosper again.
+
+We stand at the birth of a new millennium, ready to unlock the mysteries of space, to free the Earth from the miseries of disease, and to harness the energies, industries, and technologies of tomorrow.
+
+A new national pride will stir our souls, lift our sights, and heal our divisions.",86,73,53;54;55;56,False
+trump3_c015,trump3,trump,en,2017-01-20,inaugural_address,,15,17,0.938,"It's time to remember that old wisdom our soldiers will never forget: that whether we are black or brown or white, we all bleed the same red blood of patriots.
+
+We all enjoy the same glorious freedoms, and we all salute the same great American flag.
+
+And whether a child is born in the urban sprawl of Detroit or the windswept plains of Nebraska, they look up at the same night sky, they fill their heart with the same dreams, and they are infused with the breath of life by the same Almighty Creator.",108,94,57;58;59,False
+trump3_c016,trump3,trump,en,2017-01-20,inaugural_address,,16,17,1.0,"So to all Americans in every city near and far, small and large, from mountain to mountain, from ocean to ocean, hear these words:
+
+You will never, never be ignored again.
+
+Your voice, your hopes, and your dreams will define our American destiny.
+
+And your courage and goodness and love will forever guide us along the way.
+
+Together, we will make America strong again.
+
+We will make America wealthy again.
+
+We will make America proud again.
+
+We will make America safe again.
+
+And yes, together, we will make America great again.
+
+Thank you. God bless you. And God bless America.
+
+Thank you. God bless America.",129,105,60;61;62;63;64;65;66;67;68;69;70,False

@@ -225,6 +225,96 @@ def check_f(cfg: dict, tables: Path, tag: str) -> None:
     REPORT.append("\n" + md(df) + "\n")
 
 
+def check_g_language_effect(cfg: dict, tables: Path) -> None:
+    """Same embedding model, original-language corpus (archived run) vs English corpus (this run)."""
+    le = cfg.get("robustness", {}).get("language_effect", {})
+    mk = le.get("model_key", "qwen3_embedding_8b")
+    old_dir = Path(cfg["paths"].get("old_results_tables", "old_results/outputs/tables"))
+    if not old_dir.is_absolute():
+        from .config import PROJECT_ROOT
+
+        old_dir = PROJECT_ROOT / old_dir
+    old_tag, new_tag = le.get("old_tag", ""), result_tag(cfg, mk, "")
+    REPORT.append(f"### G: language effect — `{mk}` on the original-language corpus (archived) vs the English corpus\n")
+    if not (old_dir / f"leader_pairs{old_tag}.csv").exists() or not (tables / f"leader_pairs{new_tag}.csv").exists():
+        REPORT.append("_skipped — archived tables or the robustness-model tables are missing_\n")
+        add("G", "original languages vs English", "status", "skipped", "tables missing")
+        return
+    leaders = leader_slugs(cfg)
+    names = {L: cfg["leaders"][L]["short_name"] for L in leaders}
+    po = pd.read_csv(old_dir / f"leader_pairs{old_tag}.csv")
+    pn = pd.read_csv(tables / f"leader_pairs{new_tag}.csv")
+    for d in (po, pn):
+        d["pair"] = d.apply(lambda r: "–".join(sorted([r.leader_a, r.leader_b])), axis=1)
+    m = po[["pair", "cosine_similarity"]].rename(columns={"cosine_similarity": "old_similarity"}).merge(
+        pn[["pair", "cosine_similarity"]].rename(columns={"cosine_similarity": "new_similarity"}), on="pair")
+    m["old_rank"] = m["old_similarity"].rank(ascending=False).astype(int)
+    m["new_rank"] = m["new_similarity"].rank(ascending=False).astype(int)
+    m["delta"] = m["new_similarity"] - m["old_similarity"]
+    m.sort_values("old_similarity", ascending=False).to_csv(tables / "language_effect_pairs.csv", index=False, encoding="utf-8")
+    rho = spearmanr(m["old_similarity"], m["new_similarity"]).statistic
+    add("G", "original languages vs English", "leader_pair_similarity_spearman", rho, "10 pairs, same model", material=rho < 0.5)
+    add("G", "original languages vs English", "most_similar_pair", f"{m.loc[m.old_similarity.idxmax(), 'pair']} | {m.loc[m.new_similarity.idxmax(), 'pair']}", "old | new",
+        material=m.loc[m.old_similarity.idxmax(), "pair"] != m.loc[m.new_similarity.idxmax(), "pair"])
+    erd = m[m["pair"].str.contains("erdogan")]
+    add("G", "original languages vs English", "erdogan_pairs_mean_rank", f"{erd['old_rank'].mean():.1f} → {erd['new_rank'].mean():.1f}", "of 10 (1 = most similar)",
+        material=abs(erd["old_rank"].mean() - erd["new_rank"].mean()) >= 2)
+    REPORT.append(f"- Leader-pair similarities, same model: Spearman **{rho:.2f}** between the two corpora. Most similar pair: "
+                  f"{m.loc[m.old_similarity.idxmax(), 'pair']} (original) → {m.loc[m.new_similarity.idxmax(), 'pair']} (English). "
+                  f"Erdoğan's four pairs move from mean rank {erd['old_rank'].mean():.1f} to {erd['new_rank'].mean():.1f} of 10; "
+                  f"mean off-diagonal similarity {m['old_similarity'].mean():.3f} → {m['new_similarity'].mean():.3f}.\n")
+    REPORT.append(md(m.sort_values("old_similarity", ascending=False)[["pair", "old_similarity", "new_similarity", "delta", "old_rank", "new_rank"]]) + "\n")
+
+    ko = pd.read_csv(old_dir / f"chunk_knn_leader_matrix{old_tag}.csv", index_col=0)
+    kn = pd.read_csv(tables / f"chunk_knn_leader_matrix{new_tag}.csv", index_col=0)
+    common = [L for L in leaders if L in ko.index and L in kn.index]
+    knn = pd.DataFrame({"leader": common, "old_same_leader_share": [float(ko.loc[L, L]) for L in common], "new_same_leader_share": [float(kn.loc[L, L]) for L in common]})
+    knn.to_csv(tables / "language_effect_knn.csv", index=False, encoding="utf-8")
+    for r in knn.itertuples():
+        add("G", "original languages vs English", f"knn_same_leader_share_{r.leader}", f"{r.old_same_leader_share:.3f} → {r.new_same_leader_share:.3f}", "old → new",
+            material=abs(r.new_same_leader_share - r.old_same_leader_share) > 0.15)
+    REPORT.append("- Same-leader share of the 10 nearest neighbours: " + ", ".join(f"{names[r.leader]} {r.old_same_leader_share:.0%} → {r.new_same_leader_share:.0%}" for r in knn.itertuples()) + "\n")
+
+    to = pd.read_csv(old_dir / f"theme_profile_leader{old_tag}.csv").set_index("leader")
+    tn = pd.read_csv(tables / f"theme_profile_leader{new_tag}.csv").set_index("leader")
+    themes = theme_keys(cfg)
+    rows = []
+    for L in common:
+        a = to.loc[L, [f"{k}_pct" for k in themes]].to_numpy(float)
+        b = tn.loc[L, [f"{k}_pct" for k in themes]].to_numpy(float)
+        rows.append({"leader": L, "spearman_8_themes": spearmanr(a, b).statistic, "top3_overlap": len({themes[i] for i in np.argsort(-a)[:3]} & {themes[i] for i in np.argsort(-b)[:3]})})
+        add("G", "original languages vs English", f"theme_profile_spearman_{L}", rows[-1]["spearman_8_themes"], "8 themes (old: language-matched descriptions; new: English)",
+            material=rows[-1]["spearman_8_themes"] < 0.5)
+    REPORT.append("- Theme profiles (old run scored against language-matched descriptions, new run against English): median Spearman "
+                  f"**{pd.DataFrame(rows)['spearman_8_themes'].median():.2f}**.\n")
+    REPORT.append(md(pd.DataFrame(rows)) + "\n")
+    REPORT.append("_Caveat: the English texts are translations for Erdoğan, Macron and Merkel; the comparison mixes the language effect with the translator's choices._\n")
+
+
+def check_h_rhetoric_vs_emotion(cfg: dict, tables: Path, tag: str, etag: str) -> None:
+    REPORT.append("### H: rhetorical dimensions (embedding) vs emotional tone (classifier), speech level\n")
+    fr = pd.read_csv(tables / f"framing_speech{tag}.csv")
+    em_path = tables / f"emotion_profile_speech{etag}.csv"
+    if not em_path.exists():
+        REPORT.append("_skipped — emotion tables missing_\n")
+        return
+    em = pd.read_csv(em_path)
+    sp = fr.merge(em, on="speech_id", suffixes=("", "_emo"))
+    pairs = [("conflict_threat_framing_pct", "fam_hostility"), ("conflict_threat_framing_pct", "fam_threat_negative"),
+             ("cooperation_solidarity_framing_pct", "fam_affiliative_positive"), ("gratitude_recognition_pct", "emo_gratitude"),
+             ("conflict_threat_framing_pct", "valence"), ("us_vs_them_pct", "fam_hostility"), ("future_orientation_pct", "emo_optimism")]
+    rows = []
+    for a, b in pairs:
+        if a in sp.columns and b in sp.columns:
+            rho = spearmanr(sp[a], sp[b]).statistic
+            rows.append({"rhetorical": a, "emotion": b, "spearman_speech_level": rho, "n_speeches": len(sp)})
+            add("H", "rhetoric vs emotion", f"{a}__vs__{b}", rho, f"{len(sp)} speeches")
+    df = pd.DataFrame(rows)
+    df.to_csv(tables / "rhetoric_vs_emotion.csv", index=False, encoding="utf-8")
+    REPORT.append("- Two independent methods (embedding similarity to a description vs a supervised classifier) agree where the correlations are clearly positive and diverge where they are near zero:\n")
+    REPORT.append(md(df) + "\n")
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Phase 8: robustness comparisons.")
     ap.add_argument("--config", default=None)
@@ -254,6 +344,10 @@ def main(argv: list[str] | None = None) -> int:
     check_d(cfg, tables, result_tag(cfg, pk, ""))
     check_e(cfg, tables, pk)
     check_f(cfg, tables, result_tag(cfg, pk, ""))
+    check_g_language_effect(cfg, tables)
+    from .emotion import etag_for
+
+    check_h_rhetoric_vs_emotion(cfg, tables, result_tag(cfg, pk, ""), etag_for(""))
 
     summary = pd.DataFrame(ROWS)
     summary.to_csv(tables / "robustness_summary.csv", index=False, encoding="utf-8")

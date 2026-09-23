@@ -1,5 +1,9 @@
 # political-speech-geometry — single source of truth for every phase.
 # All analysis scripts read this file; nothing is hard-coded in src/.
+#
+# Run 2 (2026-09-23): English corpus (the collector translated the tr/fr/de speeches into English and
+# saved them over data/original/), primary model KaLM-Embedding-Gemma3-12B, robustness model
+# Qwen3-Embedding-8B. The original-language run is archived under old_results/.
 
 project_name: political-speech-geometry
 random_seed: 42
@@ -15,60 +19,79 @@ paths:
   outputs: outputs
   outputs_plots: outputs/plots
   outputs_tables: outputs/tables
+  old_results_tables: old_results/outputs/tables   # original-language run, used for the language-effect check
 
 # Leader slug = folder name under data/original/ and filename prefix.
+# `language` is the language of the analysed text (now English for everyone);
+# `original_language` is the language the speech was delivered in.
 leaders:
   erdogan:
     display_name: "Recep Tayyip Erdoğan"
     short_name: "Erdoğan"
-    language: tr
+    language: en
+    original_language: tr
+    text_is_translation: true
   macron:
     display_name: "Emmanuel Macron"
     short_name: "Macron"
-    language: fr
+    language: en
+    original_language: fr
+    text_is_translation: true
   merkel:
     display_name: "Angela Merkel"
     short_name: "Merkel"
-    language: de
+    language: en
+    original_language: de
+    text_is_translation: true
   putin:
     display_name: "Vladimir Putin"
     short_name: "Putin"
     language: en
-    language_note: "English transcript of the Russian original"
+    original_language: ru
+    text_is_translation: true
+    language_note: "Official English transcript of the Russian original"
   trump:
     display_name: "Donald Trump"
     short_name: "Trump"
     language: en
+    original_language: en
+    text_is_translation: false
 
 corpus:
   min_speeches_per_leader: 3
   target_speeches_per_leader: [3, 5]
-  # Which corpus variant to analyse: "original" (mixed-language) or "translated_en".
-  variant: original
+  variant: original          # data/original now holds the English texts
 
 # ---------------------------------------------------------------- embeddings
-primary_embedding_model: Qwen/Qwen3-Embedding-8B
-robustness_embedding_model: BAAI/bge-m3
+primary_embedding_model: tencent/KaLM-Embedding-Gemma3-12B-2511
+robustness_embedding_model: Qwen/Qwen3-Embedding-8B
 
 embedding:
   device: cuda
-  normalize: true                 # unit-length before any cosine computation
+  normalize: true
   models:
+    kalm_embedding_gemma3_12b:
+      hf_id: tencent/KaLM-Embedding-Gemma3-12B-2511
+      dtype: bfloat16              # 11.76B params ≈ 23.5 GB; fits the 32 GB RTX 5090
+      attn_implementation: sdpa
+      padding_side: left           # last-token pooling
+      trust_remote_code: true
+      batch_size: 8
+      max_seq_length: 512
+      query_instruction_template: "Instruct: {task}\nQuery: {text}"
     qwen3_embedding_8b:
       hf_id: Qwen/Qwen3-Embedding-8B
       dtype: bfloat16
-      attn_implementation: sdpa   # flash_attention_2 has no Windows wheels
-      padding_side: left          # required for last-token pooling
+      attn_implementation: sdpa
+      padding_side: left
       batch_size: 16
       max_seq_length: 512
-      # Documents (chunks) are embedded raw; only queries (theme descriptions) get the instruction.
       query_instruction_template: "Instruct: {task}\nQuery: {text}"
     bge_m3:
       hf_id: BAAI/bge-m3
       dtype: float16
       batch_size: 32
       max_seq_length: 512
-  # artifacts/embeddings/{model_key}_chunks.npy and {model_key}_index.parquet
   artifact_pattern: "{model_key}_{unit}"
 
 # ---------------------------------------------------------------- chunking
@@ -76,19 +99,17 @@ chunking:
   chunk_min_tokens: 80
   chunk_max_tokens: 180
   chunk_target_tokens: 130
-  overlap_tokens: 0               # no overlapping windows
-  tokenizer: Qwen/Qwen3-Embedding-8B
-  fallback_tokens_per_word: 1.5   # used only if the tokenizer cannot be loaded
-  short_chunk_merge_tolerance: 1.15  # allow up to 1.15 * max when absorbing a short orphan chunk
+  overlap_tokens: 0
+  tokenizer: Qwen/Qwen3-Embedding-8B   # kept from run 1 so both models embed identical chunks
+  fallback_tokens_per_word: 1.5
+  short_chunk_merge_tolerance: 1.15
 
 # ---------------------------------------------------------------- preprocessing (Phase 1)
-# Conservative: only obvious non-speech artifacts are removed, every removal is logged in
-# data/processed/preprocessing_report.md, original files are never touched.
 preprocess:
   collapse_whitespace: true
-  remove_symbol_only_lines: true          # e.g. a lone "*" section separator
-  strip_leading_speaker_label: true       # "President of Russia Vladimir Putin:" at file start
-  speaker_label_patterns:                 # case-insensitive, anchored at the start of the file
+  remove_symbol_only_lines: true
+  strip_leading_speaker_label: true
+  speaker_label_patterns:
     - "^\\W*p?resident of russia vladimir putin\\s*:\\s*"
   remove_stage_directions: true
   remove_html: true
@@ -99,7 +120,6 @@ preprocess:
     trump3.txt:
       drop_paragraphs_before_match: "^Chief Justice Roberts, President Carter"
       reason: "oath ceremony and emcee introduction spoken by other people (paragraphs 0-12)"
-  # Robustness variant C: strip ceremonial opening/closing paragraphs before chunking.
   ceremonial:
     strip_leading_paragraphs: 1
     strip_trailing_paragraphs: 2
@@ -116,7 +136,7 @@ inventory:
   double_space_warn: 20
   language_min_ratio: 0.03
 
-# ---------------------------------------------------------------- geometry / clustering / viz
+# ---------------------------------------------------------------- geometry / clustering
 knn_parameters:
   k: 10
   exclude_same_speech: true
@@ -133,36 +153,36 @@ pca_parameters:
 
 hdbscan_parameters:
   min_cluster_size: 6
-  min_samples: 2      # min_samples>=3 collapses the corpus into 'Turkish vs rest' (2 clusters) — see grid table
+  min_samples: 2
   metric: euclidean
   cluster_selection_method: eom
 
 bootstrap_iterations: 2000
 bootstrap_confidence_level: 0.95
-bootstrap_unit: speech            # resample speeches within each leader, never chunks
+bootstrap_unit: speech
 
 robustness:
   ceremonial_removal:
     strip_leading_paragraphs: 1
     strip_trailing_paragraphs: 2
+  language_effect:
+    model_key: qwen3_embedding_8b        # same model in both runs → isolates the language effect
+    old_tag: ""                          # in old_results the Qwen3 run carried the primary (plain) filenames
 
 # ---------------------------------------------------------------- theme scoring (Phase 3)
 theme_scoring:
-  method_primary: embedding_similarity       # Option A
-  method_secondary: zero_shot_nli            # Option B
+  method_primary: embedding_similarity
+  method_secondary: zero_shot_nli
   nli_model: MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7
   nli_hypothesis_template: "This text is about {}."
   nli_batch_size: 16
   query_task_instruction: "Given a passage from a political speech, retrieve the thematic description that best matches its content"
-  # Primary: each chunk is compared with the theme description written in the chunk's own language
-  # (tr/fr/de/en), which removes most of the cross-lingual bias of comparing e.g. Turkish text with an
-  # English description. Robustness: English descriptions for every chunk (query_language: en).
-  query_language: matched          # matched | en
-  percentile_reference: all_chunks # percentiles are computed over the whole corpus, identical for all leaders
-  framing_rate_percentile: 0.75    # a chunk "uses" a framing if it sits in the top quartile of the corpus
+  query_language: en               # whole corpus is English now (was: matched)
+  percentile_reference: all_chunks
+  framing_rate_percentile: 0.75
   aggregation:
     chunk_to_speech: mean
-    speech_to_leader: mean        # every speech weighs equally within its leader
+    speech_to_leader: mean
 
 theme_definitions:
   - key: national_identity
@@ -172,17 +192,6 @@ theme_definitions:
       The nation as a shared community: references to the homeland, the people, national history
       and heritage, collective memory, national pride, citizens belonging together, and calls for
       national unity and togetherness.
-    description_tr: >-
-      Ortak bir topluluk olarak millet: vatan, halk, milli tarih ve miras, ortak hafıza, milli gurur,
-      vatandaşların birbirine ait olması ve milli birlik ile beraberlik çağrıları.
-    description_fr: >-
-      La nation comme communauté partagée : références à la patrie, au peuple, à l'histoire et au
-      patrimoine national, à la mémoire collective, à la fierté nationale, à l'appartenance des
-      citoyens et aux appels à l'unité et au rassemblement national.
-    description_de: >-
-      Die Nation als gemeinsame Gemeinschaft: Bezüge auf Heimat, Volk, nationale Geschichte und
-      Erbe, kollektive Erinnerung, Nationalstolz, Zusammengehörigkeit der Bürgerinnen und Bürger
-      sowie Aufrufe zu nationaler Einheit und Zusammenhalt.
     examples: [nation, homeland, national identity, collective history, national unity, citizens, national belonging]
   - key: security_military
     label: "Security & Military"
@@ -191,18 +200,6 @@ theme_definitions:
       Armed forces, defense, soldiers and veterans, military operations, war and armed conflict,
       terrorism and counter-terrorism, border security, national security threats and the
       protection of the country by force.
-    description_tr: >-
-      Silahlı kuvvetler, savunma, askerler ve gaziler, askeri operasyonlar, savaş ve silahlı çatışma,
-      terör ve terörle mücadele, sınır güvenliği, milli güvenlik tehditleri ve ülkenin güç yoluyla
-      korunması.
-    description_fr: >-
-      Forces armées, défense, soldats et anciens combattants, opérations militaires, guerre et
-      conflit armé, terrorisme et lutte antiterroriste, sécurité des frontières, menaces pour la
-      sécurité nationale et protection du pays par la force.
-    description_de: >-
-      Streitkräfte, Verteidigung, Soldaten und Veteranen, Militäreinsätze, Krieg und bewaffneter
-      Konflikt, Terrorismus und Terrorbekämpfung, Grenzsicherung, Bedrohungen der nationalen
-      Sicherheit und der Schutz des Landes mit Gewalt.
     examples: [military, defense, terrorism, war, armed forces, national security, security threats]
   - key: economy_welfare
     label: "Economy & Welfare"
@@ -211,17 +208,6 @@ theme_definitions:
       Economic conditions and policy: jobs, employment, wages, growth, inflation and prices,
       industry and production, trade, taxes, public finances, pensions, living standards,
       prosperity and public welfare.
-    description_tr: >-
-      Ekonomik durum ve politika: iş, istihdam, ücretler, büyüme, enflasyon ve fiyatlar, sanayi ve
-      üretim, ticaret, vergiler, kamu maliyesi, emeklilik, hayat standardı, refah ve kamu yararı.
-    description_fr: >-
-      Situation et politique économiques : emplois, travail, salaires, croissance, inflation et
-      prix, industrie et production, commerce, impôts, finances publiques, retraites, niveau de
-      vie, prospérité et bien-être collectif.
-    description_de: >-
-      Wirtschaftliche Lage und Politik: Arbeitsplätze, Beschäftigung, Löhne, Wachstum, Inflation
-      und Preise, Industrie und Produktion, Handel, Steuern, öffentliche Finanzen, Renten,
-      Lebensstandard, Wohlstand und Gemeinwohl.
     examples: [economy, jobs, growth, inflation, production, prosperity, living standards, public welfare]
   - key: foreign_policy
     label: "Foreign Policy & Geopolitics"
@@ -230,18 +216,6 @@ theme_definitions:
       Relations with other countries and international organizations: alliances, diplomacy,
       summits, treaties, the global order, other governments and regions, geopolitical
       positioning, and the country's role and influence in the world.
-    description_tr: >-
-      Diğer ülkeler ve uluslararası kuruluşlarla ilişkiler: ittifaklar, diplomasi, zirveler,
-      anlaşmalar, küresel düzen, diğer hükümetler ve bölgeler, jeopolitik konumlanma ve ülkenin
-      dünyadaki rolü ile etkisi.
-    description_fr: >-
-      Relations avec les autres pays et les organisations internationales : alliances, diplomatie,
-      sommets, traités, ordre mondial, autres gouvernements et régions, positionnement
-      géopolitique, rôle et influence du pays dans le monde.
-    description_de: >-
-      Beziehungen zu anderen Ländern und internationalen Organisationen: Bündnisse, Diplomatie,
-      Gipfeltreffen, Verträge, die Weltordnung, andere Regierungen und Regionen, geopolitische
-      Positionierung sowie Rolle und Einfluss des Landes in der Welt.
     examples: [international relations, alliances, diplomacy, global order, foreign countries, geopolitical positioning]
   - key: democracy_institutions
     label: "Democracy, Law & Institutions"
@@ -250,18 +224,6 @@ theme_definitions:
       Democratic processes and the rule of law: elections and voting, the constitution,
       parliament, courts and the judiciary, civil rights and freedoms, institutions, governance,
       accountability and the legitimacy of power.
-    description_tr: >-
-      Demokratik süreçler ve hukukun üstünlüğü: seçimler ve oy kullanma, anayasa, meclis, mahkemeler
-      ve yargı, haklar ve özgürlükler, kurumlar, yönetişim, hesap verebilirlik ve iktidarın
-      meşruiyeti.
-    description_fr: >-
-      Processus démocratiques et État de droit : élections et vote, constitution, parlement,
-      tribunaux et justice, droits et libertés civiques, institutions, gouvernance, responsabilité
-      et légitimité du pouvoir.
-    description_de: >-
-      Demokratische Prozesse und Rechtsstaatlichkeit: Wahlen und Abstimmungen, die Verfassung,
-      Parlament, Gerichte und Justiz, Bürgerrechte und Freiheiten, Institutionen, Regierungsführung,
-      Rechenschaft und die Legitimität der Macht.
     examples: [democracy, elections, constitution, rule of law, institutions, rights, governance]
   - key: social_solidarity
     label: "Social Solidarity & Values"
@@ -270,18 +232,6 @@ theme_definitions:
       Social bonds and shared values: family, community, mutual support, compassion, care for
       the vulnerable, volunteers, faith and traditions, social cohesion, respect and gratitude
       toward fellow citizens.
-    description_tr: >-
-      Toplumsal bağlar ve ortak değerler: aile, topluluk, karşılıklı destek, merhamet, kırılgan
-      kesimlere sahip çıkma, gönüllüler, inanç ve gelenekler, sosyal uyum, vatandaşlara saygı ve
-      şükran.
-    description_fr: >-
-      Liens sociaux et valeurs partagées : famille, communauté, entraide, compassion, attention
-      aux plus fragiles, bénévoles, foi et traditions, cohésion sociale, respect et gratitude
-      envers les concitoyens.
-    description_de: >-
-      Soziale Bindungen und gemeinsame Werte: Familie, Gemeinschaft, gegenseitige Unterstützung,
-      Mitgefühl, Fürsorge für Schwache, Ehrenamtliche, Glaube und Traditionen, gesellschaftlicher
-      Zusammenhalt, Respekt und Dankbarkeit gegenüber den Mitbürgerinnen und Mitbürgern.
     examples: [family, solidarity, community, social cohesion, shared values, mutual support]
   - key: crisis_resilience
     label: "Crisis, Threat & Resilience"
@@ -290,17 +240,6 @@ theme_definitions:
       Hardship and how it is faced: crises, disasters, pandemics, emergencies, external threats
       and pressures, sacrifice, endurance, resilience, recovery and rebuilding after difficult
       times.
-    description_tr: >-
-      Zorluklar ve bunlarla nasıl başa çıkıldığı: krizler, afetler, salgınlar, acil durumlar, dış
-      tehditler ve baskılar, fedakârlık, sabır, dayanıklılık, zor günlerin ardından toparlanma ve
-      yeniden inşa.
-    description_fr: >-
-      Les épreuves et la manière d'y faire face : crises, catastrophes, pandémies, urgences,
-      menaces et pressions extérieures, sacrifice, endurance, résilience, redressement et
-      reconstruction après des temps difficiles.
-    description_de: >-
-      Not und ihre Bewältigung: Krisen, Katastrophen, Pandemien, Notlagen, äußere Bedrohungen und
-      Druck, Opfer, Durchhalten, Widerstandskraft, Erholung und Wiederaufbau nach schweren Zeiten.
     examples: [crisis, disaster, external threat, hardship, sacrifice, national resilience, recovery]
   - key: future_reform_technology
     label: "Future, Reform & Technology"
@@ -309,20 +248,12 @@ theme_definitions:
       Looking ahead and changing course: reforms and modernization, innovation, science and
       technology, digitalization, education and schools, young people, the climate transition
       and long-term plans for the coming years.
-    description_tr: >-
-      Geleceğe bakmak ve rota değiştirmek: reformlar ve modernleşme, yenilik, bilim ve teknoloji,
-      dijitalleşme, eğitim ve okullar, gençler, iklim dönüşümü ve önümüzdeki yıllara dair uzun
-      vadeli planlar.
-    description_fr: >-
-      Regarder vers l'avenir et changer de cap : réformes et modernisation, innovation, science
-      et technologie, numérique, éducation et école, jeunesse, transition climatique et projets
-      de long terme pour les années à venir.
-    description_de: >-
-      Nach vorn blicken und den Kurs ändern: Reformen und Modernisierung, Innovation, Wissenschaft
-      und Technologie, Digitalisierung, Bildung und Schulen, junge Menschen, der Klimawandel als
-      Umbau und langfristige Pläne für die kommenden Jahre.
     examples: [future, reform, modernization, innovation, technology, education, youth, transformation]
 
+# Rhetorical dimensions ("framing" in the code). The first two are the spec's required metrics and keep
+# their exact names; the other five extend the style analysis. All are scored the same way as themes
+# (embedding similarity + NLI), aggregated chunk → speech → leader, and reported as sorted descriptive
+# measurements with bootstrap intervals — never as normative labels.
 framing_definitions:
   conflict_threat_framing:
     label: "Conflict / Threat Framing"
@@ -330,91 +261,127 @@ framing_definitions:
     description: >-
       Language that frames a situation in terms of threat, enemies, conflict, war, attack,
       danger, defense, struggle, confrontation, terror and hostility.
-    description_tr: >-
-      Bir durumu tehdit, düşman, çatışma, savaş, saldırı, tehlike, savunma, mücadele, hesaplaşma,
-      terör ve düşmanlık kavramlarıyla çerçeveleyen dil.
-    description_fr: >-
-      Un langage qui présente une situation en termes de menace, d'ennemis, de conflit, de guerre,
-      d'attaque, de danger, de défense, de lutte, de confrontation, de terreur et d'hostilité.
-    description_de: >-
-      Sprache, die eine Lage in Begriffen von Bedrohung, Feinden, Konflikt, Krieg, Angriff,
-      Gefahr, Verteidigung, Kampf, Konfrontation, Terror und Feindseligkeit rahmt.
     concepts: [threat, enemy, conflict, war, attack, danger, defense, struggle, confrontation, terror, hostility]
+    nli_label: "threat, enemies, conflict and war"
   cooperation_solidarity_framing:
     label: "Cooperation / Solidarity Framing"
     label_tr: "İş Birliği / Dayanışma Çerçevesi"
     description: >-
       Language that frames a situation in terms of cooperation, unity, peace, dialogue,
       solidarity, partnership, reconciliation, mutual support and working together.
-    description_tr: >-
-      Bir durumu iş birliği, birlik, barış, diyalog, dayanışma, ortaklık, uzlaşma, karşılıklı destek
-      ve birlikte çalışma kavramlarıyla çerçeveleyen dil.
-    description_fr: >-
-      Un langage qui présente une situation en termes de coopération, d'unité, de paix, de
-      dialogue, de solidarité, de partenariat, de réconciliation, d'entraide et de travail en commun.
-    description_de: >-
-      Sprache, die eine Lage in Begriffen von Zusammenarbeit, Einheit, Frieden, Dialog,
-      Solidarität, Partnerschaft, Versöhnung, gegenseitiger Unterstützung und gemeinsamem Handeln
-      rahmt.
     concepts: [cooperation, unity, peace, dialogue, solidarity, partnership, reconciliation, mutual support, working together]
+    nli_label: "cooperation, unity, peace and solidarity"
+  past_orientation:
+    label: "Past Orientation"
+    label_tr: "Geçmişe Yönelim"
+    description: >-
+      Looking back: recalling the year that has ended, history and anniversaries, what was
+      achieved, endured or lost, events that already happened and lessons drawn from them.
+    concepts: [last year, history, anniversary, we achieved, we endured, remember, what happened, lessons of the past]
+    nli_label: "the past, history and what has already happened"
+  future_orientation:
+    label: "Future Orientation"
+    label_tr: "Geleceğe Yönelim"
+    description: >-
+      Looking ahead: plans, goals and hopes for the coming year and the years after, what will be
+      built, changed or achieved, the next steps and the long-term direction.
+    concepts: [next year, coming years, we will, plans, goals, vision, tomorrow, the future ahead]
+    nli_label: "the future, plans and goals"
+  us_vs_them:
+    label: "Us-versus-Them Contrast"
+    label_tr: "Biz-Onlar Karşıtlığı"
+    description: >-
+      Drawing a line between an in-group and an out-group: we versus they, our people versus
+      opponents, adversaries, elites, foreign powers or other groups portrayed as outsiders or
+      as acting against us.
+    concepts: [they, those who, against us, our enemies, opponents, outsiders, the others, we alone]
+    nli_label: "us versus them, opponents and adversaries"
+  gratitude_recognition:
+    label: "Gratitude & Recognition"
+    label_tr: "Teşekkür ve Takdir"
+    description: >-
+      Thanking and honouring: gratitude to citizens, workers, soldiers, health workers,
+      volunteers and public servants; recognising service, sacrifice and the achievements of
+      named groups.
+    concepts: [thank you, gratitude, we honour, tribute, recognise, appreciation, dedication, service]
+    nli_label: "gratitude and thanking people"
+  promises_commitments:
+    label: "Promises & Commitments"
+    label_tr: "Vaatler ve Taahhütler"
+    description: >-
+      Making commitments: concrete pledges, announced measures, deadlines, guarantees and
+      assurances about what the government or the speaker will do.
+    concepts: [we will deliver, I promise, commitment, pledge, measures, guarantee, we are going to, by next year]
+    nli_label: "promises and commitments to act"
 
-# Diagnostic only (never used as the theme score): multilingual keyword hits per theme.
+# ---------------------------------------------------------------- emotional tone (Phase 3b)
+# Chunk-level classifier probabilities (English text). Trained on Reddit/Twitter data — domain shift is a
+# stated caveat. For translated leaders the scores describe the English translation.
+emotion:
+  emotion_model: SamLowe/roberta-base-go_emotions        # 28 GoEmotions labels, multi-label sigmoid
+  sentiment_model: cardiffnlp/twitter-roberta-base-sentiment-latest   # negative / neutral / positive
+  batch_size: 32
+  max_length: 512
+  families:
+    affiliative_positive: [admiration, gratitude, pride, love, caring, joy, optimism, approval, relief, excitement]
+    threat_negative: [fear, nervousness, sadness, grief, disappointment, remorse]
+    hostility: [anger, annoyance, disgust, disapproval]
+    cognitive_other: [realization, curiosity, confusion, surprise, desire, amusement, embarrassment]
+    neutral: [neutral]
+  family_aggregation: max        # family score of a chunk = highest member-emotion probability
+  valence: "P(positive) - P(negative) from the sentiment model"
+  report_families: [affiliative_positive, threat_negative, hostility, cognitive_other, neutral]
+  family_labels:
+    affiliative_positive: "Affiliative / positive emotion"
+    threat_negative: "Fear, sadness & loss"
+    hostility: "Hostility & disapproval"
+    cognitive_other: "Curiosity, surprise & other"
+    neutral: "Neutral"
+
+# ---------------------------------------------------------------- composite style similarity (Phase 4c)
+style_similarity:
+  framing_metric: pct                 # rhetorical dimensions enter as corpus percentiles
+  emotion_families: [affiliative_positive, threat_negative, hostility]
+  include_valence: true
+  standardize: zscore_across_speeches
+  distance: euclidean                 # cosine on z-scores also reported
+  linkage: average                    # dendrogram ordering
+
+# Diagnostic only (never used as the theme score): keyword hits per theme (English corpus → `en` lists).
 theme_keywords_diagnostic:
   national_identity:
     en: [nation, national, homeland, our people, history, heritage, unity, united, citizens, motherland, fatherland]
-    tr: [millet, milli, vatan, tarih, birlik, beraberlik, vatandaş, bayrak, cumhuriyet, ecdad]
-    fr: [nation, national, patrie, peuple, histoire, unité, unis, citoyens, république, france]
-    de: [nation, national, heimat, volk, geschichte, einheit, zusammenhalt, bürger, deutschland, vaterland]
   security_military:
     en: [military, army, soldiers, defense, defence, war, terror, terrorism, security, armed, troops, veterans]
-    tr: [ordu, asker, savunma, savaş, terör, güvenlik, şehit, gazi, silah, operasyon]
-    fr: [armée, militaire, soldats, défense, guerre, terrorisme, sécurité, forces armées, attentat]
-    de: [bundeswehr, soldaten, verteidigung, krieg, terror, sicherheit, streitkräfte, anschlag]
   economy_welfare:
     en: [economy, economic, jobs, employment, wages, growth, inflation, prices, industry, trade, taxes, prosperity, pension]
-    tr: [ekonomi, istihdam, iş, ücret, büyüme, enflasyon, fiyat, üretim, sanayi, ticaret, vergi, refah, emekli]
-    fr: [économie, économique, emploi, emplois, salaires, croissance, inflation, prix, industrie, entreprises, impôts, retraites, pouvoir d'achat]
-    de: [wirtschaft, arbeitsplätze, arbeit, löhne, wachstum, inflation, preise, industrie, unternehmen, steuern, rente, wohlstand]
   foreign_policy:
     en: [international, allies, alliance, diplomacy, nato, united nations, europe, world, countries, partners, foreign]
-    tr: [uluslararası, müttefik, diplomasi, nato, dünya, ülkeler, ortak, dış politika, bölge, küresel]
-    fr: [international, alliés, diplomatie, europe, européen, monde, pays, partenaires, otan, ukraine]
-    de: [international, verbündete, diplomatie, europa, europäisch, welt, länder, partner, nato, ukraine]
   democracy_institutions:
     en: [democracy, democratic, election, elections, constitution, law, rights, freedom, parliament, court, institutions, vote]
-    tr: [demokrasi, seçim, anayasa, hukuk, hak, özgürlük, meclis, mahkeme, kurum, oy, sistem]
-    fr: [démocratie, démocratique, élection, élections, constitution, loi, droits, liberté, parlement, institutions, vote, assemblée]
-    de: [demokratie, demokratisch, wahl, wahlen, grundgesetz, verfassung, recht, rechte, freiheit, parlament, bundestag, institutionen]
   social_solidarity:
     en: [family, families, community, solidarity, together, support, compassion, care, volunteers, faith, values, love]
-    tr: [aile, dayanışma, birlikte, destek, merhamet, kardeş, gönüllü, inanç, değer, sevgi, komşu]
-    fr: [famille, familles, solidarité, ensemble, soutien, fraternité, bénévoles, valeurs, entraide, proches]
-    de: [familie, familien, solidarität, gemeinsam, unterstützung, zusammenhalt, ehrenamt, werte, nächsten, glaube]
   crisis_resilience:
     en: [crisis, disaster, pandemic, emergency, threat, hardship, sacrifice, resilience, recover, recovery, rebuild, challenge]
-    tr: [kriz, afet, deprem, salgın, tehdit, zorluk, fedakârlık, dayanıklı, toparlanma, yeniden, mücadele, sınav]
-    fr: [crise, catastrophe, pandémie, épidémie, urgence, menace, épreuve, sacrifice, résilience, reconstruire, défis]
-    de: [krise, katastrophe, pandemie, notlage, bedrohung, prüfung, opfer, widerstandskraft, wiederaufbau, herausforderung]
   future_reform_technology:
     en: [future, reform, modernize, innovation, technology, digital, science, education, schools, young, youth, climate, transformation]
-    tr: [gelecek, reform, modern, yenilik, teknoloji, dijital, bilim, eğitim, okul, genç, gençlik, iklim, dönüşüm]
-    fr: [avenir, réforme, réformes, modernisation, innovation, technologie, numérique, science, éducation, école, jeunes, jeunesse, climat, transition]
-    de: [zukunft, reform, reformen, modernisierung, innovation, technologie, digital, wissenschaft, bildung, schulen, junge, jugend, klima, wandel]
-
-# Fixed wording that every report must carry.
-methodology_notes:
-  projection_note: "2D projections are shown only for visualization; reported similarity values are calculated in the original embedding space."
-  interpretation_scope: "All similarity, distance and theme values describe the collected speech corpora, not ideology, personality, political quality or the people themselves."
 
 # ---------------------------------------------------------------- visualization (Phase 6)
-# Fixed colour per leader (reference categorical palette, slots 1-5 in validated adjacent order;
-# never re-assigned). Scatter plots add marker shapes and per-leader facets because a 5-colour set
-# cannot pass the all-pairs colour-vision floor on its own.
 visualization:
-  leader_colors:
-    erdogan: "#2a78d6"   # blue
-    macron: "#eb6834"    # orange
-    merkel: "#1baf7a"    # aqua
-    putin: "#eda100"     # yellow
-    trump: "#e87ba4"     # magenta
-  radar_range: [0.2, 0.8]   # identical radial scale for every leader; 0.5 = corpus average
+  leader_colors:                # reference categorical palette, validated adjacent order; never re-assigned
+    erdogan: "#2a78d6"
+    macron: "#eb6834"
+    merkel: "#1baf7a"
+    putin: "#eda100"
+    trump: "#e87ba4"
+  radar_range: [0.2, 0.8]
+  formats:                      # Instagram: square feed post and vertical Reel/Story; pixels at export
+    square:   {width_px: 1080, height_px: 1080, suffix: ""}
+    vertical: {width_px: 1080, height_px: 1920, suffix: "_9x16"}
+  export_scale: 2               # PNG rendered at 2× the pixel size
+  base_font_px: 22              # smallest text on a phone screen
+
+methodology_notes:
+  projection_note: "2D projections are shown only for visualization; reported similarity values are calculated in the original embedding space."
+  interpretation_scope: "All similarity, distance, theme, rhetorical and emotional values describe the collected speech corpora, not ideology, personality, political quality or the people themselves."
+  translation_note: "Erdoğan, Macron and Merkel are analysed in English translation and Putin in an official English transcript; for them, style measurements describe the translated text and therefore also carry the translator's choices."

@@ -1,0 +1,34 @@
+filename,leader,flag,detail
+erdogan1.txt,erdogan,third_person_narration,1 sentence(s) narrate the speaker in third person
+erdogan1.txt,erdogan,missing_metadata,"speech_date, source"
+erdogan1.txt,erdogan,review:verify,Not a New Year message: a speech at a SETA symposium held 'on the eve of the historic decision' on the presidential system (likely early 2017). Source text look
+erdogan1.txt,erdogan,speech_type_outlier,'symposium_speech' vs leader majority 'new_year_message'
+erdogan2022.txt,erdogan,missing_metadata,source
+erdogan2023.txt,erdogan,missing_metadata,source
+erdogan2024.txt,erdogan,missing_metadata,source
+erdogan2025.txt,erdogan,missing_metadata,source
+macron2022.txt,macron,missing_metadata,source
+macron2023.txt,macron,missing_metadata,source
+macron2024.txt,macron,missing_metadata,source
+macron2025.txt,macron,missing_metadata,source
+merkel1.txt,merkel,missing_metadata,source
+merkel2.txt,merkel,missing_metadata,source
+merkel2020.txt,merkel,missing_metadata,source
+merkel2020.txt,merkel,filename_year_vs_speech_date,"filename says 2020, speech_date is 2019-12-31"
+merkel3.txt,merkel,missing_metadata,source
+putin2022.txt,putin,truncated_start,text begins 'resident of Russia Vladimir Pu'
+putin2022.txt,putin,missing_metadata,source
+putin2023.txt,putin,speaker_label_prefix,"1 label(s), first: 'President of Russia Vladimir Putin'"
+putin2023.txt,putin,missing_metadata,source
+putin2024.txt,putin,speaker_label_prefix,"1 label(s), first: 'President of Russia Vladimir Putin'"
+putin2024.txt,putin,missing_metadata,source
+putin2025.txt,putin,speaker_label_prefix,"1 label(s), first: 'President of Russia Vladimir Putin'"
+putin2025.txt,putin,missing_metadata,source
+trump1.txt,trump,missing_metadata,source
+trump1.txt,trump,mixed_speech_types,"trump has no dominant speech type: farewell_address×1, composite_excerpts×1, inaugural_address×1"
+trump2.txt,trump,very_short,323 words < 400
+trump2.txt,trump,missing_metadata,"speech_date, source"
+trump2.txt,trump,review:exclude_candidate,"NOT a single speech: ~320 words stitched from several occasions (Gorsuch nomination Jan 2017, MS-13 remarks, a disaster-visit remark, space-policy lines). Kept "
+trump2.txt,trump,mixed_speech_types,"trump has no dominant speech type: farewell_address×1, composite_excerpts×1, inaugural_address×1"
+trump3.txt,trump,missing_metadata,source
+trump3.txt,trump,mixed_speech_types,"trump has no dominant speech type: farewell_address×1, composite_excerpts×1, inaugural_address×1"

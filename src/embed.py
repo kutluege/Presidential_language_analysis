@@ -73,13 +73,58 @@ def load_model(cfg: dict, model_key: str):
         model_kwargs["attn_implementation"] = mcfg["attn_implementation"]
     tokenizer_kwargs = {"padding_side": mcfg["padding_side"]} if mcfg.get("padding_side") else None
     device = cfg["embedding"].get("device", "cuda") if torch.cuda.is_available() else "cpu"
+    trc = bool(mcfg.get("trust_remote_code", False))
+    st_kwargs = dict(device=device, model_kwargs=model_kwargs, tokenizer_kwargs=tokenizer_kwargs, trust_remote_code=trc)
     try:
-        model = SentenceTransformer(mcfg["hf_id"], device=device, model_kwargs=model_kwargs, tokenizer_kwargs=tokenizer_kwargs)
+        model = SentenceTransformer(mcfg["hf_id"], **st_kwargs)
     except TypeError:  # older transformers expect torch_dtype
         model_kwargs["torch_dtype"] = model_kwargs.pop("dtype")
-        model = SentenceTransformer(mcfg["hf_id"], device=device, model_kwargs=model_kwargs, tokenizer_kwargs=tokenizer_kwargs)
+        model = SentenceTransformer(mcfg["hf_id"], **st_kwargs)
+    except Exception as exc:  # remote code incompatible with the installed transformers → plain loader
+        print(f"[embed] sentence-transformers load failed ({type(exc).__name__}: {str(exc)[:160]}); using the plain last-token loader")
+        model = LastTokenEmbedder(mcfg["hf_id"], device, dtype, mcfg.get("attn_implementation"), trc)
     model.max_seq_length = int(mcfg.get("max_seq_length", 512))
     return model, mcfg, device
+
+
+class LastTokenEmbedder:
+    """Minimal stand-in for SentenceTransformer: AutoModel + last-token pooling + L2 normalisation.
+
+    Used only when a model's remote code cannot be loaded through sentence-transformers. Mirrors the
+    pooling declared by KaLM/Qwen3 embedding models (last token, left padding).
+    """
+
+    def __init__(self, hf_id: str, device: str, dtype, attn_implementation: str | None, trust_remote_code: bool):
+        import torch
+        from transformers import AutoModel, AutoTokenizer
+
+        self.torch = torch
+        self.device = device
+        self.tokenizer = AutoTokenizer.from_pretrained(hf_id, trust_remote_code=trust_remote_code, padding_side="left")
+        kwargs = {"dtype": dtype, "trust_remote_code": trust_remote_code}
+        if attn_implementation:
+            kwargs["attn_implementation"] = attn_implementation
+        try:
+            self.model = AutoModel.from_pretrained(hf_id, **kwargs)
+        except TypeError:
+            kwargs["torch_dtype"] = kwargs.pop("dtype")
+            self.model = AutoModel.from_pretrained(hf_id, **kwargs)
+        self.model.to(device).eval()
+        self.max_seq_length = 512
+
+    def encode(self, texts, batch_size=8, prompt=None, normalize_embeddings=True, convert_to_numpy=True, show_progress_bar=False):
+        torch = self.torch
+        out = []
+        with torch.inference_mode():
+            for i in range(0, len(texts), batch_size):
+                batch = [(prompt or "") + t for t in texts[i:i + batch_size]]
+                enc = self.tokenizer(batch, padding=True, truncation=True, max_length=self.max_seq_length, return_tensors="pt").to(self.device)
+                hidden = self.model(**enc).last_hidden_state
+                emb = hidden[:, -1, :]  # left padding → last position is the final real token
+                if normalize_embeddings:
+                    emb = torch.nn.functional.normalize(emb, dim=-1)
+                out.append(emb.float().cpu().numpy())
+        return np.vstack(out)
 
 
 def encode(model, texts: list[str], batch_size: int, prompt: str | None = None) -> np.ndarray:
@@ -152,8 +197,16 @@ def main(argv: list[str] | None = None) -> int:
         run["query_prompt"] = prompt
         print(f"[embed] {len(q)} concept queries embedded (prompt={'yes' if prompt else 'no'})")
 
+    try:
+        import torch
+
+        run["peak_vram_gb"] = round(torch.cuda.max_memory_allocated() / 2**30, 2) if torch.cuda.is_available() else None
+        del model
+        torch.cuda.empty_cache()
+    except Exception:
+        pass
     (base.with_name(base.name + "_run.json")).write_text(json.dumps(run, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"[embed] artifacts: {base.name}_chunks.npy, {base.name}_index.parquet, {args.model}_queries.*")
+    print(f"[embed] artifacts: {base.name}_chunks.npy, {base.name}_index.parquet, {args.model}_queries.* · peak VRAM {run.get('peak_vram_gb')} GB")
     return 0
 
 

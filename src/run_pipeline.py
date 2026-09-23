@@ -19,7 +19,8 @@ import time
 
 from .config import load_config, primary_model_key
 
-STEPS = ["preprocess", "chunking", "embed", "theme_scoring", "aggregate", "geometry", "clustering", "bootstrap", "visualization", "robustness", "generate_report"]
+STEPS = ["preprocess", "chunking", "embed", "theme_scoring", "emotion", "aggregate", "geometry", "style", "clustering", "bootstrap",
+         "visualization", "robustness", "generate_report"]
 
 
 def run(mod: str, *args: str) -> None:
@@ -60,10 +61,19 @@ def main(argv: list[str] | None = None) -> int:
         for m in models:
             run("embed", "--model", m, *var, "--chunks", "chunks.csv")
             run("embed", "--model", m, *var, "--chunks", "chunks_noceremonial.csv")
-    for step in ("theme_scoring", "aggregate", "geometry"):
+    if active("theme_scoring"):
+        for m, s in combos:
+            run("theme_scoring", "--model", m, "--suffix", s)
+    if active("emotion"):
+        for s in (vsuf, vsuf + "_noceremonial"):
+            run("emotion", "--suffix", s)
+    for step in ("aggregate", "geometry"):
         if active(step):
             for m, s in combos:
                 run(step, "--model", m, "--suffix", s)
+    if active("style"):
+        for m, s in combos:
+            run("style", "--model", m, "--suffix", s)
     if active("clustering"):
         run("clustering", "--model", pk, "--suffix", vsuf)
         run("clustering", "--model", pk, "--suffix", vsuf, "--center-by-leader")

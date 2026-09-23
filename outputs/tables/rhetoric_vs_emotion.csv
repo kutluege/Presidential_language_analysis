@@ -1,0 +1,8 @@
+rhetorical,emotion,spearman_speech_level,n_speeches
+conflict_threat_framing_pct,fam_hostility,0.4872180451127819,20
+conflict_threat_framing_pct,fam_threat_negative,0.31729323308270674,20
+cooperation_solidarity_framing_pct,fam_affiliative_positive,-0.11278195488721804,20
+gratitude_recognition_pct,emo_gratitude,-0.10676691729323308,20
+conflict_threat_framing_pct,valence,-0.16541353383458643,20
+us_vs_them_pct,fam_hostility,0.4947368421052631,20
+future_orientation_pct,emo_optimism,0.5593984962406015,20

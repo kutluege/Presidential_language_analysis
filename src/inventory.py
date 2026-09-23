@@ -120,6 +120,9 @@ def build_inventory(cfg: dict, input_dir: Path, recurse: bool, use_tokenizer: bo
         review = str(meta.get("review_status", "")).strip().lower()
         if review and review != "ok":
             flags[fname].append((f"review:{review}", str(meta.get("notes", "")).strip()[:160]))
+        if str(meta.get("text_is_translation", "")).strip().lower() in ("true", "1", "yes"):
+            flags[fname].append(("translated_text", f"analysed in {meta.get('language', '?')}; original language "
+                                                     f"{meta.get('original_language', '?')} — {str(meta.get('translation_note', '')).strip()[:120]}"))
         fy = FILENAME_YEAR_RE.search(path.stem)
         sd = str(meta.get("speech_date", "")).strip()
         if fy and sd and sd[:4] != fy.group(1):
@@ -371,9 +374,13 @@ def write_report(cfg: dict, df: pd.DataFrame, susp: pd.DataFrame, info: dict, re
     if not empties and not blockers:
         add("No hard blockers. Review the warnings and decisions above, then Phase 1 can run.")
         add("")
+    translated = [lc["short_name"] for lc in leaders_cfg.values() if lc.get("text_is_translation")]
+    langs = sorted({lc.get("language", "?") for lc in leaders_cfg.values()})
+    lang_note = (f"all texts are analysed in {langs[0]}; translated or transcribed leaders: {', '.join(translated) or 'none'} "
+                 "(their style measurements also carry the translator's choices)" if len(langs) == 1 else
+                 "the corpus is mixed-language (" + ", ".join(f"{lc['short_name']} {lc.get('language')}" for lc in leaders_cfg.values()) + ")")
     add("Corpus caveats to repeat in the video: speeches differ in year and format; leaders have unequal speech counts; "
-        "Putin and Trump are English (Putin via official English transcript) while the others are in the original language. "
-        "Every later result is a statement about *this* corpus.")
+        f"{lang_note}. Every later result is a statement about *this* corpus.")
     add("")
 
     report_path.parent.mkdir(parents=True, exist_ok=True)

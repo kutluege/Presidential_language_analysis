@@ -158,8 +158,9 @@ def main(argv: list[str] | None = None) -> int:
     df["top_theme_margin"] = np.sort(pct_mat, axis=1)[:, -1] - np.sort(pct_mat, axis=1)[:, -2]
 
     if not args.no_nli:
-        labels = {t["key"]: t["label"].replace(" & ", " and ").lower() for t in cfg["theme_definitions"]}
-        labels.update(NLI_FRAMING_LABELS)
+        labels = {t["key"]: t.get("nli_label") or t["label"].replace(" & ", " and ").lower() for t in cfg["theme_definitions"]}
+        for k, f in cfg["framing_definitions"].items():
+            labels[k] = f.get("nli_label") or NLI_FRAMING_LABELS.get(k) or f["label"].lower()
         cache = emb_dir / f"nli_scores{args.suffix}.parquet"
         nli = nli_scores(texts, labels, cfg, cache)
         for k in list(themes) + list(framings):

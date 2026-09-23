@@ -1,0 +1,18 @@
+{
+  "model_key": "qwen3_embedding_8b",
+  "hf_id": "Qwen/Qwen3-Embedding-8B",
+  "device": "cuda",
+  "dtype": "bfloat16",
+  "attn_implementation": "sdpa",
+  "variant": "original",
+  "chunks_file": "chunks_noceremonial.csv",
+  "n_chunks": 242,
+  "dim": 4096,
+  "load_seconds": 22.9,
+  "encode_seconds": 3.2,
+  "normalized": true,
+  "random_seed": 42,
+  "n_queries": 15,
+  "query_prompt": "Instruct: Given a passage from a political speech, retrieve the thematic description that best matches its content\nQuery: ",
+  "peak_vram_gb": 14.82
+}
