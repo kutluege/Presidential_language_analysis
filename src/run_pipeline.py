@@ -86,6 +86,7 @@ def main(argv: list[str] | None = None) -> int:
         run("robustness")
     if active("generate_report"):
         run("generate_report")
+        run("generate_brief")
     print("\npipeline complete")
     return 0
 

@@ -84,6 +84,7 @@ All commands from the project root with the `speechgeo` interpreter. `{model}` i
 | 7 | Bootstrap uncertainty | `python -m src.bootstrap --model {model} --suffix {suffix}` | `bootstrap_*_ci{tag}.csv`, `bootstrap_pair_rank_stability{tag}.csv` |
 | 8 | Robustness | `python -m src.robustness` | `robustness_summary.csv`, `outputs/robustness_report.md`, `language_effect_*.csv`, `rhetoric_vs_emotion.csv` |
 | 9 | Final report generation | `python -m src.generate_report` | `outputs/video_insights.md`, `methodology_for_video.md`, `results_summary.md` |
+| 9 | Self-contained project brief (for a reader or an LLM) | `python -m src.generate_brief` | `outputs/PROJECT_BRIEF.md` — goal, corpus, pipeline, every key table, figure catalogue, findings, what the data can/cannot support |
 | all | Phases 1–9 | `python -m src.run_pipeline` (`--skip-embed`, `--from <step>`) | everything above |
 
 Result tables for the primary model on the full chunk set carry the plain spec filenames; every other
