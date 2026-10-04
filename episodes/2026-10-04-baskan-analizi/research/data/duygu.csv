@@ -1,0 +1,21 @@
+leader,name,measure,measure_tr,value,value_tr,rank,ci_low,ci_high,share_rank1,corpus_mean
+erdogan,Erdoğan,fam_affiliative_positive,Olumlu / birleştirici,0.3868,"%38,7",5,0.294,0.5,0.013,0.454
+erdogan,Erdoğan,fam_threat_negative,"Korku, üzüntü, kayıp",0.0352,"%3,5",2,0.012,0.061,0.163,0.03
+erdogan,Erdoğan,fam_hostility,"Düşmanlık, onaylamama",0.0138,"%1,4",3,0.009,0.02,0.013,0.017
+erdogan,Erdoğan,valence,Duygu değeri (olumlu − olumsuz),0.4181,"0,42",5,0.206,0.63,0.002,0.552
+macron,Macron,fam_affiliative_positive,Olumlu / birleştirici,0.4554,"%45,5",4,0.429,0.482,0.0035,0.454
+macron,Macron,fam_threat_negative,"Korku, üzüntü, kayıp",0.0274,"%2,7",4,0.018,0.038,0.022,0.03
+macron,Macron,fam_hostility,"Düşmanlık, onaylamama",0.0113,"%1,1",4,0.009,0.014,0.001,0.017
+macron,Macron,valence,Duygu değeri (olumlu − olumsuz),0.4612,"0,46",4,0.397,0.556,0.0,0.552
+merkel,Merkel,fam_affiliative_positive,Olumlu / birleştirici,0.4603,"%46,0",3,0.395,0.561,0.1195,0.454
+merkel,Merkel,fam_threat_negative,"Korku, üzüntü, kayıp",0.0311,"%3,1",3,0.008,0.057,0.1195,0.03
+merkel,Merkel,fam_hostility,"Düşmanlık, onaylamama",0.0198,"%2,0",2,0.008,0.039,0.1295,0.017
+merkel,Merkel,valence,Duygu değeri (olumlu − olumsuz),0.5185,"0,52",3,0.415,0.623,0.001,0.552
+putin,Putin,fam_affiliative_positive,Olumlu / birleştirici,0.5114,"%51,1",1,0.466,0.549,0.5775,0.454
+putin,Putin,fam_threat_negative,"Korku, üzüntü, kayıp",0.0086,"%0,9",5,0.004,0.017,0.0,0.03
+putin,Putin,fam_hostility,"Düşmanlık, onaylamama",0.0108,"%1,1",5,0.005,0.02,0.003,0.017
+putin,Putin,valence,Duygu değeri (olumlu − olumsuz),0.7661,"0,77",1,0.562,0.912,0.7895,0.552
+trump,Trump,fam_affiliative_positive,Olumlu / birleştirici,0.4816,"%48,2",2,0.379,0.608,0.2865,0.454
+trump,Trump,fam_threat_negative,"Korku, üzüntü, kayıp",0.0548,"%5,5",1,0.002,0.096,0.6955,0.03
+trump,Trump,fam_hostility,"Düşmanlık, onaylamama",0.0349,"%3,5",1,0.007,0.051,0.8535,0.017
+trump,Trump,valence,Duygu değeri (olumlu − olumsuz),0.6539,"0,65",2,0.433,0.881,0.2075,0.552

@@ -1,0 +1,84 @@
+== 1. Leader-centroid similarity, recomputed from speech-level similarity
+[OK ] run1 qwen3 (original languages) erdogan-macron: recomputed 0.581325 | reported 0.581325
+[OK ] run1 qwen3 (original languages) erdogan-merkel: recomputed 0.620583 | reported 0.620583
+[OK ] run1 qwen3 (original languages) erdogan-putin: recomputed 0.594956 | reported 0.594956
+[OK ] run1 qwen3 (original languages) erdogan-trump: recomputed 0.592522 | reported 0.592522
+[OK ] run1 qwen3 (original languages) macron-merkel: recomputed 0.698123 | reported 0.698123
+[OK ] run1 qwen3 (original languages) macron-putin: recomputed 0.642940 | reported 0.642940
+[OK ] run1 qwen3 (original languages) macron-trump: recomputed 0.633335 | reported 0.633335
+[OK ] run1 qwen3 (original languages) merkel-putin: recomputed 0.678220 | reported 0.678220
+[OK ] run1 qwen3 (original languages) merkel-trump: recomputed 0.659709 | reported 0.659709
+[OK ] run1 qwen3 (original languages) putin-trump: recomputed 0.743614 | reported 0.743614
+[OK ] run2 qwen3 (English) erdogan-macron: recomputed 0.856979 | reported 0.856979
+[OK ] run2 qwen3 (English) erdogan-merkel: recomputed 0.827564 | reported 0.827564
+[OK ] run2 qwen3 (English) erdogan-putin: recomputed 0.774309 | reported 0.774309
+[OK ] run2 qwen3 (English) erdogan-trump: recomputed 0.795512 | reported 0.795512
+[OK ] run2 qwen3 (English) macron-merkel: recomputed 0.871052 | reported 0.871052
+[OK ] run2 qwen3 (English) macron-putin: recomputed 0.778172 | reported 0.778172
+[OK ] run2 qwen3 (English) macron-trump: recomputed 0.806096 | reported 0.806096
+[OK ] run2 qwen3 (English) merkel-putin: recomputed 0.761446 | reported 0.761446
+[OK ] run2 qwen3 (English) merkel-trump: recomputed 0.774120 | reported 0.774120
+[OK ] run2 qwen3 (English) putin-trump: recomputed 0.743466 | reported 0.743466
+[OK ] run2 kalm (English) erdogan-macron: recomputed 0.805629 | reported 0.805629
+[OK ] run2 kalm (English) erdogan-merkel: recomputed 0.784473 | reported 0.784473
+[OK ] run2 kalm (English) erdogan-putin: recomputed 0.754788 | reported 0.754788
+[OK ] run2 kalm (English) erdogan-trump: recomputed 0.734532 | reported 0.734533
+[OK ] run2 kalm (English) macron-merkel: recomputed 0.849589 | reported 0.849589
+[OK ] run2 kalm (English) macron-putin: recomputed 0.753424 | reported 0.753424
+[OK ] run2 kalm (English) macron-trump: recomputed 0.735854 | reported 0.735854
+[OK ] run2 kalm (English) merkel-putin: recomputed 0.735767 | reported 0.735767
+[OK ] run2 kalm (English) merkel-trump: recomputed 0.728813 | reported 0.728813
+[OK ] run2 kalm (English) putin-trump: recomputed 0.701320 | reported 0.701320
+[OK ] run1 bge-m3 (original languages) erdogan-macron: recomputed 0.941488 | reported 0.941488
+[OK ] run1 bge-m3 (original languages) erdogan-merkel: recomputed 0.924226 | reported 0.924226
+[OK ] run1 bge-m3 (original languages) erdogan-putin: recomputed 0.851246 | reported 0.851246
+[OK ] run1 bge-m3 (original languages) erdogan-trump: recomputed 0.874701 | reported 0.874701
+[OK ] run1 bge-m3 (original languages) macron-merkel: recomputed 0.942153 | reported 0.942153
+[OK ] run1 bge-m3 (original languages) macron-putin: recomputed 0.860421 | reported 0.860421
+[OK ] run1 bge-m3 (original languages) macron-trump: recomputed 0.879670 | reported 0.879671
+[OK ] run1 bge-m3 (original languages) merkel-putin: recomputed 0.837837 | reported 0.837837
+[OK ] run1 bge-m3 (original languages) merkel-trump: recomputed 0.864057 | reported 0.864057
+[OK ] run1 bge-m3 (original languages) putin-trump: recomputed 0.823638 | reported 0.823638
+== 2. Same model (Qwen3-Embedding-8B), original languages -> English
+[OK ] delta erdogan–macron: recomputed 0.275654 | reported 0.275653
+[OK ] delta erdogan–merkel: recomputed 0.206980 | reported 0.206980
+[OK ] delta erdogan–putin: recomputed 0.179353 | reported 0.179353
+[OK ] delta erdogan–trump: recomputed 0.202990 | reported 0.202990
+[OK ] delta macron–merkel: recomputed 0.172929 | reported 0.172929
+[OK ] delta macron–putin: recomputed 0.135232 | reported 0.135232
+[OK ] delta macron–trump: recomputed 0.172761 | reported 0.172761
+[OK ] delta merkel–putin: recomputed 0.083226 | reported 0.083226
+[OK ] delta merkel–trump: recomputed 0.114411 | reported 0.114411
+[OK ] delta putin–trump: recomputed -0.000148 | reported -0.000148
+[OK ] all 10 old/new ranks match language_effect_pairs.csv
+non-EN/EN pairs: delta min 0.083, max 0.276; Putin–Trump delta -0.00015
+Erdoğan pairs mean rank 8.50 -> 4.25
+== 3. Nearest-neighbour same-leader share, recomputed from per-chunk tables
+[OK ] run1 qwen3 kNN same-leader share erdogan: recomputed 0.995294 | reported 0.995294
+[OK ] run1 qwen3 kNN same-leader share macron: recomputed 0.957576 | reported 0.957576
+[OK ] run1 qwen3 kNN same-leader share merkel: recomputed 0.689130 | reported 0.689130
+[OK ] run1 qwen3 kNN same-leader share putin: recomputed 0.919231 | reported 0.919231
+[OK ] run1 qwen3 kNN same-leader share trump: recomputed 0.866667 | reported 0.866667
+[OK ] run2 qwen3 kNN same-leader share erdogan: recomputed 0.598413 | reported 0.598413
+[OK ] run2 qwen3 kNN same-leader share macron: recomputed 0.713333 | reported 0.713333
+[OK ] run2 qwen3 kNN same-leader share merkel: recomputed 0.478947 | reported 0.478947
+[OK ] run2 qwen3 kNN same-leader share putin: recomputed 0.761538 | reported 0.761538
+[OK ] run2 qwen3 kNN same-leader share trump: recomputed 0.658333 | reported 0.658333
+[OK ] run2 kalm kNN same-leader share erdogan: recomputed 0.831746 | reported 0.831746
+[OK ] run2 kalm kNN same-leader share macron: recomputed 0.890667 | reported 0.890667
+[OK ] run2 kalm kNN same-leader share merkel: recomputed 0.781579 | reported 0.781579
+[OK ] run2 kalm kNN same-leader share putin: recomputed 0.919231 | reported 0.919231
+[OK ] run2 kalm kNN same-leader share trump: recomputed 0.954167 | reported 0.954167
+Erdoğan neighbours out of 10: run1 9.95 -> run2 5.98
+== 4. Bootstrap stability of the top / bottom pair (read from tables, 2000 resamples)
+run1_qwen3_putin_trump_share_most_similar: 0.8870
+run2_qwen3_putin_trump_share_least_similar: 0.6525
+run2_kalm_putin_trump_share_least_similar: 0.9070
+run2_kalm_macron_merkel_share_most_similar: 1.0000
+== 5. Rank agreement
+[OK ] Spearman run1 vs run2 (qwen3): recomputed -0.430303 | reported -0.430300
+[OK ] Spearman qwen3 vs kalm on English: recomputed 0.830000 | reported 0.830000
+== 6. Control: Putin and Trump texts identical in both runs?
+putin: chunk texts identical across runs = True
+trump: chunk texts identical across runs = True
+corpus: {'speeches': 20, 'chunks_run2': 250, 'chunks_run1': 304, 'speeches_per_leader': {'erdogan': 5, 'macron': 4, 'merkel': 4, 'putin': 4, 'trump': 3}}

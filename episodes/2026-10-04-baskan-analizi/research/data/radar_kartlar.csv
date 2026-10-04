@@ -1,0 +1,36 @@
+leader,name,dimension,dimension_tr,value,card,rank,ci_low,ci_high,share_rank1
+erdogan,Erdoğan,conflict_threat_framing,Çatışma / tehdit,0.4899,49,3,0.34,0.653,0.197
+erdogan,Erdoğan,cooperation_solidarity_framing,İş birliği,0.4345,43,4,0.272,0.606,0.023
+erdogan,Erdoğan,past_orientation,Geçmiş,0.5281,53,2,0.376,0.64,0.1195
+erdogan,Erdoğan,future_orientation,Gelecek,0.515,52,3,0.333,0.667,0.251
+erdogan,Erdoğan,us_vs_them,Biz–onlar,0.4618,46,4,0.376,0.577,0.0245
+erdogan,Erdoğan,gratitude_recognition,Teşekkür,0.411,41,5,0.276,0.504,0.0
+erdogan,Erdoğan,promises_commitments,Vaat,0.4576,46,3,0.32,0.568,0.012
+macron,Macron,conflict_threat_framing,Çatışma / tehdit,0.4378,44,5,0.368,0.497,0.0055
+macron,Macron,cooperation_solidarity_framing,İş birliği,0.4728,47,3,0.371,0.532,0.0
+macron,Macron,past_orientation,Geçmiş,0.4854,49,3,0.421,0.549,0.0
+macron,Macron,future_orientation,Gelecek,0.5711,57,1,0.55,0.593,0.4545
+macron,Macron,us_vs_them,Biz–onlar,0.387,39,5,0.312,0.438,0.0
+macron,Macron,gratitude_recognition,Teşekkür,0.4433,44,4,0.412,0.474,0.0
+macron,Macron,promises_commitments,Vaat,0.5722,57,2,0.552,0.599,0.3425
+merkel,Merkel,conflict_threat_framing,Çatışma / tehdit,0.4852,49,4,0.393,0.578,0.1145
+merkel,Merkel,cooperation_solidarity_framing,İş birliği,0.6124,61,1,0.543,0.707,0.6645
+merkel,Merkel,past_orientation,Geçmiş,0.3828,38,5,0.307,0.466,0.0
+merkel,Merkel,future_orientation,Gelecek,0.4483,45,4,0.379,0.525,0.0
+merkel,Merkel,us_vs_them,Biz–onlar,0.5109,51,2,0.409,0.599,0.0905
+merkel,Merkel,gratitude_recognition,Teşekkür,0.4445,44,3,0.419,0.48,0.0
+merkel,Merkel,promises_commitments,Vaat,0.4322,43,4,0.355,0.534,0.0015
+putin,Putin,conflict_threat_framing,Çatışma / tehdit,0.509,51,2,0.438,0.591,0.2025
+putin,Putin,cooperation_solidarity_framing,İş birliği,0.5644,56,2,0.427,0.652,0.2565
+putin,Putin,past_orientation,Geçmiş,0.6178,62,1,0.564,0.69,0.8805
+putin,Putin,future_orientation,Gelecek,0.5465,55,2,0.442,0.65,0.274
+putin,Putin,us_vs_them,Biz–onlar,0.5027,50,3,0.413,0.566,0.0745
+putin,Putin,gratitude_recognition,Teşekkür,0.6962,70,1,0.662,0.736,0.9995
+putin,Putin,promises_commitments,Vaat,0.3088,31,5,0.266,0.343,0.0
+trump,Trump,conflict_threat_framing,Çatışma / tehdit,0.5448,54,1,0.351,0.774,0.4805
+trump,Trump,cooperation_solidarity_framing,İş birliği,0.4092,41,5,0.153,0.679,0.056
+trump,Trump,past_orientation,Geçmiş,0.4376,44,4,0.275,0.527,0.0
+trump,Trump,future_orientation,Gelecek,0.3714,37,5,0.218,0.595,0.0205
+trump,Trump,us_vs_them,Biz–onlar,0.6514,65,1,0.425,0.911,0.8105
+trump,Trump,gratitude_recognition,Teşekkür,0.5117,51,2,0.246,0.669,0.0005
+trump,Trump,promises_commitments,Vaat,0.5907,59,1,0.477,0.795,0.644

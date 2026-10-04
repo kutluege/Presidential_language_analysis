@@ -1,88 +1,78 @@
 # Bölüm araştırması: başkan konuşmaları analizi (2026-10-04)
 
-Durum: **senaryo + görsel plan taslağı. Sahne/render üretilmedi, onay bekliyor.**
+Durum: **senaryo v2 + görsel plan taslağı. Sahne/render üretilmedi, onay bekliyor.**
 
 | dosya | ne |
 |---|---|
-| `senaryo.md` | Seslendirme metni (S01–S14), ★ anları, kısaltma seçenekleri, cümle başına kaynak tablosu |
-| `gorsel_plan.md` | Yerleşim sistemi, cümle cümle görsel plan, animasyon kartları (A1–A8), SFX |
-| `data/animation_data.json` | Sahne başına temiz veri (A1…A8), marka formatında gösterim dizgileri (`*_tr`) |
-| `data/pairs_run1_vs_run2.csv` | 10 lider çifti: Tur 1 / Tur 2 benzerlik ve sıra, fark, ikinci model, Tur 1 BGE-M3 |
-| `data/knn_same_leader_share.csv` | Lider başına en yakın 10 komşuda aynı lider payı (Tur 1, Tur 2, ikinci model, şans düzeyi) |
-| `build_data.py` | Tüm sayıları alt tablolardan yeniden hesaplar, repodaki değerlerle karşılaştırır, `data/` dosyalarını üretir |
-| `verification_log.txt` | Son çalıştırmanın çıktısı: her kontrol `[OK ]` |
+| `senaryo.md` | Seslendirme metni (S01–S17), ★ anları, ~75 sn kesimi, cümle başına kaynak tablosu |
+| `gorsel_plan.md` | Yerleşim sistemi, cümle cümle plan, animasyon kartları (B0–B5), SFX |
+| `data/animation_data.json` | Sahne başına temiz veri (B1…B5), marka formatında gösterim dizgileri (`*_tr`) |
+| `data/temalar.csv` | 5 lider × 8 tema: değer, sıra, ilk-1 / ilk-3 bootstrap payı |
+| `data/radar_kartlar.csv` | 5 lider × 7 retorik ölçü: değer, kart puanı (×100), sıra, %95 aralık, 1.'lik payı |
+| `data/duygu.csv` | 5 lider × 4 duygu ölçüsü: değer, sıra, aralık, 1.'lik payı, derlem ortalaması |
+| `data/stil_ciftler.csv` | 10 çift: üslup kosinüsü ve içerik kosinüsü, sıraları |
+| `data/dagilim.csv`, `data/dagilim_konusma.csv` | Lider ve konuşma düzeyinde merkeze uzaklık |
+| `build_data.py` | Sayıları alt tablolardan yeniden hesaplar, repodaki değerlerle karşılaştırır, `data/` dosyalarını üretir |
+| `verification_log.txt` | Son çalıştırma: 202 kontrol `[OK ]` |
+| `arsiv/v1_dil_hikayesi/` | İlk taslak ("model önce dili görüyormuş"); kendi verisi ve doğrulamasıyla |
 
-Marka kuralları: `brand/` (identity, motion, palette, avatar SVG'leri; kullanıcının
-gönderdiği dosyalar, değiştirilmeden kopyalandı).
+Marka kuralları: `brand/` (kullanıcının gönderdiği dosyalar, değiştirilmeden).
 
-## Seçilen hikaye: "Model önce dili görüyormuş"
+## Hikaye (v2, kullanıcı yönlendirmesiyle)
 
-1. İlk turda (her lider kendi dilinde) model en benzer çift olarak **Putin–Trump**'ı buldu
-   (0,744; 2000 bootstrap örneğinin %88,7'sinde birinci).
-2. Bu ikisi setteki **tek İngilizce** metinlerdi.
-3. Her şey İngilizceye çevrilip **aynı modelle** yeniden ölçülünce Putin–Trump **1. sıradan 10. sıraya**
-   düştü. Kendi puanları neredeyse hiç değişmedi (0,744 → 0,743; metinleri iki turda da birebir
-   aynıydı), diğer 9 çiftin hepsi arttı (+0,083 … +0,276).
-4. Erdoğan paragraflarının en yakın 10 komşusunda Erdoğan payı %99,5'ten %59,8'e indi.
-5. Daha büyük ikinci bir model de İngilizce metinde Putin–Trump'ı en sona koyuyor (0,701).
+Giriş (senin metnin) → derlem (20 konuşma) → beş grafik → "kimin iyi kimin kötü olduğunu söylemez" →
+"yapay zeka devlet yönetebilir mi bilmiyorum, ama liderleri denetleyebiliriz" → GitHub.
 
-**Neden bu hikaye:**
-- "Bunu bilmiyordum" anı somut: herkesin aklına gelen yorum ("bu ikisi birbirine benziyormuş")
-  tersine dönüyor, ve sebep teknik ama tek cümlede anlaşılıyor: model dil görüyordu.
-- Kendi kendini doğrulayan bir doğal deney: Putin ve Trump metinleri iki turda da aynı kaldı,
-  yani kontrol grubu gibi davranıyorlar. Puanları sabit kalırken sıraları tersine dönüyor.
-- Siyasi olarak tarafsız: hikayenin öznesi liderler değil, ölçüm aracı. Kimse övülmüyor ya da
-  eleştirilmiyor; ilk "bulgu" zaten çürütülüyor.
-- Projenin kendi özeti de bunu "en temiz metodolojik hikaye" olarak işaretliyor
-  (`outputs/PROJECT_BRIEF.md` §7).
+Beş grafikten çıkan ve senaryoya giren bulgular:
+1. **Temalar:** Macron'da gelecek/reform açık ara önde (her bootstrap örneğinde 1.). Erdoğan'da
+   "hukuk ve kurumlar" önde görünüyor, ama bunu tek bir sempozyum konuşması taşıyor (0,91; yılbaşı
+   mesajları 0,42–0,60). Bunu söylemek hem dürüst hem "bunu bilmiyordum" anı.
+2. **FIFA kartları:** Radar → kart. Putin teşekkür 70, vaat 31 (en sağlam iki ölçüm). Erdoğan'ın kartı en dar aralıklı (12 puan).
+3. **Duygu:** Hepsi olumlu ağırlıklı. Korku ve düşmanlıkta en yüksek set bile %6'nın altında.
+4. **Üslup:** Konuda en benzeşen Macron–Merkel (0,850), üslupta benzemiyor (−0,20). İçerik ile üslup ilişkisi 0,21.
+5. **Dağılım:** Macron'un konuşmaları en toplu. Erdoğan'ın setini yine sempozyum konuşması dağıtıyor (onsuz 0,031).
 
-**Bilerek dışarıda bırakılanlar (ve neden):**
-- *Retorik/duygu sıralamaları* (ör. "biz–onlar" ölçeğinde 1. sıra, "teşekkür" ölçeğinde 1. sıra):
-  güven aralıklarının çoğu örtüşüyor, çeviri etkisi taşıyor ve "X daha kavgacı" gibi kişiye dair
-  okumalara çok açık. Tarafsızlık kuralı için riskli.
-- *İçerik ile stil benzerliği ilişkisizdir (Spearman 0,21)*: ilginç ama 10 noktalı bir korelasyon,
-  ve 60 sn'ye ikinci bir kavram sokuyor.
-- *Tema profilleri*: iki yöntem (embedding ve NLI) parça düzeyinde yalnızca %34 aynı temayı buluyor;
-  sağlam değil.
-- *Kümeleme, dağılım (dispersion)*: teknik, görsel anlatımı uzun.
+1 ve 5 aynı kaynağa çıkıyor: Erdoğan setindeki tek yılbaşı-dışı konuşma. Videonun içinde küçük bir
+geri çağırma ("yine o tek konuşma yüzünden") olarak kullanıldı.
 
 ## Doğrulama
 
-Embedding dosyaları (`*.npy`) repoda yok (git-ignore), bu ortamda GPU da yok; bu yüzden metinler
-yeniden gömülmedi. Bunun yerine her lider düzeyindeki sayı, pipeline'ın kaydettiği bir alt
-seviyedeki tablodan bağımsız olarak yeniden hesaplandı:
+Embedding dosyaları (`*.npy`) repoda yok (git-ignore); bu ortamda GPU da yok, yani metinler yeniden
+gömülmedi. Her lider düzeyindeki sayı, pipeline'ın kaydettiği bir alt seviyeden bağımsız olarak
+yeniden hesaplandı:
 
-- Lider merkez benzerliği ← konuşma düzeyi benzerlik matrisi (lider merkezi = birim konuşma
-  merkezlerinin normalize ortalaması olduğu için cos(A,B) = Σs_ij / √(Σs_AA·Σs_BB)).
-  4 matris × 10 çift, hepsi 1e-4 içinde eşleşti.
-- Sıralar, farklar, Spearman (−0,43 ve 0,83) bu yeniden hesaplanmış değerlerden türetildi; eşleşti.
-- Komşu payları ← parça başına kNN tablosu; 3 çalışma × 5 lider eşleşti.
-- Putin ve Trump parça metinlerinin iki turda birebir aynı olduğu kontrol edildi.
+- Tema ve retorik: lider = konuşma yüzdeliklerinin ortalaması (40 + 35 kontrol).
+- Duygu: konuşma = parçaların ortalaması, lider = konuşmaların ortalaması (80 + 20 kontrol).
+- Üslup: 11 ölçü 20 konuşmada z-skoru, lider ortalaması, kosinüs (10 kontrol). İçerik: konuşma kosinüs matrisinden lider merkez kosinüsü (10 kontrol). Spearman 0,21 tuttu.
+- Dağılım: konuşma → lider merkezi uzaklığı konuşma kosinüs matrisinden (5 kontrol).
+- **Yeniden hesaplanamayanlar** (olduğu gibi okundu): bootstrap payları ve aralıkları, parça → konuşma uzaklığı.
 
-Çalıştırmak için: `pip install pandas numpy`, repo kökünden
-`python episodes/2026-10-04-baskan-analizi/research/build_data.py`.
+Çalıştırmak için: `pip install pandas numpy`, sonra `python episodes/2026-10-04-baskan-analizi/research/build_data.py`.
 
-## Emin olmadığım / dikkat edilmesi gerekenler
+## Dikkat / emin olmadığım noktalar
 
-1. **"Model dil görüyordu" bu model için doğru, genel olarak değil.** İlk turdaki *ikinci* model
-   (BGE-M3, çok dilli eşleme için eğitilmiş) orijinal dillerde bile Putin–Trump'ı **10. sıraya**
-   koymuştu ve Erdoğan komşu payı orada zaten %47,3'tü. Senaryo bu yüzden "yapay zeka" değil "model"
-   diyor. İzleyiciden "her model böyle mi?" sorusu gelebilir; cevabı: hayır, model seçimine bağlı.
-   İstersen S11'den sonra kısa bir satır eklenebilir: "Bu arada başka bir model bu tuzağa düşmemişti."
-2. **Çeviri kendi izini bırakıyor.** Tur 2'de Erdoğan, Macron ve Merkel metinleri toplayıcının
-   çevirisi. Putin–Trump'ın en sona düşmesinde "aynı çevirmen" etkisinin payı ayrıştırılamıyor
-   (diğer üç set aynı kişi tarafından çevrildiyse birbirlerine yaklaşmaları kısmen bundan olabilir).
-   S13 bunu "çevirmenin sesi" diye tek cümleyle söylüyor; daha fazla iddia etmiyoruz.
-3. **S02'deki "konuşmaları karıştırıp iki bin kez tekrarladım"** bootstrap'in (konuşmaları yerine
-   koyarak yeniden örnekleme) sadeleştirilmiş anlatımı. Daha kesin istenirse: "konuşmaları rastgele
-   yeniden seçip iki bin kez hesapladım".
-4. **S10'daki "ortalama altısı"** 5,98'in yuvarlaması; ekranda kesin değer (%59,8) yazıyor.
-5. **Süreler tahmin.** Saniyede 6–6,8 hece varsayımıyla 62–70 sn. Gerçek kayıt 75 sn'yi geçerse
-   S12 ilk çıkarılacak satır.
-6. **Marka şartnamesindeki iki gerilim** (plan içinde çözüm önerildi, onayını isterim):
-   (a) Kayıt yalnızca ses → tüm video `AVATAR` modu, ama marka "aynı mod 12 sn'den uzun sürmez"
-   diyor; ritmi mod yerine yerleşim değişimiyle (A/B/C) taşıdım. (b) `alt-orta` 2,5× avatarda yüz
-   alt güvenli alanın üstünde kalınca gövde havada kalıyor; gövdeyi bir `sarap-siyah` kürsü paneline
-   oturttum ve altyazıyı ceketin üzerine aldım (defne karelerinde açık toga yüzünden altyazıya plaka).
-7. Brifte geçen `sources/baskan-analizi` klasörü henüz yok; bu senaryo düzenlendikten sonra
-   kaynak olacak.
+1. **"5 yıllık tüm ulusa sesleniş konuşmaları" diyemedim.** Derlem 20 konuşma, lider başına 3–5.
+   16'sı yılbaşı mesajı. Erdoğan'ın birisi sempozyum konuşması, Trump'ınkiler veda, yemin ve 323
+   kelimelik bir alıntı derlemesi (Trump'ın yılbaşı mesajı yok). Yıllar da farklı: Merkel 2016–2019,
+   Erdoğan / Macron / Putin 2022–2025. Senaryo bu yüzden "çoğu yılbaşı mesajı olan yirmi konuşma" diyor.
+2. **Trump'ın "en sık duygusu minnettarlık" sonucunu bilerek kullanmadım.** Bunu 323 kelimelik alıntı
+   derlemesi taşıyor (minnettarlık 0,54). Veda ve yemin konuşmalarında 0,14 ve 0,17, ve orada ilk sırada
+   değil. Aynı derleme Trump'ın olumlu duygu değerini de yukarı çekiyor; bu yüzden S11'de Trump için
+   yalnızca korku/düşmanlık söyleniyor (o skorları gerçek konuşmalar taşıyor).
+3. **Çeviri seslendirmede yok** (isteğin üzerine). Ama Erdoğan, Macron ve Merkel metinleri İngilizce
+   çeviri, Putin resmi İngilizce metin. Retorik, duygu ve üslup ölçümleri çevirmenin tercihlerini de
+   taşıyor. Bunu S04'te ekranda bir dipnot olarak bıraktım; kaldırmanı önermem.
+4. **Sıralamaların çoğunda güven aralıkları örtüşüyor.** Senaryoya yalnızca görece sağlam olanları
+   koydum: Putin teşekkür %99,95, Macron gelecek/reform teması %100, Trump biz–onlar %81. Macron'un
+   "gelecek 57" değeri ise kıl payı (1.'lik payı %45, Putin 55). S09'da yalnızca sayıyı söylüyor, "en yüksek" demiyor.
+5. **Futbol benzetmesi** her lidere eşit dozda değil: espri yalnızca Putin kartında ("pası herkese
+   veriyor, gol sözü vermiyor"), çünkü en sağlam ölçüm orada. Diğer kartlar sadece sayı. Kartlarda
+   genel puan ve mevki bilerek yok (kalite notu ve "sağ/sol kanat" çağrışımı).
+6. **"Gül" notu:** Marka avatarın gülmesini yasaklıyor. Gülme yalnızca seste. Avatar o anda kaş kaldırıp göz kırpıyor (deadpan).
+7. **"Liderleri denetleyebiliriz"** senin cümlen, olduğu gibi duruyor. Tüm liderlere eşit uygulanan
+   genel bir ifade olduğu için tarafsızlık açısından sorun görmüyorum. Daha yumuşak bir alternatif:
+   "liderlerin söylediklerini denetleyebiliriz".
+8. **Süre ~88–90 sn.** Marka sınırının (90 sn) hemen altında, ilk brifteki 75 sn'nin üstünde.
+   `senaryo.md` içinde ~75 sn'lik kesim var.
+9. **Marka gerilimleri** (v1'den devam): tek modlu videoda ritim yerleşim değişimiyle taşınıyor; `alt-orta`'da
+   gövde kürsü paneline oturuyor. S08 ve S13'te taç köşedeki küçük avatarda kalıyor.

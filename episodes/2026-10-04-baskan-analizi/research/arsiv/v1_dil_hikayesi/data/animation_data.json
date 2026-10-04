@@ -1,0 +1,375 @@
+{
+  "_note": "All values recomputed by build_data.py from pipeline tables (see verification_log.txt). *_tr fields are display strings in brand format (decimal comma, % before the number).",
+  "leaders": [
+    {
+      "id": "erdogan",
+      "name": "Erdoğan",
+      "lang_run1": "TR",
+      "lang_run2": "EN"
+    },
+    {
+      "id": "macron",
+      "name": "Macron",
+      "lang_run1": "FR",
+      "lang_run2": "EN"
+    },
+    {
+      "id": "merkel",
+      "name": "Merkel",
+      "lang_run1": "DE",
+      "lang_run2": "EN"
+    },
+    {
+      "id": "putin",
+      "name": "Putin",
+      "lang_run1": "EN",
+      "lang_run2": "EN"
+    },
+    {
+      "id": "trump",
+      "name": "Trump",
+      "lang_run1": "EN",
+      "lang_run2": "EN"
+    }
+  ],
+  "corpus": {
+    "speeches": 20,
+    "chunks_run2": 250,
+    "chunks_run1": 304,
+    "speeches_per_leader": {
+      "erdogan": 5,
+      "macron": 4,
+      "merkel": 4,
+      "putin": 4,
+      "trump": 3
+    }
+  },
+  "A1_siralama_tur1": {
+    "model": "Qwen3-Embedding-8B",
+    "corpus": "original languages (run 1)",
+    "rows": [
+      {
+        "rank": 1,
+        "pair": "Putin–Trump",
+        "lang": "EN–EN",
+        "sim": 0.744,
+        "sim_tr": "0,744",
+        "highlight": true
+      },
+      {
+        "rank": 2,
+        "pair": "Macron–Merkel",
+        "lang": "FR–DE",
+        "sim": 0.698,
+        "sim_tr": "0,698",
+        "highlight": false
+      },
+      {
+        "rank": 3,
+        "pair": "Merkel–Putin",
+        "lang": "DE–EN",
+        "sim": 0.678,
+        "sim_tr": "0,678",
+        "highlight": false
+      },
+      {
+        "rank": 4,
+        "pair": "Merkel–Trump",
+        "lang": "DE–EN",
+        "sim": 0.66,
+        "sim_tr": "0,660",
+        "highlight": false
+      },
+      {
+        "rank": 5,
+        "pair": "Macron–Putin",
+        "lang": "FR–EN",
+        "sim": 0.643,
+        "sim_tr": "0,643",
+        "highlight": false
+      },
+      {
+        "rank": 6,
+        "pair": "Macron–Trump",
+        "lang": "FR–EN",
+        "sim": 0.633,
+        "sim_tr": "0,633",
+        "highlight": false
+      },
+      {
+        "rank": 7,
+        "pair": "Erdoğan–Merkel",
+        "lang": "TR–DE",
+        "sim": 0.621,
+        "sim_tr": "0,621",
+        "highlight": false
+      },
+      {
+        "rank": 8,
+        "pair": "Erdoğan–Putin",
+        "lang": "TR–EN",
+        "sim": 0.595,
+        "sim_tr": "0,595",
+        "highlight": false
+      },
+      {
+        "rank": 9,
+        "pair": "Erdoğan–Trump",
+        "lang": "TR–EN",
+        "sim": 0.593,
+        "sim_tr": "0,593",
+        "highlight": false
+      },
+      {
+        "rank": 10,
+        "pair": "Erdoğan–Macron",
+        "lang": "TR–FR",
+        "sim": 0.581,
+        "sim_tr": "0,581",
+        "highlight": false
+      }
+    ],
+    "bootstrap_top_share": 0.887,
+    "bootstrap_top_share_tr": "%88,7",
+    "bootstrap_n": 2000
+  },
+  "A2_dil_rozetleri": [
+    {
+      "name": "Erdoğan",
+      "badge_run1": "TR",
+      "badge_run2": "EN",
+      "flips_in_A3": true
+    },
+    {
+      "name": "Macron",
+      "badge_run1": "FR",
+      "badge_run2": "EN",
+      "flips_in_A3": true
+    },
+    {
+      "name": "Merkel",
+      "badge_run1": "DE",
+      "badge_run2": "EN",
+      "flips_in_A3": true
+    },
+    {
+      "name": "Putin",
+      "badge_run1": "EN",
+      "badge_run2": "EN",
+      "flips_in_A3": false
+    },
+    {
+      "name": "Trump",
+      "badge_run1": "EN",
+      "badge_run2": "EN",
+      "flips_in_A3": false
+    }
+  ],
+  "A4_egim_sira": [
+    {
+      "pair": "Putin–Trump",
+      "rank_run1": 1,
+      "rank_run2": 10,
+      "highlight": true
+    },
+    {
+      "pair": "Macron–Merkel",
+      "rank_run1": 2,
+      "rank_run2": 1,
+      "highlight": false
+    },
+    {
+      "pair": "Merkel–Putin",
+      "rank_run1": 3,
+      "rank_run2": 9,
+      "highlight": false
+    },
+    {
+      "pair": "Merkel–Trump",
+      "rank_run1": 4,
+      "rank_run2": 8,
+      "highlight": false
+    },
+    {
+      "pair": "Macron–Putin",
+      "rank_run1": 5,
+      "rank_run2": 6,
+      "highlight": false
+    },
+    {
+      "pair": "Macron–Trump",
+      "rank_run1": 6,
+      "rank_run2": 4,
+      "highlight": false
+    },
+    {
+      "pair": "Erdoğan–Merkel",
+      "rank_run1": 7,
+      "rank_run2": 3,
+      "highlight": false
+    },
+    {
+      "pair": "Erdoğan–Putin",
+      "rank_run1": 8,
+      "rank_run2": 7,
+      "highlight": false
+    },
+    {
+      "pair": "Erdoğan–Trump",
+      "rank_run1": 9,
+      "rank_run2": 5,
+      "highlight": false
+    },
+    {
+      "pair": "Erdoğan–Macron",
+      "rank_run1": 10,
+      "rank_run2": 2,
+      "highlight": false
+    }
+  ],
+  "A5_kipirdamadi": {
+    "putin_trump": {
+      "sim_run1_tr": "0,744",
+      "sim_run2_tr": "0,743"
+    },
+    "others": [
+      {
+        "pair": "Erdoğan–Macron",
+        "delta": 0.276,
+        "delta_tr": "+0,276"
+      },
+      {
+        "pair": "Erdoğan–Merkel",
+        "delta": 0.207,
+        "delta_tr": "+0,207"
+      },
+      {
+        "pair": "Erdoğan–Trump",
+        "delta": 0.203,
+        "delta_tr": "+0,203"
+      },
+      {
+        "pair": "Erdoğan–Putin",
+        "delta": 0.179,
+        "delta_tr": "+0,179"
+      },
+      {
+        "pair": "Macron–Merkel",
+        "delta": 0.173,
+        "delta_tr": "+0,173"
+      },
+      {
+        "pair": "Macron–Trump",
+        "delta": 0.173,
+        "delta_tr": "+0,173"
+      },
+      {
+        "pair": "Macron–Putin",
+        "delta": 0.135,
+        "delta_tr": "+0,135"
+      },
+      {
+        "pair": "Merkel–Trump",
+        "delta": 0.114,
+        "delta_tr": "+0,114"
+      },
+      {
+        "pair": "Merkel–Putin",
+        "delta": 0.083,
+        "delta_tr": "+0,083"
+      }
+    ]
+  },
+  "A6_komsular": {
+    "model": "Qwen3-Embedding-8B (same model both runs)",
+    "k": 10,
+    "share_run1": 0.995,
+    "share_run1_tr": "%99,5",
+    "share_run2": 0.598,
+    "share_run2_tr": "%59,8",
+    "filled_dots_run1": 10,
+    "filled_dots_run2": 6,
+    "_dots_note": "dot counts are the rounded average over all Erdoğan paragraphs; the % label is exact"
+  },
+  "A8_ikinci_model": {
+    "model": "KaLM-Embedding-Gemma3-12B-2511",
+    "corpus": "English (run 2)",
+    "rows": [
+      {
+        "rank": 1,
+        "pair": "Macron–Merkel",
+        "sim_tr": "0,850",
+        "highlight": false
+      },
+      {
+        "rank": 2,
+        "pair": "Erdoğan–Macron",
+        "sim_tr": "0,806",
+        "highlight": false
+      },
+      {
+        "rank": 3,
+        "pair": "Erdoğan–Merkel",
+        "sim_tr": "0,784",
+        "highlight": false
+      },
+      {
+        "rank": 4,
+        "pair": "Erdoğan–Putin",
+        "sim_tr": "0,755",
+        "highlight": false
+      },
+      {
+        "rank": 5,
+        "pair": "Macron–Putin",
+        "sim_tr": "0,753",
+        "highlight": false
+      },
+      {
+        "rank": 6,
+        "pair": "Macron–Trump",
+        "sim_tr": "0,736",
+        "highlight": false
+      },
+      {
+        "rank": 7,
+        "pair": "Merkel–Putin",
+        "sim_tr": "0,736",
+        "highlight": false
+      },
+      {
+        "rank": 8,
+        "pair": "Erdoğan–Trump",
+        "sim_tr": "0,735",
+        "highlight": false
+      },
+      {
+        "rank": 9,
+        "pair": "Merkel–Trump",
+        "sim_tr": "0,729",
+        "highlight": false
+      },
+      {
+        "rank": 10,
+        "pair": "Putin–Trump",
+        "sim_tr": "0,701",
+        "highlight": true
+      }
+    ],
+    "bottom_share_tr": "%90,7",
+    "spearman_with_qwen3_english": 0.83
+  },
+  "bootstrap": {
+    "run1_qwen3_putin_trump_share_most_similar": 0.887,
+    "run2_qwen3_putin_trump_share_least_similar": 0.652,
+    "run2_kalm_putin_trump_share_least_similar": 0.907,
+    "run2_kalm_macron_merkel_share_most_similar": 1.0
+  },
+  "spearman_run1_vs_run2_same_model": -0.43,
+  "run1_bge_m3_note": {
+    "_why": "second model of run 1; did NOT rank Putin–Trump first even in original languages",
+    "putin_trump_rank": 10,
+    "top_pair": "Macron–Merkel",
+    "erdogan_knn_same_leader_share": 0.473
+  }
+}

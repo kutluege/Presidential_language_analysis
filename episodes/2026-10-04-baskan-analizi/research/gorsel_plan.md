@@ -1,98 +1,91 @@
-# Görsel plan — cümle cümle
+# Görsel plan v2 — cümle cümle
 
-Kurallar `brand/identity.md`, `brand/motion.md`, `brand/palette.md` dosyalarından alındı.
-Bu bir plan; sahne veya render üretilmedi.
+Kurallar `brand/identity.md`, `brand/motion.md`, `brand/palette.md` dosyalarından. Bu bir plan; sahne veya render üretilmedi.
 
 **Genel**
-- 1080×1920, 30 fps. Tüm video `AVATAR` modunda (kayıt yalnızca ses). Ritim, mod yerine
-  **yerleşim değişimiyle** taşınıyor: aynı yerleşim 12 sn'yi geçmiyor.
-- Zemin: marka gradyanı (parıltı sağ-altta). Grafik sahnelerinde köşe kaymıyor; ★ anlarında
-  `tac` preset'inin %15 parlaması dışında gradyan sabit.
-- Lider fotoğrafı yok. Liderler yalnızca **isim yazısı** (Inter/Manrope 600, `parlak-tas`).
-  Repodaki lider renkleri (mavi/turuncu/…) **kullanılmıyor**: marka tek vurgu rengine izin
-  veriyor ve renk-lider eşlemesi tarafsızlık için de gereksiz.
-- Veri: `kraft` = etiket/çizgi, `golge-tas` = pasif veri, `parlak-tas` = ana metin/sayı,
-  `vurgu` (#D45A93) = karedeki **tek** önemli öğe. `derin-golge` metinde hiç kullanılmıyor.
-- Sayılar JetBrains Mono 400/600, ondalık virgül (0,744), yüzde işareti önde (%59,8).
-- Altyazı: 64–72 px, `parlak-tas`, satırda en çok 4–5 kelime. Grafikte vurgulu öğe olan
-  karelerde altyazıda vurgulu kelime **yok** (karede tek vurgu kuralı). Avatar irisleri bu
-  sayıma dahil edilmedi (marka metninde irisler ayrıca sayılıyor).
+- 1080×1920, 30 fps. Tüm video `AVATAR` modunda (kayıt yalnızca ses). Ritim yerleşim değişimiyle
+  taşınıyor; hiçbir yerleşim 12 sn'yi aşmıyor (aşağıdaki tablo).
+- Zemin: marka gradyanı, parıltı sağ-altta. Repodaki grafikler kullanılmıyor; hepsi
+  `data/animation_data.json` içinden yeniden kuruluyor.
+- **Lider fotoğrafı yok.** Liderler yalnızca isim yazısı (Inter/Manrope 600, `parlak-tas`).
+  Repodaki lider renkleri kullanılmıyor: marka tek vurgu rengine izin veriyor. Ayırt etmek için
+  isim etiketi ve konum yeterli.
+- Renk rolleri: `parlak-tas` ana metin ve sayılar · `kraft` etiket, çizgi, kart kenarı ·
+  `golge-tas` pasif veri · `erik` / `sarap-siyah` kart ve panel zemini · `vurgu` (#D45A93) karedeki
+  **tek** önemli öğe. `derin-golge` metinde hiç kullanılmıyor.
+- Sayılar JetBrains Mono 400/600, ondalık virgül (0,42), yüzde işareti önde (%5,5).
+- Altyazı 64–72 px, satırda en çok 4–5 kelime. Grafikte vurgulu öğe varken altyazıda vurgulu kelime yok.
+  Avatar irisleri bu sayıma dahil edilmedi.
+- Teknik terimler bir kez, ekranda küçük `kraft` dipnotla açıklanıyor (marka kuralı: "bir kez açıklanır").
 
-## Yerleşimler (güvenli alan: üst 220, alt 380, sağ 160 px boş → içerik kutusu x 0–920, y 220–1540)
+## Yerleşimler (güvenli alan: üst 220, alt 380, sağ 160 → içerik x 0–920, y 220–1540)
 
 | kod | avatar | grafik alanı | altyazı |
 |---|---|---|---|
-| **A** `alt-orta` | `avatar-sade` veya `-defne`, 2,5× (775×1000), x=152, y=520 → yüz y≈670–1245. Gövde altı (y=1520) `sarap-siyah` kürsü paneline oturur (panel y 1520–1920, tam genişlik) | başın üstü, y 240–500 (tek satır / tek sayı) | y 1290–1500, ceketin üstünde. Defne karelerinde açık renkli toga altyazının arkasına girer → altyazıya `sarap-siyah` %85 plaka |
-| **B** `grafik + kose` | 0,9× (279×360), x=620, y=880; altyazı paneline oturur. Yüz y≈934–1141 | x 60–900, y 240–860 tam genişlik; y 860–1240 arasında yalnızca x 60–600 | `sarap-siyah` panel y 1240–1520; metin y 1300–1480 |
-| **C** `alt-sol` | 1,6× (496×640), x=20, y=880 → yüz y≈976–1344; gövde y=1520'de kürsü paneline oturur | x 540–900, y 240–1200 | y 260–420 (grafiğin üstü, sol hizalı) |
+| **A** `alt-orta` | 2,5× (775×1000), x=152, y=520 → yüz y≈670–1245; gövde y=1520'de `sarap-siyah` kürsü paneline oturur | başın üstü, y 240–500 | y 1290–1500, ceketin üstünde; defne karelerinde altyazıya `sarap-siyah` %85 plaka |
+| **B** `grafik + kose` | 0,9× (279×360), x=620, y=880 → yüz y≈934–1141; altyazı paneline oturur | x 60–900, y 240–860; y 860–1240 arasında yalnızca x 60–600 | `sarap-siyah` panel y 1240–1520 |
+| **C** `alt-sol` | 1,6× (496×640), x=20, y=880 → yüz y≈976–1344; kürsü paneline oturur | x 540–900, y 240–1200 | y 260–420, sol hizalı |
 
-Avatar hiçbir zaman aynalanmıyor; yalnızca izinli hareketler: göz kırpma (`eyes` scaleY
-1→0,1→1, 120 ms), bakış kayması (`irises` ±4 px), kaş kaldırma (`brows` −6 px), vurgu
-sallanması (±2° / 4 px), `avatar-giris`, `tac`, `tac-cikis`.
+İzinli avatar hareketleri: göz kırpma, iris ±4 px, kaş −6 px, ±2° / 4 px vurgu sallanması,
+`avatar-giris`, `tac`, `tac-cikis`. Gülme, açık ağız, dudak senkronu yok (marka yasağı).
 
 ## Cümle cümle
 
-Zamanlar tahmini (saniyede 6 hece); seslendirmeden sonra kayıttaki gerçek sürelere göre kaydırılır.
+Zamanlar tahmini; kayıttan sonra gerçek sürelere göre kaydırılır.
 
-| # | zaman (sn) | metin (kısa) | yerleşim / avatar | grafik / animasyon | ekrandaki metin | karedeki tek vurgu | veri |
-|---|---|---|---|---|---|---|---|
-| S01 | 0,0–5,8 | "…kim kime en çok benziyor?" | **A**, sade. `avatar-giris` (500 ms) ilk karede. "sordum" kelimesinde `irises` +4 px (soruya bakış) | Başın üstünde beş isim tek satır, `kayis` ile sırayla (80 ms arayla), `golge-tas` | Üstte: "Kim kime en çok benziyor?" (`parlak-tas`) | altyazıda "benziyor" | `leaders` |
-| S02 | 6,0–12,4 | "Cevap: Putin ile Trump… %89'unda yine onlar." | **B**, sade | **A1 · Sıralama (Tur 1).** 10 satırlık sıralı liste `kayis` ile (satır başı 60 ms). "Putin ile Trump" kelimesinde 1. satır `vurgu` preset'i. Ardından satırın altında küçük mono etiket "2000 tekrarın %88,7'si" `sayac` ile | Başlık: "Benzerlik sırası" · altta küçük `kraft`: "model: Qwen3-Embedding-8B" | 1. satır: Putin–Trump 0,744 | `A1_siralama_tur1` |
-| S03 | 12,7–14,6 | "Sonra bir şey dikkatimi çekti." | **A**, sade. Kaş kaldırma −6 px ("ciddi misin?"), sonra göz kırpma | Liste kayboluyor (opaklık, 300 ms). Grafik yok | — | yok (sessiz kare) | — |
-| S04 | 14,9–22,0 | "Erdoğan Türkçe, Macron Fransızca…" | **B**, sade | **A2 · Dil rozetleri.** Beş isim kartı dikey dizilim (x 60–600). Her dil söylendiğinde o kartın yanında rozet `kayis` ile: TR, FR, DE, EN, EN. Rozet: `kraft` kontur, mono 600 | — | yok (rozetler hep `kraft`; vurgu S05'e saklanıyor) | `A2_dil_rozetleri` |
-| S05 ★ | 22,3–25,8 | "Yani o ikisi, setteki tek İngilizce metinlerdi." | **A**, `tac` (700 ms) cümle başında → defne. Cümle sonunda `tac-cikis` (400 ms) | A2'nin küçültülmüş hali başın üstüne çıkar (tek satır: TR FR DE EN EN). Putin ve Trump'ın iki EN rozetini saran **tek köşeli parantez** çizilir | Parantez altında: "tek İngilizce metinler" | parantez (rozetler değil; tek öğe) | `A2_dil_rozetleri` |
-| S06 | 26,1–30,0 | "Ben de hepsini İngilizceye çevirip…" | **B**, sade | `kesit` (66 ms `parilti` flaşı) → **A3 · Çeviri.** Rozetler TR→EN, FR→EN, DE→EN dönerek (scaleX 1→0→1, 300 ms, 100 ms arayla) değişir; Putin/Trump rozetleri yerinde kalır | Üst köşede küçük etiket: "Tur 2 · hepsi İngilizce · aynı model" | altyazıda "aynı modelle" | `A2_dil_rozetleri` (`flips_in_A3`) |
-| S07 ★ | 30,3–34,1 | "Putin–Trump birincilikten onunculuğa…" | **B**, `tac` → defne (kose ölçeğinde). Sonda `tac-cikis` | **A4 · Eğim grafiği (sıra).** İki sütun: "Orijinal dil" / "Hepsi İngilizce", 1–10 sıra. Dokuz çizgi `golge-tas` 1,5 px, Putin–Trump çizgisi 1. sıradan 10. sıraya 800 ms'de iner. Değer değil sıra gösteriliyor (eksen kırpma yok) | Sütun başlıkları `kraft` | Putin–Trump çizgisi | `A4_egim_sira` |
-| S08 | 34,4–37,9 | "…onların puanı kıpırdamadı bile." | **A**, sade. Cümle sonunda yalnızca göz kırpma (deadpan) | Başın üstünde büyük mono sayı **0,744**; `sayac` gibi saymaya başlar ama yalnızca son hane 4→3 olur (300 ms). Altında küçük `kraft`: "Putin–Trump · Tur 1 → Tur 2" | 0,744 → 0,743 | son hane "3" | `A5_kipirdamadi.putin_trump` |
-| S09 | 38,2–42,7 | "Değişen diğerleriydi…" | **B**, sade | **A5 · Artışlar.** Diğer 9 çift alt alta, her birinin yanında yukarı ok + mono fark (+0,276 … +0,083), `kayis` 60 ms arayla, `parlak-tas`. Putin–Trump en altta `golge-tas` "±0,000" | — | altyazıda "yaklaştı" | `A5_kipirdamadi.others` |
-| S10 | 43,0–51,6 | "…en yakın on komşusuna baktım…" | **C**, sade. "altısı"nda vurgu sallanması (4 px) | **A6 · Komşular** (`dagilim` preset). Ortada tek nokta = bir Erdoğan paragrafı; etrafına 10 komşu nokta saçılır. Önce 10'u dolu (`parlak-tas` = Erdoğan), etiket **%99,5**. Kesmeden geçişle 4 nokta içi boş `golge-tas` konturlu olur (başka liderler), etiket `sayac` ile **%59,8** | Etiket: "Erdoğan'ın 10 en yakın komşusu" · "Tur 1 → Tur 2" | merkez nokta | `A6_komsular` |
-| S11 ★ | 51,9–55,2 | "Yani model önce dili görüyormuş, anlamı sonra." | **A**, `tac` → defne, cümle sonunda `tac-cikis` | Grafik yok. Başın üstünde iki satır: "önce dil" / "sonra anlam", `kayis` | "önce dil · sonra anlam" | "dil" kelimesi | — |
-| S12 | 55,5–60,4 | "Daha büyük ikinci bir modelle…" | **B**, sade | **A8 · İkinci model.** A1 ile aynı liste tasarımı, bu kez İngilizce metin + KaLM-Embedding-Gemma3-12B. Liste alttan dolar; son satır Putin–Trump 0,701 | Başlık: "Model 2 · 12 milyar parametre" | 10. satır | `A8_ikinci_model` |
-| S13 | 60,7–68,2 | "Bu, liderler hakkında bir şey kanıtlamıyor…" | **A**, sade. Hareketsiz, yalnızca bir göz kırpma | Başın üstünde düz metin kartı (`kraft` ince kontur): "20 konuşma · metin ölçümü" / "3'ü çeviri, 1'i resmi çeviri seti" | — | yok (bilerek sakin kare) | `corpus` |
-| S14 | 68,5–69,6 | "Kod GitHub'ımda." | **A**, sade, avatar 4 px zıplama | Başın üstünde mono: `github.com/kutluege/Presidential_language_analysis` (satırı iki satıra böl: `github.com/kutluege/` · `Presidential_language_analysis`) | — | yok | — |
+| # | zaman (sn) | metin (kısa) | yerleşim / avatar | grafik / animasyon | tek vurgu | veri |
+|---|---|---|---|---|---|---|
+| S01 | 0,0–4,7 | "…biliyor muydunuz?" | **A**, sade, `avatar-giris`. Soru sonunda iris +4 px (kameraya yan bakış) | Başın üstünde tek satır: "Siyasi söylem × yapay zeka" `kayis` | altyazıda "yapay zekayla" | — |
+| S02 | 5,0–10,2 | "…devletleri yöneteceğini konuşanlar bile var." | **C**, sade | Sağ sütunda kelimeler alt alta `kayis` ile (120 ms arayla), `golge-tas`: "kod" · "metin" · "görsel" · "müzik" · en son **"devlet?"** | "devlet?" | — |
+| S03 | 10,5–15,7 | "…yerine değil, yanında…" | **A**, sade. "yerine değil" sözünde kaş −6 px, "yanında"da geri | Başın üstünde: "yerine değil · yanında" | "yanında" | — |
+| S04 | 16,0–21,5 | "…yirmi konuşmasını…okuttum." | **C**, sade | **B0 · Derlem.** 20 nokta, beş sütun (isim altta): 5-4-4-4-3. Dolu nokta = yılbaşı mesajı (16), içi boş = diğer (4). Noktalar `sayac` gibi tek tek yanar. Dipnot (`kraft`, 28 px): "Erdoğan, Macron, Merkel: İngilizce çeviri · Putin: resmi İngilizce metin" | yok | `corpus` |
+| S05 | 21,8–28,4 | "Kim ne konuşuyor? Macron'da…" | **B**, sade | **B1 · Temalar.** Beş satır (Macron, Putin, Trump, Merkel, Erdoğan). Her satır: isim + en yüksek tema etiketi + 0,50 çizgisinden sağa uzanan çubuk + değer. Orta dikey çizgi "ortalama". Söylenen lider satırı `parlak-tas`'a geçer, diğerleri `golge-tas` | söylenen satırın çubuğu (sırayla tek tek) | `B1_temalar.leaders[].top3[0]` |
+| S06 | 28,7–33,9 | "Erdoğan'da dış politika… tek bir konuşma taşıyor." | **C**, sade | Sağ sütunda Erdoğan'ın 2 teması: "Dış politika 0,56" ve "Hukuk ve kurumlar 0,58". İkincisinin altında 5 küçük nokta = 5 konuşma (0,42 · 0,60 · 0,54 · 0,44 · **0,91**). 0,91'lik nokta sağa ayrılır, etiketi: "sempozyum konuşması" | 0,91 noktası | `B1_temalar.erdogan_democracy_by_speech` |
+| S07 | 34,2–39,6 | "…FIFA oyuncu kartları geldi." [gülme] | **C**, sade. Gülme anında avatar **gülmüyor**: kaş −6 px + göz kırpma (deadpan) | Sağda beş radar poligonu üst üste (`golge-tas` 1,5 px, dolgu yok); "FIFA" kelimesinde poligonlar kart çerçevesine dönüşür (300 ms) | yok | `B2_fifa_kartlari` |
+| S08 ★ | 39,9–45,5 | "Putin'in kartı: teşekkür 70, vaat 31…" | **B**, `tac` → defne (kose ölçeğinde); cümle sonunda `tac-cikis` | **B2 · FIFA kartı.** Büyük kart (x 120–600, y 260–1180), `erik` zemin, `kraft` 3 px kenar, üstte isim. 7 istatistik iki sütun mono 600: ÇAT 51 · İŞB 56 · GEÇ 62 · GEL 55 · B-O 50 · TŞK 70 · VAT 31. "teşekkür"de 70 `vurgu` preset, "vaat"te vurgu 31'e geçer. **Genel puan (OVR) yok** | önce 70, sonra 31 (aynı anda tek) | `B2_fifa_kartlari.cards[Putin]` |
+| S09 | 45,8–50,6 | "Trump'ta biz-onlar 65, Merkel… Macron…" | **B**, sade | Kart yatay kayarak değişir (her biri ~1,6 sn): Trump (B-O 65), Merkel (İŞB 61), Macron (GEL 57). Her kartta yalnız söylenen istatistik vurgulu | söylenen istatistik | `cards[Trump/Merkel/Macron]` |
+| S10 | 50,9–54,5 | "Erdoğan'ın kartı en dengelisi…" | **C**, sade, 4 px zıplama | Sağda Erdoğan kartı: 7 istatistik 41–53. Altında yatay mini şerit: beş kartın min–max aralığı (Erdoğan 12, Macron 19, Merkel 23, Trump 28, Putin 39); Erdoğan'ın şeridi en kısa | Erdoğan şeridi | `cards[].range` |
+| S11 | 54,8–62,0 | "Duygu tonu hepsinde olumlu ağırlıklı… yüzde 6'nın altında." | **B**, sade | **B3 · Duygu.** Üst: "duygu değeri" 5 çubuk, sıfırdan sağa (0,42…0,77), hepsi pozitif; Putin 0,77. Alt: "korku" ve "düşmanlık" 0–%100 ölçeğinde 5'er çubuk; hepsi %6 çizgisinin altında kalıyor. Çizgi etiketi "%6". Bıyık çizgileri (güven aralığı) `golge-tas` | önce Putin çubuğu, sonra "%6" çizgisi | `B3_duygu` |
+| S12 | 62,2–65,0 | "Üslupta en yakın ikili Erdoğan ile Macron." | **C**, sade | Sağda 10 çiftlik sıralı liste (üslup kosinüsü): 1. Erdoğan–Macron 0,42 … 10. Erdoğan–Putin −0,53. Dipnot: "üslup = 7 retorik ölçü + duygu" | 1. satır | `B4_stil.style_pairs` |
+| S13 ★ | 65,2–69,7 | "Asıl ilginci: konuda…Macron ve Merkel, üslupta benzemiyor." | **B**, `tac` → defne; sonda `tac-cikis` | **B4 · Konu × üslup** (`dagilim` preset). 10 nokta = 10 çift; x = konu benzerliği, y = üslup benzerliği. Noktalar gri saçılır; Macron–Merkel noktası en sağda ama orta-altta kalır. Eksen etiketleri: "konu →", "üslup ↑". Köşede küçük: "ilişki: 0,21" | Macron–Merkel noktası | `B4_stil.macron_merkel` + `data/stil_ciftler.csv` |
+| S14 | 70,0–75,7 | "Kendi içinde en toplu… Erdoğan'ınki; yine o tek konuşma…" | **B**, sade | **B5 · Takımyıldızlar.** Beş küçük küme yan yana (2 satır). Her kümede merkez nokta + konuşma noktaları; noktanın merkeze uzaklığı = gerçek uzaklık × 800 px. Macron'unkiler neredeyse üst üste; Erdoğan'da dört nokta yakın, sempozyum noktası uzakta | Erdoğan'ın sempozyum noktası | `B5_dagilim`, `data/dagilim_konusma.csv` |
+| S15 | 76,0–81,7 | "Bunların hiçbiri kimin iyi, kimin kötü…" | **C**, sade, hareketsiz, bir göz kırpma | Sağda düz metin kartı (`kraft` ince kenar): "20 metin · ölçüm, hüküm değil" | yok (bilerek sakin) | — |
+| S16 ★ | 82,0–88,7 | "…bilmiyorum. [es] Ama… liderleri denetleyebiliriz." | **A**. İlk cümle sade + kaş −6 px. Esten sonra `tac` → defne (yalnızca ikinci cümle, ~3,5 sn), sonra `tac-cikis` | Başın üstünde: "devlet yönetir mi? —" sonra "denetleyebiliriz" | "denetleyebiliriz" | — |
+| S17 | 88,9–89,9 | "Kod GitHub'ımda." | **A**, sade, 4 px zıplama | Başın üstünde mono, iki satır: `github.com/kutluege/` · `Presidential_language_analysis` | yok | — |
 
 ### Defne bütçesi
-S05 (3,5 sn) + S07 (3,8 sn) + S11 (3,3 sn) = **10,6 sn / ~70 sn ≈ %15** (sınır %20, en çok 3 kez).
+S08 (5,7 sn) + S13 (4,5 sn) + S16 ikinci cümle (~3,5 sn) = **~13,7 sn / ~90 sn ≈ %15** (sınır %20, en çok 3 kez).
+S08 ve S13'te avatar köşede (0,9×) olduğu için taç küçük görünür. Daha görünür olsun istersen
+o iki cümlede A yerleşimine geçip grafiği başın üstüne sıkıştırmak gerekir. Ben grafiğin okunmasını öne aldım.
 
 ### Yerleşim ritmi
-A (0–5,8) → B (6–12,4) → A (12,7–14,6) → B (14,9–22) → A (22,3–25,8) → B (26,1–34,1) →
-A (34,4–37,9) → B (38,2–42,7) → C (43–51,6) → A (51,9–55,2) → B (55,5–60,4) → A (60,7–69,6).
-En uzun tek yerleşim: S13–S14'teki A, ~9 sn. Hepsi 12 sn'nin altında.
+A 0–4,7 · C 5–10,2 · A 10,5–15,7 · C 16–21,5 · B 21,8–28,4 · C 28,7–39,6 · B 39,9–50,6 ·
+C 50,9–54,5 · B 54,8–62 · C 62,2–65 · B 65,2–75,7 · C 76–81,7 · A 82–89,9. En uzun blok 10,9 sn.
 
-## Animasyon kartları (veri → görsel)
+## Animasyon kartları
 
-Repodaki grafikler kullanılmıyor; her biri `data/animation_data.json` içindeki anahtardan
-yeniden kuruluyor.
+**B0 · Derlem** — `corpus`. 20 nokta (Ø 28 px, aralık 44 px). Dolu `parlak-tas` = yılbaşı mesajı, içi boş `kraft`
+= diğer (Erdoğan sempozyum, Trump veda / yemin / alıntı derlemesi). Tür adları ekranda yazmıyor; sadece "16 yılbaşı mesajı + 4 diğer".
 
-**A1 · Sıralama (Tur 1)** — `A1_siralama_tur1.rows`
-10 satır, satır yüksekliği ~58 px, y 300–880. Sol: sıra no (mono `golge-tas`), orta: çift adı
-(`parlak-tas`), sağ: değer (`sim_tr`, mono). Çubuk yok: değerler 0,581–0,744 aralığında,
-çubuk sıfırdan başlarsa farklar görünmez, kırpılırsa yanıltır. Dil etiketleri (`lang`) bu
-sahnede **gösterilmiyor**; ipucu S05'e saklanıyor.
+**B1 · Temalar** — `B1_temalar`. Çubuklar 0,50'den başlar (0,50 = 20 konuşmanın ortalaması; marka dipnotu:
+"0,50 = ortalama"). Ölçek 0,40–0,75. Değer etiketleri mono, virgüllü. Tema adları Türkçe (`theme_tr`).
 
-**A2/A3 · Dil rozetleri** — `A2_dil_rozetleri`
-Beş kart; rozet 96×56 px, `kraft` 2 px kontur, mono 600. A3'te `flips_in_A3 = true` olan üç
-rozet dönüyor. S05'te tek satıra küçülüp başın üstüne taşınıyor.
+**B2 · FIFA kartları** — `B2_fifa_kartlari.cards`. Kısaltmalar: ÇAT çatışma/tehdit · İŞB iş birliği · GEÇ geçmişe
+yönelim · GEL geleceğe yönelim · B-O biz–onlar · TŞK teşekkür/takdir · VAT vaat. Kart altında küçük dipnot: "50 = ortalama".
+Kartlarda **mevki, bayrak, fotoğraf, genel puan yok**. Genel puan bir kalite notu gibi okunur, mevki
+adları da siyasi çağrışım yapabilir ("sağ/sol kanat").
 
-**A4 · Eğim grafiği** — `A4_egim_sira`
-Sol sütun `rank_run1`, sağ sütun `rank_run2`; iki sütun arası ~520 px. Çift adları her iki
-uçta küçük (`kraft`, 28 px). Sadece `highlight: true` olan çizgi `vurgu`. Değer yok, sadece sıra.
+**B3 · Duygu** — `B3_duygu`. Duygu değeri çubukları ölçek 0–1. Korku ve düşmanlık 0–%100 ölçeğinde gösteriliyor
+ki küçüklükleri görünsün. Bu bilerek seçildi, çünkü cümlenin iddiası "çok düşük". Dipnot: "duygu sınıflandırıcısı, olasılık".
 
-**A5 · Kıpırdamadı + artışlar** — `A5_kipirdamadi`
-S08: tek büyük sayı (mono 600, ~180 px). S09: `others` dizisi `delta` sırasına göre; ok uzunluğu
-farkla orantılı olabilir (0,083 → 0,276), ama sayılar her zaman yazılı.
+**B4 · Konu × üslup** — `data/stil_ciftler.csv` (`content_cosine`, `style_cosine`). x ekseni 0,70–0,86,
+y ekseni −0,6–0,5. Noktaların çift adları yok, yalnız Macron–Merkel etiketli (tek vurgu).
 
-**A6 · Komşular** — `A6_komsular`
-`dagilim` preset'i (1200 ms). Nokta sayıları (`filled_dots_run1` = 10, `filled_dots_run2` = 6)
-**ortalamanın yuvarlanmış hali**; kesin değer etikette (`share_run1_tr`, `share_run2_tr`).
-Diğer liderler renklendirilmiyor (tek vurgu kuralı); yalnızca "Erdoğan / diğer" ayrımı var.
-
-**A8 · İkinci model** — `A8_ikinci_model.rows`
-A1 ile aynı bileşen; yalnızca veri ve başlık farklı. İzleyici "aynı liste, farklı sonuç"u
-göz ucuyla karşılaştırabilsin diye tasarım bilerek tekrar ediliyor.
+**B5 · Takımyıldızlar** — `data/dagilim_konusma.csv`. Konuşma noktaları merkez etrafında eşit açıyla dizilir;
+yarıçap = uzaklık × 800 px (0,019 → 15 px, 0,162 → 130 px; küme kutusu ~280 px). Konuşma adları yok.
 
 ## Ses / SFX
-- `vurgu` → yumuşak tık: S02 (1. satır), S07 (çizgi inişi bitince), S10 (%59,8 oturunca).
-- `tac` → hafif metalik çınlama: S05, S07, S11.
-- `kesit` → kısa whoosh: S06.
-- Müzik konuşmanın en az 18 dB altında; S03 ve S08'deki eslerde müzik de kısılabilir (deadpan).
+- `vurgu` → yumuşak tık: S02 ("devlet?"), S08 (31), S13 (Macron–Merkel noktası), S14 (sempozyum noktası).
+- `tac` → hafif metalik çınlama: S08, S13, S16.
+- S07'deki gülme seslendirmenin kendisi; müzik o anda kısılabilir.
+- Müzik konuşmanın en az 18 dB altında.

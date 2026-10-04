@@ -1,0 +1,6 @@
+leader,name,speech_to_leader,speech_to_leader_tr,chunk_to_speech,chunk_to_speech_tr,ci_low,ci_high
+erdogan,Erdoğan,0.0649,"0,065",0.1916,"0,192",0.0173,0.0789
+macron,Macron,0.0188,"0,019",0.2158,"0,216",0.0072,0.0188
+merkel,Merkel,0.0288,"0,029",0.2036,"0,204",0.011,0.0288
+putin,Putin,0.0263,"0,026",0.1307,"0,131",0.0119,0.0263
+trump,Trump,0.0398,"0,040",0.1774,"0,177",-0.0,0.0398

@@ -1,375 +1,596 @@
 {
-  "_note": "All values recomputed by build_data.py from pipeline tables (see verification_log.txt). *_tr fields are display strings in brand format (decimal comma, % before the number).",
-  "leaders": [
-    {
-      "id": "erdogan",
-      "name": "Erdoğan",
-      "lang_run1": "TR",
-      "lang_run2": "EN"
-    },
-    {
-      "id": "macron",
-      "name": "Macron",
-      "lang_run1": "FR",
-      "lang_run2": "EN"
-    },
-    {
-      "id": "merkel",
-      "name": "Merkel",
-      "lang_run1": "DE",
-      "lang_run2": "EN"
-    },
-    {
-      "id": "putin",
-      "name": "Putin",
-      "lang_run1": "EN",
-      "lang_run2": "EN"
-    },
-    {
-      "id": "trump",
-      "name": "Trump",
-      "lang_run1": "EN",
-      "lang_run2": "EN"
-    }
-  ],
+  "_note": "Recomputed by build_data.py from pipeline tables (verification_log.txt). *_tr = brand display strings.",
+  "_model": "KaLM-Embedding-Gemma3-12B-2511 (themes, rhetoric, content); GoEmotions + sentiment classifier (emotion)",
   "corpus": {
     "speeches": 20,
-    "chunks_run2": 250,
-    "chunks_run1": 304,
-    "speeches_per_leader": {
+    "per_leader": {
       "erdogan": 5,
       "macron": 4,
       "merkel": 4,
       "putin": 4,
       "trump": 3
-    }
-  },
-  "A1_siralama_tur1": {
-    "model": "Qwen3-Embedding-8B",
-    "corpus": "original languages (run 1)",
-    "rows": [
+    },
+    "new_year": 16,
+    "types_other": [
       {
-        "rank": 1,
-        "pair": "Putin–Trump",
-        "lang": "EN–EN",
-        "sim": 0.744,
-        "sim_tr": "0,744",
-        "highlight": true
+        "speech_id": "erdogan1",
+        "speech_type": "symposium_speech"
       },
       {
-        "rank": 2,
-        "pair": "Macron–Merkel",
-        "lang": "FR–DE",
-        "sim": 0.698,
-        "sim_tr": "0,698",
-        "highlight": false
+        "speech_id": "trump1",
+        "speech_type": "farewell_address"
       },
       {
-        "rank": 3,
-        "pair": "Merkel–Putin",
-        "lang": "DE–EN",
-        "sim": 0.678,
-        "sim_tr": "0,678",
-        "highlight": false
+        "speech_id": "trump2",
+        "speech_type": "composite_excerpts"
       },
       {
-        "rank": 4,
-        "pair": "Merkel–Trump",
-        "lang": "DE–EN",
-        "sim": 0.66,
-        "sim_tr": "0,660",
-        "highlight": false
-      },
-      {
-        "rank": 5,
-        "pair": "Macron–Putin",
-        "lang": "FR–EN",
-        "sim": 0.643,
-        "sim_tr": "0,643",
-        "highlight": false
-      },
-      {
-        "rank": 6,
-        "pair": "Macron–Trump",
-        "lang": "FR–EN",
-        "sim": 0.633,
-        "sim_tr": "0,633",
-        "highlight": false
-      },
-      {
-        "rank": 7,
-        "pair": "Erdoğan–Merkel",
-        "lang": "TR–DE",
-        "sim": 0.621,
-        "sim_tr": "0,621",
-        "highlight": false
-      },
-      {
-        "rank": 8,
-        "pair": "Erdoğan–Putin",
-        "lang": "TR–EN",
-        "sim": 0.595,
-        "sim_tr": "0,595",
-        "highlight": false
-      },
-      {
-        "rank": 9,
-        "pair": "Erdoğan–Trump",
-        "lang": "TR–EN",
-        "sim": 0.593,
-        "sim_tr": "0,593",
-        "highlight": false
-      },
-      {
-        "rank": 10,
-        "pair": "Erdoğan–Macron",
-        "lang": "TR–FR",
-        "sim": 0.581,
-        "sim_tr": "0,581",
-        "highlight": false
+        "speech_id": "trump3",
+        "speech_type": "inaugural_address"
       }
     ],
-    "bootstrap_top_share": 0.887,
-    "bootstrap_top_share_tr": "%88,7",
-    "bootstrap_n": 2000
+    "translated": [
+      "erdogan",
+      "macron",
+      "merkel",
+      "putin"
+    ]
   },
-  "A2_dil_rozetleri": [
-    {
-      "name": "Erdoğan",
-      "badge_run1": "TR",
-      "badge_run2": "EN",
-      "flips_in_A3": true
-    },
-    {
-      "name": "Macron",
-      "badge_run1": "FR",
-      "badge_run2": "EN",
-      "flips_in_A3": true
-    },
-    {
-      "name": "Merkel",
-      "badge_run1": "DE",
-      "badge_run2": "EN",
-      "flips_in_A3": true
-    },
-    {
-      "name": "Putin",
-      "badge_run1": "EN",
-      "badge_run2": "EN",
-      "flips_in_A3": false
-    },
-    {
-      "name": "Trump",
-      "badge_run1": "EN",
-      "badge_run2": "EN",
-      "flips_in_A3": false
+  "B1_temalar": {
+    "scale_note": "0,50 = 20 konuşmanın ortalaması",
+    "leaders": [
+      {
+        "name": "Erdoğan",
+        "top3": [
+          {
+            "theme_tr": "Demokrasi, hukuk ve kurumlar",
+            "value": 0.5809,
+            "value_tr": "0,58",
+            "stable_top3_tr": "%69"
+          },
+          {
+            "theme_tr": "Dış politika ve jeopolitik",
+            "value": 0.5582,
+            "value_tr": "0,56",
+            "stable_top3_tr": "%100"
+          },
+          {
+            "theme_tr": "Güvenlik ve askeriye",
+            "value": 0.4956,
+            "value_tr": "0,50",
+            "stable_top3_tr": "%67"
+          }
+        ]
+      },
+      {
+        "name": "Macron",
+        "top3": [
+          {
+            "theme_tr": "Gelecek, reform ve teknoloji",
+            "value": 0.6894,
+            "value_tr": "0,69",
+            "stable_top3_tr": "%100"
+          },
+          {
+            "theme_tr": "Ekonomi ve refah",
+            "value": 0.5479,
+            "value_tr": "0,55",
+            "stable_top3_tr": "%96"
+          },
+          {
+            "theme_tr": "Kriz, tehdit ve dayanıklılık",
+            "value": 0.5284,
+            "value_tr": "0,53",
+            "stable_top3_tr": "%100"
+          }
+        ]
+      },
+      {
+        "name": "Merkel",
+        "top3": [
+          {
+            "theme_tr": "Gelecek, reform ve teknoloji",
+            "value": 0.6099,
+            "value_tr": "0,61",
+            "stable_top3_tr": "%93"
+          },
+          {
+            "theme_tr": "Toplumsal dayanışma ve değerler",
+            "value": 0.5954,
+            "value_tr": "0,60",
+            "stable_top3_tr": "%99"
+          },
+          {
+            "theme_tr": "Demokrasi, hukuk ve kurumlar",
+            "value": 0.5556,
+            "value_tr": "0,56",
+            "stable_top3_tr": "%65"
+          }
+        ]
+      },
+      {
+        "name": "Putin",
+        "top3": [
+          {
+            "theme_tr": "Ulusal kimlik ve birlik",
+            "value": 0.6763,
+            "value_tr": "0,68",
+            "stable_top3_tr": "%100"
+          },
+          {
+            "theme_tr": "Toplumsal dayanışma ve değerler",
+            "value": 0.6717,
+            "value_tr": "0,67",
+            "stable_top3_tr": "%100"
+          },
+          {
+            "theme_tr": "Güvenlik ve askeriye",
+            "value": 0.6062,
+            "value_tr": "0,61",
+            "stable_top3_tr": "%99"
+          }
+        ]
+      },
+      {
+        "name": "Trump",
+        "top3": [
+          {
+            "theme_tr": "Ekonomi ve refah",
+            "value": 0.5589,
+            "value_tr": "0,56",
+            "stable_top3_tr": "%100"
+          },
+          {
+            "theme_tr": "Güvenlik ve askeriye",
+            "value": 0.5342,
+            "value_tr": "0,53",
+            "stable_top3_tr": "%96"
+          },
+          {
+            "theme_tr": "Ulusal kimlik ve birlik",
+            "value": 0.4919,
+            "value_tr": "0,49",
+            "stable_top3_tr": "%74"
+          }
+        ]
+      }
+    ],
+    "erdogan_democracy_by_speech": [
+      {
+        "speech_id": "erdogan1",
+        "value_tr": "0,91"
+      },
+      {
+        "speech_id": "erdogan2022",
+        "value_tr": "0,41"
+      },
+      {
+        "speech_id": "erdogan2023",
+        "value_tr": "0,60"
+      },
+      {
+        "speech_id": "erdogan2024",
+        "value_tr": "0,54"
+      },
+      {
+        "speech_id": "erdogan2025",
+        "value_tr": "0,44"
+      }
+    ],
+    "erdogan_democracy_without_symposium_tr": "0,50"
+  },
+  "B2_fifa_kartlari": {
+    "scale_note": "50 = ortalama (yüzdelik × 100)",
+    "order": [
+      "Çatışma / tehdit",
+      "İş birliği",
+      "Geçmiş",
+      "Gelecek",
+      "Biz–onlar",
+      "Teşekkür",
+      "Vaat"
+    ],
+    "cards": [
+      {
+        "name": "Erdoğan",
+        "stats": {
+          "Çatışma / tehdit": 49,
+          "İş birliği": 43,
+          "Geçmiş": 53,
+          "Gelecek": 52,
+          "Biz–onlar": 46,
+          "Teşekkür": 41,
+          "Vaat": 46
+        },
+        "range": 12
+      },
+      {
+        "name": "Macron",
+        "stats": {
+          "Çatışma / tehdit": 44,
+          "İş birliği": 47,
+          "Geçmiş": 49,
+          "Gelecek": 57,
+          "Biz–onlar": 39,
+          "Teşekkür": 44,
+          "Vaat": 57
+        },
+        "range": 19
+      },
+      {
+        "name": "Merkel",
+        "stats": {
+          "Çatışma / tehdit": 49,
+          "İş birliği": 61,
+          "Geçmiş": 38,
+          "Gelecek": 45,
+          "Biz–onlar": 51,
+          "Teşekkür": 44,
+          "Vaat": 43
+        },
+        "range": 23
+      },
+      {
+        "name": "Putin",
+        "stats": {
+          "Çatışma / tehdit": 51,
+          "İş birliği": 56,
+          "Geçmiş": 62,
+          "Gelecek": 55,
+          "Biz–onlar": 50,
+          "Teşekkür": 70,
+          "Vaat": 31
+        },
+        "range": 39
+      },
+      {
+        "name": "Trump",
+        "stats": {
+          "Çatışma / tehdit": 54,
+          "İş birliği": 41,
+          "Geçmiş": 44,
+          "Gelecek": 37,
+          "Biz–onlar": 65,
+          "Teşekkür": 51,
+          "Vaat": 59
+        },
+        "range": 28
+      }
+    ],
+    "spoken": {
+      "Putin": {
+        "Teşekkür": 70,
+        "Vaat": 31
+      },
+      "Trump": {
+        "Biz–onlar": 65
+      },
+      "Merkel": {
+        "İş birliği": 61
+      },
+      "Macron": {
+        "Gelecek": 57
+      }
     }
-  ],
-  "A4_egim_sira": [
-    {
-      "pair": "Putin–Trump",
-      "rank_run1": 1,
-      "rank_run2": 10,
-      "highlight": true
-    },
-    {
-      "pair": "Macron–Merkel",
-      "rank_run1": 2,
-      "rank_run2": 1,
-      "highlight": false
-    },
-    {
-      "pair": "Merkel–Putin",
-      "rank_run1": 3,
-      "rank_run2": 9,
-      "highlight": false
-    },
-    {
-      "pair": "Merkel–Trump",
-      "rank_run1": 4,
-      "rank_run2": 8,
-      "highlight": false
-    },
-    {
-      "pair": "Macron–Putin",
-      "rank_run1": 5,
-      "rank_run2": 6,
-      "highlight": false
-    },
-    {
-      "pair": "Macron–Trump",
-      "rank_run1": 6,
-      "rank_run2": 4,
-      "highlight": false
-    },
-    {
-      "pair": "Erdoğan–Merkel",
-      "rank_run1": 7,
-      "rank_run2": 3,
-      "highlight": false
-    },
-    {
-      "pair": "Erdoğan–Putin",
-      "rank_run1": 8,
-      "rank_run2": 7,
-      "highlight": false
-    },
-    {
-      "pair": "Erdoğan–Trump",
-      "rank_run1": 9,
-      "rank_run2": 5,
-      "highlight": false
-    },
-    {
-      "pair": "Erdoğan–Macron",
-      "rank_run1": 10,
-      "rank_run2": 2,
-      "highlight": false
-    }
-  ],
-  "A5_kipirdamadi": {
-    "putin_trump": {
-      "sim_run1_tr": "0,744",
-      "sim_run2_tr": "0,743"
-    },
-    "others": [
+  },
+  "B3_duygu": {
+    "fam_affiliative_positive": [
       {
-        "pair": "Erdoğan–Macron",
-        "delta": 0.276,
-        "delta_tr": "+0,276"
+        "name": "Putin",
+        "value": 0.5114,
+        "value_tr": "%51,1",
+        "ci": [
+          0.466,
+          0.549
+        ]
       },
       {
-        "pair": "Erdoğan–Merkel",
-        "delta": 0.207,
-        "delta_tr": "+0,207"
+        "name": "Trump",
+        "value": 0.4816,
+        "value_tr": "%48,2",
+        "ci": [
+          0.379,
+          0.608
+        ]
       },
       {
-        "pair": "Erdoğan–Trump",
-        "delta": 0.203,
-        "delta_tr": "+0,203"
+        "name": "Merkel",
+        "value": 0.4603,
+        "value_tr": "%46,0",
+        "ci": [
+          0.395,
+          0.561
+        ]
       },
       {
-        "pair": "Erdoğan–Putin",
-        "delta": 0.179,
-        "delta_tr": "+0,179"
+        "name": "Macron",
+        "value": 0.4554,
+        "value_tr": "%45,5",
+        "ci": [
+          0.429,
+          0.482
+        ]
       },
       {
-        "pair": "Macron–Merkel",
-        "delta": 0.173,
-        "delta_tr": "+0,173"
+        "name": "Erdoğan",
+        "value": 0.3868,
+        "value_tr": "%38,7",
+        "ci": [
+          0.294,
+          0.5
+        ]
+      }
+    ],
+    "fam_threat_negative": [
+      {
+        "name": "Trump",
+        "value": 0.0548,
+        "value_tr": "%5,5",
+        "ci": [
+          0.002,
+          0.096
+        ]
       },
       {
-        "pair": "Macron–Trump",
-        "delta": 0.173,
-        "delta_tr": "+0,173"
+        "name": "Erdoğan",
+        "value": 0.0352,
+        "value_tr": "%3,5",
+        "ci": [
+          0.012,
+          0.061
+        ]
       },
       {
-        "pair": "Macron–Putin",
-        "delta": 0.135,
-        "delta_tr": "+0,135"
+        "name": "Merkel",
+        "value": 0.0311,
+        "value_tr": "%3,1",
+        "ci": [
+          0.008,
+          0.057
+        ]
       },
       {
-        "pair": "Merkel–Trump",
-        "delta": 0.114,
-        "delta_tr": "+0,114"
+        "name": "Macron",
+        "value": 0.0274,
+        "value_tr": "%2,7",
+        "ci": [
+          0.018,
+          0.038
+        ]
       },
       {
-        "pair": "Merkel–Putin",
-        "delta": 0.083,
-        "delta_tr": "+0,083"
+        "name": "Putin",
+        "value": 0.0086,
+        "value_tr": "%0,9",
+        "ci": [
+          0.004,
+          0.017
+        ]
+      }
+    ],
+    "fam_hostility": [
+      {
+        "name": "Trump",
+        "value": 0.0349,
+        "value_tr": "%3,5",
+        "ci": [
+          0.007,
+          0.051
+        ]
+      },
+      {
+        "name": "Merkel",
+        "value": 0.0198,
+        "value_tr": "%2,0",
+        "ci": [
+          0.008,
+          0.039
+        ]
+      },
+      {
+        "name": "Erdoğan",
+        "value": 0.0138,
+        "value_tr": "%1,4",
+        "ci": [
+          0.009,
+          0.02
+        ]
+      },
+      {
+        "name": "Macron",
+        "value": 0.0113,
+        "value_tr": "%1,1",
+        "ci": [
+          0.009,
+          0.014
+        ]
+      },
+      {
+        "name": "Putin",
+        "value": 0.0108,
+        "value_tr": "%1,1",
+        "ci": [
+          0.005,
+          0.02
+        ]
+      }
+    ],
+    "valence": [
+      {
+        "name": "Putin",
+        "value": 0.7661,
+        "value_tr": "0,77",
+        "ci": [
+          0.562,
+          0.912
+        ]
+      },
+      {
+        "name": "Trump",
+        "value": 0.6539,
+        "value_tr": "0,65",
+        "ci": [
+          0.433,
+          0.881
+        ]
+      },
+      {
+        "name": "Merkel",
+        "value": 0.5185,
+        "value_tr": "0,52",
+        "ci": [
+          0.415,
+          0.623
+        ]
+      },
+      {
+        "name": "Macron",
+        "value": 0.4612,
+        "value_tr": "0,46",
+        "ci": [
+          0.397,
+          0.556
+        ]
+      },
+      {
+        "name": "Erdoğan",
+        "value": 0.4181,
+        "value_tr": "0,42",
+        "ci": [
+          0.206,
+          0.63
+        ]
       }
     ]
   },
-  "A6_komsular": {
-    "model": "Qwen3-Embedding-8B (same model both runs)",
-    "k": 10,
-    "share_run1": 0.995,
-    "share_run1_tr": "%99,5",
-    "share_run2": 0.598,
-    "share_run2_tr": "%59,8",
-    "filled_dots_run1": 10,
-    "filled_dots_run2": 6,
-    "_dots_note": "dot counts are the rounded average over all Erdoğan paragraphs; the % label is exact"
-  },
-  "A8_ikinci_model": {
-    "model": "KaLM-Embedding-Gemma3-12B-2511",
-    "corpus": "English (run 2)",
-    "rows": [
+  "B4_stil": {
+    "style_pairs": [
       {
-        "rank": 1,
-        "pair": "Macron–Merkel",
-        "sim_tr": "0,850",
-        "highlight": false
-      },
-      {
-        "rank": 2,
         "pair": "Erdoğan–Macron",
-        "sim_tr": "0,806",
-        "highlight": false
+        "style_cosine_tr": "0,42",
+        "rank": 1
       },
       {
-        "rank": 3,
-        "pair": "Erdoğan–Merkel",
-        "sim_tr": "0,784",
-        "highlight": false
-      },
-      {
-        "rank": 4,
-        "pair": "Erdoğan–Putin",
-        "sim_tr": "0,755",
-        "highlight": false
-      },
-      {
-        "rank": 5,
-        "pair": "Macron–Putin",
-        "sim_tr": "0,753",
-        "highlight": false
-      },
-      {
-        "rank": 6,
-        "pair": "Macron–Trump",
-        "sim_tr": "0,736",
-        "highlight": false
-      },
-      {
-        "rank": 7,
-        "pair": "Merkel–Putin",
-        "sim_tr": "0,736",
-        "highlight": false
-      },
-      {
-        "rank": 8,
-        "pair": "Erdoğan–Trump",
-        "sim_tr": "0,735",
-        "highlight": false
-      },
-      {
-        "rank": 9,
         "pair": "Merkel–Trump",
-        "sim_tr": "0,729",
-        "highlight": false
+        "style_cosine_tr": "0,12",
+        "rank": 2
       },
       {
-        "rank": 10,
+        "pair": "Macron–Merkel",
+        "style_cosine_tr": "-0,20",
+        "rank": 3
+      },
+      {
+        "pair": "Erdoğan–Merkel",
+        "style_cosine_tr": "-0,21",
+        "rank": 4
+      },
+      {
+        "pair": "Erdoğan–Trump",
+        "style_cosine_tr": "-0,32",
+        "rank": 5
+      },
+      {
+        "pair": "Merkel–Putin",
+        "style_cosine_tr": "-0,34",
+        "rank": 6
+      },
+      {
         "pair": "Putin–Trump",
-        "sim_tr": "0,701",
-        "highlight": true
+        "style_cosine_tr": "-0,35",
+        "rank": 7
+      },
+      {
+        "pair": "Macron–Trump",
+        "style_cosine_tr": "-0,42",
+        "rank": 8
+      },
+      {
+        "pair": "Macron–Putin",
+        "style_cosine_tr": "-0,43",
+        "rank": 9
+      },
+      {
+        "pair": "Erdoğan–Putin",
+        "style_cosine_tr": "-0,53",
+        "rank": 10
       }
     ],
-    "bottom_share_tr": "%90,7",
-    "spearman_with_qwen3_english": 0.83
+    "macron_merkel": {
+      "content_cosine_tr": "0,850",
+      "content_rank": 1,
+      "style_cosine_tr": "-0,20",
+      "style_rank": 3
+    },
+    "spearman_content_style_tr": "0,21"
   },
-  "bootstrap": {
-    "run1_qwen3_putin_trump_share_most_similar": 0.887,
-    "run2_qwen3_putin_trump_share_least_similar": 0.652,
-    "run2_kalm_putin_trump_share_least_similar": 0.907,
-    "run2_kalm_macron_merkel_share_most_similar": 1.0
-  },
-  "spearman_run1_vs_run2_same_model": -0.43,
-  "run1_bge_m3_note": {
-    "_why": "second model of run 1; did NOT rank Putin–Trump first even in original languages",
-    "putin_trump_rank": 10,
-    "top_pair": "Macron–Merkel",
-    "erdogan_knn_same_leader_share": 0.473
+  "B5_dagilim": {
+    "speech_to_leader": [
+      {
+        "name": "Macron",
+        "value_tr": "0,019"
+      },
+      {
+        "name": "Putin",
+        "value_tr": "0,026"
+      },
+      {
+        "name": "Merkel",
+        "value_tr": "0,029"
+      },
+      {
+        "name": "Trump",
+        "value_tr": "0,040"
+      },
+      {
+        "name": "Erdoğan",
+        "value_tr": "0,065"
+      }
+    ],
+    "chunk_to_speech": [
+      {
+        "name": "Putin",
+        "value_tr": "0,131"
+      },
+      {
+        "name": "Trump",
+        "value_tr": "0,177"
+      },
+      {
+        "name": "Erdoğan",
+        "value_tr": "0,192"
+      },
+      {
+        "name": "Merkel",
+        "value_tr": "0,204"
+      },
+      {
+        "name": "Macron",
+        "value_tr": "0,216"
+      }
+    ],
+    "erdogan_by_speech": [
+      {
+        "speech_id": "erdogan1",
+        "value_tr": "0,162"
+      },
+      {
+        "speech_id": "erdogan2022",
+        "value_tr": "0,049"
+      },
+      {
+        "speech_id": "erdogan2023",
+        "value_tr": "0,035"
+      },
+      {
+        "speech_id": "erdogan2024",
+        "value_tr": "0,040"
+      },
+      {
+        "speech_id": "erdogan2025",
+        "value_tr": "0,039"
+      }
+    ],
+    "erdogan_without_symposium_tr": "0,031"
   }
 }
