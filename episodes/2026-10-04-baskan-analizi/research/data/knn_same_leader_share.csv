@@ -1,0 +1,6 @@
+leader,name,lang_run1,share_run1_qwen3,expected_run1,n_chunks_run1,share_run2_qwen3,expected_run2,n_chunks_run2,share_run2_kalm
+erdogan,Erdoğan,TR,0.9953,0.2361,85,0.5984,0.2117,63,0.8317
+macron,Macron,FR,0.9576,0.2608,99,0.7133,0.238,75,0.8907
+merkel,Merkel,DE,0.6891,0.1179,46,0.4789,0.1184,38,0.7816
+putin,Putin,EN,0.9192,0.0619,26,0.7615,0.0757,26,0.9192
+trump,Trump,EN,0.8667,0.0899,48,0.6583,0.1111,48,0.9542

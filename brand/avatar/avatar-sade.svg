@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 400" width="310" height="400">
+<title>Ege avatar - sade</title>
+<defs><pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#0F0406" opacity="0.7"/><circle cx="5" cy="5" r="0.8" fill="#0F0406" opacity="0.6"/></pattern></defs>
+<g id="body">
+<path d="M126 250 L184 250 L190 312 L120 312 Z" fill="#B8AE9D" stroke="#0F0406" stroke-width="3" stroke-linejoin="round"/>
+<path d="M126 262 L184 262 L186 282 L155 292 L124 282 Z" fill="#635643" opacity="0.5"/>
+<path d="M0 400 L0 360 L66 330 L118 312 L155 352 L192 312 L246 330 L310 360 L310 400 Z" fill="#27071B" stroke="#0F0406" stroke-width="3" stroke-linejoin="round"/>
+<path d="M40 346 L58 400 M92 330 L100 400 M228 330 L216 400 M272 346 L254 400 M300 374 L200 358" stroke="#3F0F2C" stroke-width="2" fill="none"/>
+<path d="M118 312 L155 352 L192 312 L180 296 L130 296 Z" fill="#0F0406"/>
+<path d="M112 300 L134 292 L155 352 L118 312 Z" fill="#3F0F2C" stroke="#0F0406" stroke-width="3" stroke-linejoin="round"/>
+<path d="M198 300 L176 292 L155 352 L192 312 Z" fill="#3F0F2C" stroke="#0F0406" stroke-width="3" stroke-linejoin="round"/>
+<path d="M246 330 L310 360" stroke="#6B1A52" stroke-width="3" fill="none"/>
+</g>
+<g id="head">
+<path d="M86 150 L72 156 L72 184 L88 194 Z" fill="#C9B196" stroke="#0F0406" stroke-width="3" stroke-linejoin="round"/>
+<path d="M224 150 L238 156 L238 184 L222 194 Z" fill="#B8AE9D" stroke="#0F0406" stroke-width="3" stroke-linejoin="round"/>
+<path d="M155 62 L205 76 L226 118 L224 178 L212 222 L190 262 L170 284 L140 284 L120 262 L98 222 L86 178 L84 118 L105 76 Z" fill="#D9C9B0" stroke="#0F0406" stroke-width="3" stroke-linejoin="round"/>
+<path d="M196 118 L226 118 L224 178 L212 222 L190 262 L176 282 L184 240 L198 190 Z" fill="#B8AE9D" opacity="0.75"/>
+<g id="beard"><path d="M88 188 L98 222 L120 262 L140 284 L170 284 L190 262 L212 222 L222 188 L208 206 L192 224 L170 220 L155 228 L140 220 L118 224 L102 206 Z" fill="#635643" opacity="0.45"/><path d="M88 188 L98 222 L120 262 L140 284 L170 284 L190 262 L212 222 L222 188 L208 206 L192 224 L170 220 L155 228 L140 220 L118 224 L102 206 Z" fill="url(#dots)"/></g>
+<path d="M136 238 L174 236 L180 252 L164 258 L146 258 L134 252 Z" fill="#D9C9B0"/>
+<g id="hair">
+<path d="M86 120 L88 92 L104 70 L112 56 L124 70 L136 48 L150 64 L164 44 L178 62 L194 50 L202 70 L218 64 L224 96 L226 120 L214 110 L198 100 L180 106 L156 98 L132 106 L112 104 L98 118 Z" fill="#1F0915" stroke="#4B113A" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M108 88 L150 76 L198 82 M120 70 L126 88 M150 62 L152 80 M178 62 L176 80 M200 70 L196 88" stroke="#3F0F2C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M84 120 L96 122 L98 162 L86 180 Z" fill="#27071B"/><path d="M226 120 L214 122 L212 162 L224 180 Z" fill="#1A0710"/>
+</g>
+<g id="brows"><path d="M104 152 L150 142 L152 152 L106 162 Z" fill="#0F0406"/><path d="M166 142 L214 152 L212 162 L164 152 Z" fill="#0F0406"/></g>
+<g id="eyes">
+<path d="M108 166 L150 166 A21 14 0 0 1 108 166 Z" fill="#E5DBC3" stroke="#0F0406" stroke-width="2"/>
+<path d="M170 166 L212 166 A21 14 0 0 1 170 166 Z" fill="#E5DBC3" stroke="#0F0406" stroke-width="2"/>
+<g id="irises"><path d="M118 166 L134 166 A8 9 0 0 1 118 166 Z" fill="#D45A93"/><path d="M123 166 L129 166 A3 5 0 0 1 123 166 Z" fill="#0F0406"/>
+<path d="M180 166 L196 166 A8 9 0 0 1 180 166 Z" fill="#D45A93"/><path d="M185 166 L191 166 A3 5 0 0 1 185 166 Z" fill="#0F0406"/></g>
+<path id="eyelids" d="M104 166 L154 166 M166 166 L216 166" stroke="#0F0406" stroke-width="4" stroke-linecap="round" fill="none"/>
+</g>
+<g id="nose"><path d="M158 176 L164 212 L168 224 L176 220 L170 200 Z" fill="#B8AE9D" opacity="0.6"/><path d="M155 172 L147 214 L140 222 L156 228 L168 224" stroke="#635643" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g id="mouth"><path d="M138 246 L158 249 L178 240 L183 245" stroke="#0F0406" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M148 256 L166 254" stroke="#635643" stroke-width="2.5" fill="none" stroke-linecap="round"/></g>
+<g id="rimlight"><path d="M226 118 L224 178 L212 222 L190 262 L172 283" stroke="#D45A93" stroke-width="2.5" opacity="0.7" fill="none" stroke-linecap="round"/><path d="M218 64 L224 96 L226 120" stroke="#D45A93" stroke-width="2" opacity="0.6" fill="none" stroke-linecap="round"/></g>
+</g>
+</svg>
